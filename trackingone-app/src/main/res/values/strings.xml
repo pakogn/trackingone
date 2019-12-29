@@ -1,0 +1,137 @@
+<resources>
+    <string name="app_name">TrackingOne</string>
+
+    <!--App Message-->
+    <string name="api_retry_error">Please retry!</string>
+    <string name="api_default_error">Algo salio mal!</string>
+    <string name="some_error">Se produjo algún error!</string>
+    <string name="connection_error">Conexión a Internet perdida!</string>
+
+    <!--Login Validation-->
+    <string name="empty_email">Proporcione un correo electrónico.</string>
+    <string name="invalid_email">Proporcione un correo electrónico válido.</string>
+    <string name="empty_password">Proporcione una contraseña.</string>
+
+    <!--Drawer-->
+    <string name="open_drawer">Abrir</string>
+    <string name="close_drawer">Cerrar</string>
+
+    <!--Login-->
+    <string name="login_dummy">Login Dummy</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="about">Acerca de</string>
+    <string name="logout">Salir</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="titleRegulation">Reglamento</string>
+    <string name="article">Fracciones</string>
+    <string name="tabulator">Tabulador</string>
+    <string name="licence_number">Número de Licencia</string>
+    <string name="checkLicense">Verificar licencia</string>
+    <string name="name_user">Usuario</string>
+    <string name="city">Córdoba Veracruz</string>
+    <string name="licence_qr">Numero de Licencia:</string>
+    <string name="type_licence">Tipo:</string>
+    <string name="title_status">Status:</string>
+    <string name="status_license">Activa</string>
+
+    <!--empty state-->
+    <string name="empty_screen">No podemos conectar al servidor</string>
+    <string name="null_screen">No se ha encontrado información</string>
+    <string name="please_retry">Intenta de nuevo</string>
+    <string name="retry">Otra vez</string>
+    <string name="anomaly_folio_text">Folio</string>
+    <string name="anomaly_text">Asunto</string>
+    <string name="anomaly_description">Descripción del problema</string>
+    <string name="btn_text_anomnaly">Reportar anomalia</string>
+    <string name="title_toolbar_anomaly">Anomalias</string>
+    <string name="penalty_placa">No. Placa</string>
+    <string name="penalty_description_text">Observaciones</string>
+    <string name="penalty_name_text">Nombre</string>
+    <string name="btn_text_penalty">Levantar infracción</string>
+    <string name="title_toolbar_create_penalty">Levantar infracción</string>
+    <string name="title_toolbar_check_license">Verificar licencia</string>
+    <string name="title_toolbar_contact_list">Números importantes</string>
+    <string name="title_toolbar_scanner">Escanear QR</string>
+    <string name="title_toolbar_license_detatil">Detalle de la licencia</string>
+    <string name="title_toolbar_historic">Historial de multas</string>
+
+    <!--- MENSAJES DE ERROR PARA LA VALIDACION DE FORMULARIOS -->
+    <string name="name_error">Ingrese un nombre valido.</string>
+    <string name="plate_number_error">Ingrese un número de placa valido.</string>
+    <string name="concepts_error">Seleccione al menos un concepto.</string>
+    <string name="email_error">Ingrese un correo valido.</string>
+    <string name="btn_text_next">Continuar</string>
+    <string name="msg_exit">¿Desea salir? Se contara como intento de multa</string>
+    <string name="btn_immediate_pay">Pago inmediato</string>
+    <string name="btn_folio_generate">Generar folio</string>
+    <string name="btn_finish">Finalizar</string>
+    <string name="btn_print_penalty">Imprimir</string>
+    <string name="email_text">Correo electronico</string>
+    <string name="btn_send_mail">Enviar</string>
+    <string name="btn_text_gallery">Elgir de galeria</string>
+    <string name="btn_text_camera">Tomar Foto</string>
+    <string name="cancel">Cancelar</string>
+    <string name="btn_text_camera2">Camara</string>
+    <string name="btn_text_gallery2">Galleria</string>
+    <string name="title_toolbar_regulation">Reglamento</string>
+    <string name="project_info">Vial Mx</string>
+
+
+    <!--  DeviceListActivity -->
+    <string name="scanning">Buscar dispositivos;</string>
+    <string name="select_device">Seleccione el dispositivo conectado</string>
+    <string name="none_paired">Sin dispositivos coincidentes</string>
+    <string name="none_found">Ningún dispositivo encontrado</string>
+    <string name="title_paired_devices">Equipar equipo</string>
+    <string name="title_other_devices">Otro equipo útil</string>
+    <string name="button_scan">Dispositivo de escaneo</string>
+    <string name="info">infor</string>
+
+    <!--  Message -->
+    <string name="msg_state">Error de entrada!</string>
+    <string name="empty1">Input is empty, in the text box to enter the content to be converted &#8230;</string>
+    <string name="empty">Input is empty</string>
+    <string name="not_connected">Por favor, conecte una impresora Bluetooth</string>
+    <string name="bt_not_enabled_leaving">Bluetooth no se ha activado, es necesario para impresión</string>
+    <string name="title_connecting">conectando…</string>
+    <string name="title_connected_to">conectado: </string>
+    <string name="title_not_connected">No conectado</string>
+    <string name="Connecting">Está conectado a una impresora Bluetooth</string>
+    <string name="msg_statev1">Without a picture</string>
+    <string name="strLang">en</string>
+    <string name="camer">No pictures</string>
+    <string name="msg_error">Input errors, please check!</string>
+    <string name="title_toolbar_penalty_detail">Detalle</string>
+
+    <string name="permission_rationale">Please grant location permission to start the service</string>
+    <string name="permission_denied_explanation">You have not granted location permission. So the service cannot be started.</string>
+    <string name="settings">settings</string>
+    <string name="title_alert_no_intenet">No internet</string>
+    <string name="msg_alert_no_internet">Please make sure that you have active internet connection.</string>
+    <string name="no_google_playservice_available">No Google Playservice found. Please install it.</string>
+    <string name="msg_location_service_not_started">Location Tracking Not Started</string>
+    <string name="msg_location_service_started">Location Tracking Started</string>
+    <string name="btn_label_refresh">Refresh</string>
+    <string name="btn_clean">Limpiar</string>
+    <string name="btn_save_signature">Guardar Firma</string>
+    <string name="print_begin">Start printing, start time is：</string>
+
+    <string name="print_faile">Printing failed</string>
+    <string name="print_faile_errcode">Printing failed,errcode：</string>
+    <string name="print_end">Print completed, the end time is：</string>
+    <string name="title_toolbar_signature">Ingresa tu Firma</string>
+    <string name="btn_vehicle">Vehículo</string>
+    <string name="penalty_license_number">Licencia</string>
+    <string name="opt1">Programación Embarque</string>
+    <string name="opt2">Registro Entrada</string>
+    <string name="opt3">Asignación Rampa</string>
+    <string name="opt4">Registro Salida</string>
+    <string name="opt5">Inventario</string>
+    <string name="opt6">Reportes</string>
+    <string name="embarques">Embarques</string>
+    <string name="embarqueDetalle">Detalle de Embarque</string>
+</resources>

@@ -1,0 +1,2562 @@
+Could not find google-services.json while looking in [src/nullnull/debug, src/debug/nullnull, src/nullnull, src/debug, src/nullnullDebug]
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+Could not find google-services.json while looking in [src/nullnull/release, src/release/nullnull, src/nullnull, src/release, src/nullnullRelease]
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+:app:dependencies
+
+------------------------------------------------------------
+Project :app
+------------------------------------------------------------
+
+_internal_aapt2_binary - The AAPT2 binary to use for processing resources.
+\--- com.android.tools.build:aapt2:3.2.1-4818971
+
+androidApis - Configuration providing various types of Android JAR file
+No dependencies
+
+androidTestAnnotationProcessor - Classpath for the annotation processor for 'androidTest'. (n)
+\--- com.google.dagger:dagger-compiler:2.8 (n)
+
+androidTestApi - API dependencies for 'androidTest' sources. (n)
+No dependencies
+
+androidTestApk - Apk dependencies for 'androidTest' sources (deprecated: use 'androidTestRuntimeOnly' instead). (n)
+No dependencies
+
+androidTestCompile - Compile dependencies for 'androidTest' sources (deprecated: use 'androidTestImplementation' instead). (n)
+No dependencies
+
+androidTestCompileOnly - Compile only dependencies for 'androidTest' sources. (n)
+No dependencies
+
+androidTestDebugAnnotationProcessor - Classpath for the annotation processor for 'androidTestDebug'. (n)
+No dependencies
+
+androidTestDebugApi - API dependencies for 'androidTestDebug' sources. (n)
+No dependencies
+
+androidTestDebugApk - Apk dependencies for 'androidTestDebug' sources (deprecated: use 'androidTestDebugRuntimeOnly' instead). (n)
+No dependencies
+
+androidTestDebugCompile - Compile dependencies for 'androidTestDebug' sources (deprecated: use 'androidTestDebugImplementation' instead). (n)
+No dependencies
+
+androidTestDebugCompileOnly - Compile only dependencies for 'androidTestDebug' sources. (n)
+No dependencies
+
+androidTestDebugImplementation - Implementation only dependencies for 'androidTestDebug' sources. (n)
+No dependencies
+
+androidTestDebugProvided - Provided dependencies for 'androidTestDebug' sources (deprecated: use 'androidTestDebugCompileOnly' instead). (n)
+No dependencies
+
+androidTestDebugRuntimeOnly - Runtime only dependencies for 'androidTestDebug' sources. (n)
+No dependencies
+
+androidTestDebugWearApp - Link to a wear app to embed for object 'androidTestDebug'. (n)
+No dependencies
+
+androidTestImplementation - Implementation only dependencies for 'androidTest' sources. (n)
++--- com.android.support.test.espresso:espresso-core:2.2.2 (n)
++--- com.android.support.test.espresso:espresso-intents:2.2.2 (n)
+\--- org.mockito:mockito-core:2.7.1 (n)
+
+androidTestProvided - Provided dependencies for 'androidTest' sources (deprecated: use 'androidTestCompileOnly' instead). (n)
+No dependencies
+
+androidTestRuntimeOnly - Runtime only dependencies for 'androidTest' sources. (n)
+No dependencies
+
+androidTestUtil - Additional APKs used during instrumentation testing.
+No dependencies
+
+androidTestWearApp - Link to a wear app to embed for object 'androidTest'. (n)
+No dependencies
+
+annotationProcessor - Classpath for the annotation processor for 'main'. (n)
++--- com.google.dagger:dagger-compiler:2.8 (n)
+\--- com.jakewharton:butterknife-compiler:8.6.0 (n)
+
+api - API dependencies for 'main' sources. (n)
++--- unspecified (n)
+\--- unspecified (n)
+
+apk - Apk dependencies for 'main' sources (deprecated: use 'runtimeOnly' instead). (n)
+No dependencies
+
+archives - Configuration for archive artifacts.
+No dependencies
+
+checkstyle - The Checkstyle libraries to be used for this project.
+\--- com.puppycrawl.tools:checkstyle:6.5
+     +--- org.apache.commons:commons-lang3:3.3.2
+     +--- antlr:antlr:2.7.7
+     +--- org.antlr:antlr4-runtime:4.5
+     |    \--- org.abego.treelayout:org.abego.treelayout.core:1.0.1
+     +--- commons-beanutils:commons-beanutils-core:1.8.3
+     +--- commons-cli:commons-cli:1.2
+     \--- com.google.guava:guava:18.0
+
+compile - Compile dependencies for 'main' sources (deprecated: use 'implementation' instead).
+No dependencies
+
+compileOnly - Compile only dependencies for 'main' sources. (n)
+\--- javax.annotation:jsr250-api:1.0 (n)
+
+debugAndroidTestAnnotationProcessorClasspath - Resolved configuration for annotation-processor for variant: debugAndroidTest
+\--- com.google.dagger:dagger-compiler:2.8
+     +--- com.google.dagger:dagger:2.8
+     |    \--- javax.inject:javax.inject:1
+     +--- com.google.dagger:dagger-producers:2.8
+     |    +--- com.google.dagger:dagger:2.8 (*)
+     |    \--- com.google.guava:guava:20.0-rc1
+     \--- com.google.guava:guava:20.0-rc1
+
+debugAndroidTestCompileClasspath - Resolved configuration for compilation for variant: debugAndroidTest
++--- com.android.support.test.espresso:espresso-core:2.2.2
+|    +--- com.squareup:javawriter:2.1.1
+|    +--- com.android.support.test:rules:0.5
+|    |    \--- com.android.support.test:runner:0.5
+|    |         +--- com.android.support:support-annotations:23.1.1 -> 27.0.0
+|    |         +--- junit:junit:4.12
+|    |         |    \--- org.hamcrest:hamcrest-core:1.3
+|    |         \--- com.android.support.test:exposed-instrumentation-api-publish:0.5
+|    +--- com.android.support.test:runner:0.5 (*)
+|    +--- javax.inject:javax.inject:1
+|    +--- org.hamcrest:hamcrest-library:1.3
+|    |    \--- org.hamcrest:hamcrest-core:1.3
+|    +--- com.android.support.test.espresso:espresso-idling-resource:2.2.2
+|    +--- org.hamcrest:hamcrest-integration:1.3
+|    |    \--- org.hamcrest:hamcrest-library:1.3 (*)
+|    +--- com.google.code.findbugs:jsr305:2.0.1
+|    \--- javax.annotation:javax.annotation-api:1.2
++--- com.android.support.test.espresso:espresso-intents:2.2.2
+|    \--- com.android.support.test.espresso:espresso-core:2.2.2 (*)
++--- org.mockito:mockito-core:2.7.1
+|    +--- net.bytebuddy:byte-buddy:1.6.5
+|    +--- net.bytebuddy:byte-buddy-agent:1.6.5
+|    \--- org.objenesis:objenesis:2.5
++--- com.android.support:multidex-instrumentation:1.0.2
+|    \--- com.android.support:multidex:1.0.2
++--- com.amitshekhar.android:debug-db:1.0.3
+|    +--- com.google.code.gson:gson:2.8.0 -> 2.8.2
+|    +--- net.zetetic:android-database-sqlcipher:3.5.7
+|    \--- android.arch.persistence.room:runtime:1.0.0
+|         +--- android.arch.persistence.room:common:1.0.0
+|         |    \--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         +--- android.arch.persistence:db-framework:1.0.0
+|         |    +--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         |    \--- android.arch.persistence:db:1.0.0
+|         |         \--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         +--- android.arch.persistence:db:1.0.0 (*)
+|         +--- android.arch.core:runtime:1.0.0
+|         |    +--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         |    \--- android.arch.core:common:1.0.0
+|         |         \--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         \--- com.android.support:support-core-utils:26.1.0 -> 27.0.2
+|              +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|              \--- com.android.support:support-compat:27.0.2
+|                   +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|                   \--- android.arch.lifecycle:runtime:1.0.3
+|                        +--- android.arch.lifecycle:common:1.0.3
+|                        \--- android.arch.core:common:1.0.0 (*)
++--- project :library
++--- project :btsdk
++--- com.android.support:appcompat-v7:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    +--- com.android.support:support-core-utils:27.0.2 (*)
+|    +--- com.android.support:support-fragment:27.0.2
+|    |    +--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-core-ui:27.0.2
+|    |    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    |    |    \--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-core-utils:27.0.2 (*)
+|    |    \--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    +--- com.android.support:support-vector-drawable:27.0.2
+|    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    |    \--- com.android.support:support-compat:27.0.2 (*)
+|    \--- com.android.support:animated-vector-drawable:27.0.2
+|         +--- com.android.support:support-vector-drawable:27.0.2 (*)
+|         \--- com.android.support:support-core-ui:27.0.2 (*)
++--- com.android.support:recyclerview-v7:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    +--- com.android.support:support-compat:27.0.2 (*)
+|    \--- com.android.support:support-core-ui:27.0.2 (*)
++--- com.android.support:cardview-v7:27.0.0
+|    \--- com.android.support:support-annotations:27.0.0
++--- com.android.support:design:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-v4:27.0.2
+|    |    +--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-media-compat:27.0.2
+|    |    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    |    |    \--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-core-utils:27.0.2 (*)
+|    |    +--- com.android.support:support-core-ui:27.0.2 (*)
+|    |    \--- com.android.support:support-fragment:27.0.2 (*)
+|    +--- com.android.support:appcompat-v7:27.0.2 (*)
+|    +--- com.android.support:recyclerview-v7:27.0.2 (*)
+|    \--- com.android.support:transition:27.0.2
+|         +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         \--- com.android.support:support-compat:27.0.2 (*)
++--- com.android.support:support-vector-drawable:27.0.0 -> 27.0.2 (*)
++--- com.android.support:animated-vector-drawable:27.0.0 -> 27.0.2 (*)
++--- uk.co.chrisjenx:calligraphy:2.2.0
+|    \--- com.android.support:appcompat-v7:23.1.1 -> 27.0.2 (*)
++--- com.amitshekhar.android:rx2-android-networking:1.0.1
+|    +--- io.reactivex.rxjava2:rxandroid:2.0.1
+|    |    \--- io.reactivex.rxjava2:rxjava:2.0.1 -> 2.1.7
+|    |         \--- org.reactivestreams:reactive-streams:1.0.1
+|    +--- io.reactivex.rxjava2:rxjava:2.1.7 (*)
+|    \--- com.amitshekhar.android:android-networking:1.0.1
+|         +--- com.squareup.okhttp3:okhttp:3.9.1 -> 3.10.0
+|         |    \--- com.squareup.okio:okio:1.14.0
+|         +--- com.google.code.gson:gson:2.8.2
+|         \--- com.android.support:appcompat-v7:27.0.2 (*)
++--- com.github.bumptech.glide:glide:3.7.0
++--- com.google.code.gson:gson:2.8.0 -> 2.8.2
++--- org.greenrobot:greendao:3.2.0
+|    \--- org.greenrobot:greendao-api:3.2.0
++--- com.android.support.constraint:constraint-layout:1.0.2
+|    \--- com.android.support.constraint:constraint-layout-solver:1.0.2
++--- com.android.support:support-v4:26.1.0 -> 27.0.2 (*)
++--- com.google.dagger:dagger:2.8
+|    \--- javax.inject:javax.inject:1
++--- javax.inject:javax.inject:1
++--- io.reactivex.rxjava2:rxjava:2.0.6 -> 2.1.7 (*)
++--- io.reactivex.rxjava2:rxandroid:2.0.1 (*)
++--- com.jakewharton:butterknife:8.6.0
+|    +--- com.jakewharton:butterknife-annotations:8.6.0
+|    |    \--- com.android.support:support-annotations:25.1.0 -> 27.0.0
+|    +--- com.android.support:support-annotations:25.1.0 -> 27.0.0
+|    \--- com.android.support:support-compat:25.1.0 -> 27.0.2 (*)
++--- com.mindorks:placeholderview:0.6.1
+|    \--- com.android.support:recyclerview-v7:25.+ -> 27.0.2 (*)
++--- com.jakewharton.timber:timber:4.5.1
++--- com.journeyapps:zxing-android-embedded:3.6.0
+|    +--- com.google.zxing:core:3.3.2
+|    \--- com.android.support:support-v4:25.3.1 -> 27.0.2 (*)
++--- me.dm7.barcodescanner:zxing:1.9.8
+|    +--- me.dm7.barcodescanner:core:1.9.8
+|    |    \--- com.android.support:support-v4:25.3.1 -> 27.0.2 (*)
+|    \--- com.google.zxing:core:3.3.0 -> 3.3.2
++--- me.dm7.barcodescanner:zbar:1.9.8
+|    \--- me.dm7.barcodescanner:core:1.9.8 (*)
++--- com.basgeekball:awesome-validation:4.1
+|    +--- com.google.guava:guava:24.0-android
+|    |    +--- org.checkerframework:checker-compat-qual:2.0.0
+|    |    +--- com.google.errorprone:error_prone_annotations:2.1.3
+|    |    +--- com.google.j2objc:j2objc-annotations:1.1
+|    |    \--- org.codehaus.mojo:animal-sniffer-annotations:1.14
+|    +--- com.android.support:design:27.0.2 (*)
+|    \--- com.android.support.constraint:constraint-layout:1.0.2 (*)
++--- com.github.ratty3697:android-smart-animation-library:1.6
+|    +--- com.android.support:appcompat-v7:23.0.1 -> 27.0.2 (*)
+|    \--- com.nineoldandroids:library:2.4.0
++--- br.com.vivareal:cuid-android:0.1.0
+|    \--- com.android.support:appcompat-v7:25.0.1 -> 27.0.2 (*)
++--- com.github.Shashank02051997:FancyAlertDialog-Android:0.1
+|    +--- com.android.support:cardview-v7:26.1.0 -> 27.0.0 (*)
+|    \--- com.android.support:appcompat-v7:26.1.0 -> 27.0.2 (*)
++--- com.miguelcatalan:materialsearchview:1.4.0
+|    +--- com.android.support:appcompat-v7:23.1.1 -> 27.0.2 (*)
+|    \--- com.android.support:design:23.1.1 -> 27.0.2 (*)
++--- com.squareup.picasso:picasso:2.71828
+|    +--- com.squareup.okhttp3:okhttp:3.10.0 (*)
+|    +--- com.android.support:support-annotations:27.1.0 -> 27.0.0
+|    \--- com.android.support:exifinterface:27.1.0
+|         \--- com.android.support:support-annotations:27.1.0 -> 27.0.0
++--- com.github.tajchert:nammu:1.1.1
+|    \--- com.android.support:support-v4:23.1.0 -> 27.0.2 (*)
++--- com.google.android.gms:play-services-plus:15.0.1
+|    +--- com.google.android.gms:play-services-audience:[15.0.1] -> 15.0.1
+|    |    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1
+|    |    |    +--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1
+|    |    |    |    \--- com.android.support:support-v4:26.1.0 -> 27.0.2 (*)
+|    |    |    \--- com.google.android.gms:play-services-tasks:[15.0.1] -> 15.0.1
+|    |    |         \--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1 (*)
+|    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
++--- com.google.android.gms:play-services-location:15.0.1
+|    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-places-placereport:[15.0.1,16.0.0) -> 15.0.1
+|    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    \--- com.google.android.gms:play-services-tasks:[15.0.1,16.0.0) -> 15.0.1 (*)
++--- com.google.firebase:firebase-messaging:17.0.0
+|    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    +--- com.google.firebase:firebase-common:16.0.0
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    \--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    +--- com.google.firebase:firebase-iid:[16.0.0] -> 16.0.0
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-stats:15.0.1
+|    |    |    \--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    |    +--- com.google.firebase:firebase-common:16.0.0 (*)
+|    |    \--- com.google.firebase:firebase-iid-interop:16.0.0
+|    |         +--- com.google.android.gms:play-services-base:15.0.1 (*)
+|    |         \--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    \--- com.google.firebase:firebase-measurement-connector:16.0.0
+|         \--- com.google.android.gms:play-services-basement:15.0.1 (*)
++--- com.google.firebase:firebase-core:16.0.1
+|    +--- com.google.firebase:firebase-analytics:16.0.1
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|    |    +--- com.google.android.gms:play-services-stats:15.0.1 (*)
+|    |    +--- com.google.firebase:firebase-analytics-impl:[16.1.1] -> 16.1.1
+|    |    |    +--- com.google.android.gms:play-services-ads-identifier:15.0.1
+|    |    |    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|    |    |    +--- com.google.android.gms:play-services-stats:15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    |    |    +--- com.google.firebase:firebase-common:16.0.0 (*)
+|    |    |    \--- com.google.firebase:firebase-iid:16.0.0 (*)
+|    |    \--- com.google.firebase:firebase-common:16.0.0 (*)
+|    \--- com.google.firebase:firebase-measurement-connector-impl:16.0.1
+|         +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|         +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|         +--- com.google.firebase:firebase-analytics:[16.0.1] -> 16.0.1 (*)
+|         +--- com.google.firebase:firebase-analytics-impl:[16.1.1] -> 16.1.1 (*)
+|         +--- com.google.firebase:firebase-common:16.0.0 (*)
+|         \--- com.google.firebase:firebase-measurement-connector:16.0.0 (*)
++--- com.github.ceryle:RadioRealButton:v2.1.1
+|    \--- com.android.support:appcompat-v7:25.3.1 -> 27.0.2 (*)
++--- org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2
+\--- com.ramotion.cardslider:card-slider:0.3.0
+     +--- com.android.support:appcompat-v7:26.1.0 -> 27.0.2 (*)
+     +--- com.android.support:recyclerview-v7:26.1.0 -> 27.0.2 (*)
+     +--- com.android.support:design:26.1.0 -> 27.0.2 (*)
+     \--- com.android.support:cardview-v7:26.1.0 -> 27.0.0 (*)
+
+debugAndroidTestRuntimeClasspath - Resolved configuration for runtime for variant: debugAndroidTest
++--- com.android.support.test.espresso:espresso-core:2.2.2
+|    +--- com.squareup:javawriter:2.1.1
+|    +--- com.android.support.test:rules:0.5
+|    |    \--- com.android.support.test:runner:0.5
+|    |         +--- com.android.support:support-annotations:23.1.1 -> 27.0.0
+|    |         +--- junit:junit:4.12
+|    |         |    \--- org.hamcrest:hamcrest-core:1.3
+|    |         \--- com.android.support.test:exposed-instrumentation-api-publish:0.5
+|    +--- com.android.support.test:runner:0.5 (*)
+|    +--- javax.inject:javax.inject:1
+|    +--- org.hamcrest:hamcrest-library:1.3
+|    |    \--- org.hamcrest:hamcrest-core:1.3
+|    +--- com.android.support.test.espresso:espresso-idling-resource:2.2.2
+|    +--- org.hamcrest:hamcrest-integration:1.3
+|    |    \--- org.hamcrest:hamcrest-library:1.3 (*)
+|    +--- com.google.code.findbugs:jsr305:2.0.1
+|    \--- javax.annotation:javax.annotation-api:1.2
++--- com.android.support.test.espresso:espresso-intents:2.2.2
+|    \--- com.android.support.test.espresso:espresso-core:2.2.2 (*)
++--- org.mockito:mockito-core:2.7.1
+|    +--- net.bytebuddy:byte-buddy:1.6.5
+|    +--- net.bytebuddy:byte-buddy-agent:1.6.5
+|    \--- org.objenesis:objenesis:2.5
++--- com.android.support:multidex-instrumentation:1.0.2
+|    \--- com.android.support:multidex:1.0.2
++--- com.amitshekhar.android:debug-db:1.0.3
+|    +--- com.google.code.gson:gson:2.8.0 -> 2.8.2
+|    +--- net.zetetic:android-database-sqlcipher:3.5.7
+|    \--- android.arch.persistence.room:runtime:1.0.0
+|         +--- android.arch.persistence.room:common:1.0.0
+|         |    \--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         +--- android.arch.persistence:db-framework:1.0.0
+|         |    +--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         |    \--- android.arch.persistence:db:1.0.0
+|         |         \--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         +--- android.arch.persistence:db:1.0.0 (*)
+|         +--- android.arch.core:runtime:1.0.0
+|         |    +--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         |    \--- android.arch.core:common:1.0.0
+|         |         \--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         \--- com.android.support:support-core-utils:26.1.0 -> 27.0.2
+|              +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|              \--- com.android.support:support-compat:27.0.2
+|                   +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|                   \--- android.arch.lifecycle:runtime:1.0.3
+|                        +--- android.arch.lifecycle:common:1.0.3
+|                        \--- android.arch.core:common:1.0.0 (*)
++--- project :library
+|    \--- com.android.support:appcompat-v7:27.0.0 -> 27.0.2
+|         +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         +--- com.android.support:support-core-utils:27.0.2 (*)
+|         +--- com.android.support:support-fragment:27.0.2
+|         |    +--- com.android.support:support-compat:27.0.2 (*)
+|         |    +--- com.android.support:support-core-ui:27.0.2
+|         |    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         |    |    \--- com.android.support:support-compat:27.0.2 (*)
+|         |    +--- com.android.support:support-core-utils:27.0.2 (*)
+|         |    \--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         +--- com.android.support:support-vector-drawable:27.0.2
+|         |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         |    \--- com.android.support:support-compat:27.0.2 (*)
+|         \--- com.android.support:animated-vector-drawable:27.0.2
+|              +--- com.android.support:support-vector-drawable:27.0.2 (*)
+|              \--- com.android.support:support-core-ui:27.0.2 (*)
++--- project :btsdk
++--- com.android.support:appcompat-v7:27.0.0 -> 27.0.2 (*)
++--- com.android.support:recyclerview-v7:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    +--- com.android.support:support-compat:27.0.2 (*)
+|    \--- com.android.support:support-core-ui:27.0.2 (*)
++--- com.android.support:cardview-v7:27.0.0
+|    \--- com.android.support:support-annotations:27.0.0
++--- com.android.support:design:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-v4:27.0.2
+|    |    +--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-media-compat:27.0.2
+|    |    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    |    |    \--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-core-utils:27.0.2 (*)
+|    |    +--- com.android.support:support-core-ui:27.0.2 (*)
+|    |    \--- com.android.support:support-fragment:27.0.2 (*)
+|    +--- com.android.support:appcompat-v7:27.0.2 (*)
+|    +--- com.android.support:recyclerview-v7:27.0.2 (*)
+|    \--- com.android.support:transition:27.0.2
+|         +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         \--- com.android.support:support-compat:27.0.2 (*)
++--- com.android.support:support-vector-drawable:27.0.0 -> 27.0.2 (*)
++--- com.android.support:animated-vector-drawable:27.0.0 -> 27.0.2 (*)
++--- uk.co.chrisjenx:calligraphy:2.2.0
+|    \--- com.android.support:appcompat-v7:23.1.1 -> 27.0.2 (*)
++--- com.amitshekhar.android:rx2-android-networking:1.0.1
+|    +--- io.reactivex.rxjava2:rxandroid:2.0.1
+|    |    \--- io.reactivex.rxjava2:rxjava:2.0.1 -> 2.1.7
+|    |         \--- org.reactivestreams:reactive-streams:1.0.1
+|    +--- io.reactivex.rxjava2:rxjava:2.1.7 (*)
+|    \--- com.amitshekhar.android:android-networking:1.0.1
+|         +--- com.squareup.okhttp3:okhttp:3.9.1 -> 3.10.0
+|         |    \--- com.squareup.okio:okio:1.14.0
+|         +--- com.google.code.gson:gson:2.8.2
+|         \--- com.android.support:appcompat-v7:27.0.2 (*)
++--- com.github.bumptech.glide:glide:3.7.0
++--- com.google.code.gson:gson:2.8.0 -> 2.8.2
++--- org.greenrobot:greendao:3.2.0
+|    \--- org.greenrobot:greendao-api:3.2.0
++--- com.android.support.constraint:constraint-layout:1.0.2
+|    \--- com.android.support.constraint:constraint-layout-solver:1.0.2
++--- com.android.support:support-v4:26.1.0 -> 27.0.2 (*)
++--- com.google.dagger:dagger:2.8
+|    \--- javax.inject:javax.inject:1
++--- javax.inject:javax.inject:1
++--- io.reactivex.rxjava2:rxjava:2.0.6 -> 2.1.7 (*)
++--- io.reactivex.rxjava2:rxandroid:2.0.1 (*)
++--- com.jakewharton:butterknife:8.6.0
+|    +--- com.jakewharton:butterknife-annotations:8.6.0
+|    |    \--- com.android.support:support-annotations:25.1.0 -> 27.0.0
+|    +--- com.android.support:support-annotations:25.1.0 -> 27.0.0
+|    \--- com.android.support:support-compat:25.1.0 -> 27.0.2 (*)
++--- com.mindorks:placeholderview:0.6.1
+|    \--- com.android.support:recyclerview-v7:25.+ -> 27.0.2 (*)
++--- com.jakewharton.timber:timber:4.5.1
++--- com.journeyapps:zxing-android-embedded:3.6.0
+|    +--- com.google.zxing:core:3.3.2
+|    \--- com.android.support:support-v4:25.3.1 -> 27.0.2 (*)
++--- me.dm7.barcodescanner:zxing:1.9.8
+|    +--- me.dm7.barcodescanner:core:1.9.8
+|    |    \--- com.android.support:support-v4:25.3.1 -> 27.0.2 (*)
+|    \--- com.google.zxing:core:3.3.0 -> 3.3.2
++--- me.dm7.barcodescanner:zbar:1.9.8
+|    \--- me.dm7.barcodescanner:core:1.9.8 (*)
++--- com.basgeekball:awesome-validation:4.1
+|    +--- com.google.guava:guava:24.0-android
+|    |    +--- org.checkerframework:checker-compat-qual:2.0.0
+|    |    +--- com.google.errorprone:error_prone_annotations:2.1.3
+|    |    +--- com.google.j2objc:j2objc-annotations:1.1
+|    |    \--- org.codehaus.mojo:animal-sniffer-annotations:1.14
+|    +--- com.android.support:design:27.0.2 (*)
+|    \--- com.android.support.constraint:constraint-layout:1.0.2 (*)
++--- com.github.ratty3697:android-smart-animation-library:1.6
+|    +--- com.android.support:appcompat-v7:23.0.1 -> 27.0.2 (*)
+|    \--- com.nineoldandroids:library:2.4.0
++--- br.com.vivareal:cuid-android:0.1.0
+|    \--- com.android.support:appcompat-v7:25.0.1 -> 27.0.2 (*)
++--- com.github.Shashank02051997:FancyAlertDialog-Android:0.1
+|    +--- com.android.support:cardview-v7:26.1.0 -> 27.0.0 (*)
+|    \--- com.android.support:appcompat-v7:26.1.0 -> 27.0.2 (*)
++--- com.miguelcatalan:materialsearchview:1.4.0
+|    +--- com.android.support:appcompat-v7:23.1.1 -> 27.0.2 (*)
+|    \--- com.android.support:design:23.1.1 -> 27.0.2 (*)
++--- com.squareup.picasso:picasso:2.71828
+|    +--- com.squareup.okhttp3:okhttp:3.10.0 (*)
+|    +--- com.android.support:support-annotations:27.1.0 -> 27.0.0
+|    \--- com.android.support:exifinterface:27.1.0
+|         \--- com.android.support:support-annotations:27.1.0 -> 27.0.0
++--- com.github.tajchert:nammu:1.1.1
+|    \--- com.android.support:support-v4:23.1.0 -> 27.0.2 (*)
++--- com.google.android.gms:play-services-plus:15.0.1
+|    +--- com.google.android.gms:play-services-audience:[15.0.1] -> 15.0.1
+|    |    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1
+|    |    |    +--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1
+|    |    |    |    \--- com.android.support:support-v4:26.1.0 -> 27.0.2 (*)
+|    |    |    \--- com.google.android.gms:play-services-tasks:[15.0.1] -> 15.0.1
+|    |    |         \--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1 (*)
+|    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
++--- com.google.android.gms:play-services-location:15.0.1
+|    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-places-placereport:[15.0.1,16.0.0) -> 15.0.1
+|    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    \--- com.google.android.gms:play-services-tasks:[15.0.1,16.0.0) -> 15.0.1 (*)
++--- com.google.firebase:firebase-messaging:17.0.0
+|    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    +--- com.google.firebase:firebase-common:16.0.0
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    \--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    +--- com.google.firebase:firebase-iid:[16.0.0] -> 16.0.0
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-stats:15.0.1
+|    |    |    \--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    |    +--- com.google.firebase:firebase-common:16.0.0 (*)
+|    |    \--- com.google.firebase:firebase-iid-interop:16.0.0
+|    |         +--- com.google.android.gms:play-services-base:15.0.1 (*)
+|    |         \--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    \--- com.google.firebase:firebase-measurement-connector:16.0.0
+|         \--- com.google.android.gms:play-services-basement:15.0.1 (*)
++--- com.google.firebase:firebase-core:16.0.1
+|    +--- com.google.firebase:firebase-analytics:16.0.1
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|    |    +--- com.google.android.gms:play-services-stats:15.0.1 (*)
+|    |    +--- com.google.firebase:firebase-analytics-impl:[16.1.1] -> 16.1.1
+|    |    |    +--- com.google.android.gms:play-services-ads-identifier:15.0.1
+|    |    |    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|    |    |    +--- com.google.android.gms:play-services-stats:15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    |    |    +--- com.google.firebase:firebase-common:16.0.0 (*)
+|    |    |    \--- com.google.firebase:firebase-iid:16.0.0 (*)
+|    |    \--- com.google.firebase:firebase-common:16.0.0 (*)
+|    \--- com.google.firebase:firebase-measurement-connector-impl:16.0.1
+|         +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|         +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|         +--- com.google.firebase:firebase-analytics:[16.0.1] -> 16.0.1 (*)
+|         +--- com.google.firebase:firebase-analytics-impl:[16.1.1] -> 16.1.1 (*)
+|         +--- com.google.firebase:firebase-common:16.0.0 (*)
+|         \--- com.google.firebase:firebase-measurement-connector:16.0.0 (*)
++--- com.github.ceryle:RadioRealButton:v2.1.1
+|    \--- com.android.support:appcompat-v7:25.3.1 -> 27.0.2 (*)
++--- org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2
+\--- com.ramotion.cardslider:card-slider:0.3.0
+     +--- com.android.support:appcompat-v7:26.1.0 -> 27.0.2 (*)
+     +--- com.android.support:recyclerview-v7:26.1.0 -> 27.0.2 (*)
+     +--- com.android.support:design:26.1.0 -> 27.0.2 (*)
+     \--- com.android.support:cardview-v7:26.1.0 -> 27.0.0 (*)
+
+debugAnnotationProcessor - Classpath for the annotation processor for 'debug'. (n)
+No dependencies
+
+debugAnnotationProcessorClasspath - Resolved configuration for annotation-processor for variant: debug
++--- com.google.dagger:dagger-compiler:2.8
+|    +--- com.google.dagger:dagger:2.8
+|    |    \--- javax.inject:javax.inject:1
+|    +--- com.google.dagger:dagger-producers:2.8
+|    |    +--- com.google.dagger:dagger:2.8 (*)
+|    |    \--- com.google.guava:guava:20.0-rc1
+|    \--- com.google.guava:guava:20.0-rc1
+\--- com.jakewharton:butterknife-compiler:8.6.0
+     +--- com.jakewharton:butterknife-annotations:8.6.0
+     |    \--- com.android.support:support-annotations:25.1.0 -> 27.0.0
+     +--- com.google.auto:auto-common:0.6
+     |    \--- com.google.guava:guava:18.0 -> 20.0-rc1
+     \--- com.squareup:javapoet:1.8.0
+
+debugApi - API dependencies for 'debug' sources. (n)
+No dependencies
+
+debugApiElements - API elements for debug (n)
+No dependencies
+
+debugApk - Apk dependencies for 'debug' sources (deprecated: use 'debugRuntimeOnly' instead). (n)
+No dependencies
+
+debugBundleElements - Bundle elements for debug (n)
+No dependencies
+
+debugCompile - Compile dependencies for 'debug' sources (deprecated: use 'debugImplementation' instead). (n)
+No dependencies
+
+debugCompileClasspath - Resolved configuration for compilation for variant: debug
++--- javax.annotation:jsr250-api:1.0
++--- com.android.support:multidex:1.0.2
++--- com.amitshekhar.android:debug-db:1.0.3
+|    +--- com.google.code.gson:gson:2.8.0 -> 2.8.2
+|    +--- net.zetetic:android-database-sqlcipher:3.5.7
+|    \--- android.arch.persistence.room:runtime:1.0.0
+|         +--- android.arch.persistence.room:common:1.0.0
+|         |    \--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         +--- android.arch.persistence:db-framework:1.0.0
+|         |    +--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         |    \--- android.arch.persistence:db:1.0.0
+|         |         \--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         +--- android.arch.persistence:db:1.0.0 (*)
+|         +--- android.arch.core:runtime:1.0.0
+|         |    +--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         |    \--- android.arch.core:common:1.0.0
+|         |         \--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         \--- com.android.support:support-core-utils:26.1.0 -> 27.0.2
+|              +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|              \--- com.android.support:support-compat:27.0.2
+|                   +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|                   \--- android.arch.lifecycle:runtime:1.0.3
+|                        +--- android.arch.lifecycle:common:1.0.3
+|                        \--- android.arch.core:common:1.0.0 (*)
++--- project :library
++--- project :btsdk
++--- com.android.support:appcompat-v7:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    +--- com.android.support:support-core-utils:27.0.2 (*)
+|    +--- com.android.support:support-fragment:27.0.2
+|    |    +--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-core-ui:27.0.2
+|    |    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    |    |    \--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-core-utils:27.0.2 (*)
+|    |    \--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    +--- com.android.support:support-vector-drawable:27.0.2
+|    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    |    \--- com.android.support:support-compat:27.0.2 (*)
+|    \--- com.android.support:animated-vector-drawable:27.0.2
+|         +--- com.android.support:support-vector-drawable:27.0.2 (*)
+|         \--- com.android.support:support-core-ui:27.0.2 (*)
++--- com.android.support:recyclerview-v7:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    +--- com.android.support:support-compat:27.0.2 (*)
+|    \--- com.android.support:support-core-ui:27.0.2 (*)
++--- com.android.support:cardview-v7:27.0.0
+|    \--- com.android.support:support-annotations:27.0.0
++--- com.android.support:design:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-v4:27.0.2
+|    |    +--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-media-compat:27.0.2
+|    |    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    |    |    \--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-core-utils:27.0.2 (*)
+|    |    +--- com.android.support:support-core-ui:27.0.2 (*)
+|    |    \--- com.android.support:support-fragment:27.0.2 (*)
+|    +--- com.android.support:appcompat-v7:27.0.2 (*)
+|    +--- com.android.support:recyclerview-v7:27.0.2 (*)
+|    \--- com.android.support:transition:27.0.2
+|         +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         \--- com.android.support:support-compat:27.0.2 (*)
++--- com.android.support:support-vector-drawable:27.0.0 -> 27.0.2 (*)
++--- com.android.support:animated-vector-drawable:27.0.0 -> 27.0.2 (*)
++--- uk.co.chrisjenx:calligraphy:2.2.0
+|    \--- com.android.support:appcompat-v7:23.1.1 -> 27.0.2 (*)
++--- com.amitshekhar.android:rx2-android-networking:1.0.1
+|    +--- io.reactivex.rxjava2:rxandroid:2.0.1
+|    |    \--- io.reactivex.rxjava2:rxjava:2.0.1 -> 2.1.7
+|    |         \--- org.reactivestreams:reactive-streams:1.0.1
+|    +--- io.reactivex.rxjava2:rxjava:2.1.7 (*)
+|    \--- com.amitshekhar.android:android-networking:1.0.1
+|         +--- com.squareup.okhttp3:okhttp:3.9.1 -> 3.10.0
+|         |    \--- com.squareup.okio:okio:1.14.0
+|         +--- com.google.code.gson:gson:2.8.2
+|         \--- com.android.support:appcompat-v7:27.0.2 (*)
++--- com.github.bumptech.glide:glide:3.7.0
++--- com.google.code.gson:gson:2.8.0 -> 2.8.2
++--- org.greenrobot:greendao:3.2.0
+|    \--- org.greenrobot:greendao-api:3.2.0
++--- com.android.support.constraint:constraint-layout:1.0.2
+|    \--- com.android.support.constraint:constraint-layout-solver:1.0.2
++--- com.android.support:support-v4:26.1.0 -> 27.0.2 (*)
++--- com.google.dagger:dagger:2.8
+|    \--- javax.inject:javax.inject:1
++--- javax.inject:javax.inject:1
++--- io.reactivex.rxjava2:rxjava:2.0.6 -> 2.1.7 (*)
++--- io.reactivex.rxjava2:rxandroid:2.0.1 (*)
++--- com.jakewharton:butterknife:8.6.0
+|    +--- com.jakewharton:butterknife-annotations:8.6.0
+|    |    \--- com.android.support:support-annotations:25.1.0 -> 27.0.0
+|    +--- com.android.support:support-annotations:25.1.0 -> 27.0.0
+|    \--- com.android.support:support-compat:25.1.0 -> 27.0.2 (*)
++--- com.mindorks:placeholderview:0.6.1
+|    \--- com.android.support:recyclerview-v7:25.+ -> 27.0.2 (*)
++--- com.jakewharton.timber:timber:4.5.1
++--- com.journeyapps:zxing-android-embedded:3.6.0
+|    +--- com.google.zxing:core:3.3.2
+|    \--- com.android.support:support-v4:25.3.1 -> 27.0.2 (*)
++--- me.dm7.barcodescanner:zxing:1.9.8
+|    +--- me.dm7.barcodescanner:core:1.9.8
+|    |    \--- com.android.support:support-v4:25.3.1 -> 27.0.2 (*)
+|    \--- com.google.zxing:core:3.3.0 -> 3.3.2
++--- me.dm7.barcodescanner:zbar:1.9.8
+|    \--- me.dm7.barcodescanner:core:1.9.8 (*)
++--- com.basgeekball:awesome-validation:4.1
+|    +--- com.google.guava:guava:24.0-android
+|    |    +--- org.checkerframework:checker-compat-qual:2.0.0
+|    |    +--- com.google.errorprone:error_prone_annotations:2.1.3
+|    |    +--- com.google.j2objc:j2objc-annotations:1.1
+|    |    \--- org.codehaus.mojo:animal-sniffer-annotations:1.14
+|    +--- com.android.support:design:27.0.2 (*)
+|    \--- com.android.support.constraint:constraint-layout:1.0.2 (*)
++--- com.github.ratty3697:android-smart-animation-library:1.6
+|    +--- com.android.support:appcompat-v7:23.0.1 -> 27.0.2 (*)
+|    \--- com.nineoldandroids:library:2.4.0
++--- br.com.vivareal:cuid-android:0.1.0
+|    \--- com.android.support:appcompat-v7:25.0.1 -> 27.0.2 (*)
++--- com.github.Shashank02051997:FancyAlertDialog-Android:0.1
+|    +--- com.android.support:cardview-v7:26.1.0 -> 27.0.0 (*)
+|    \--- com.android.support:appcompat-v7:26.1.0 -> 27.0.2 (*)
++--- com.miguelcatalan:materialsearchview:1.4.0
+|    +--- com.android.support:appcompat-v7:23.1.1 -> 27.0.2 (*)
+|    \--- com.android.support:design:23.1.1 -> 27.0.2 (*)
++--- com.squareup.picasso:picasso:2.71828
+|    +--- com.squareup.okhttp3:okhttp:3.10.0 (*)
+|    +--- com.android.support:support-annotations:27.1.0 -> 27.0.0
+|    \--- com.android.support:exifinterface:27.1.0
+|         \--- com.android.support:support-annotations:27.1.0 -> 27.0.0
++--- com.github.tajchert:nammu:1.1.1
+|    \--- com.android.support:support-v4:23.1.0 -> 27.0.2 (*)
++--- com.google.android.gms:play-services-plus:15.0.1
+|    +--- com.google.android.gms:play-services-audience:[15.0.1] -> 15.0.1
+|    |    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1
+|    |    |    +--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1
+|    |    |    |    \--- com.android.support:support-v4:26.1.0 -> 27.0.2 (*)
+|    |    |    \--- com.google.android.gms:play-services-tasks:[15.0.1] -> 15.0.1
+|    |    |         \--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1 (*)
+|    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
++--- com.google.android.gms:play-services-location:15.0.1
+|    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-places-placereport:[15.0.1,16.0.0) -> 15.0.1
+|    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    \--- com.google.android.gms:play-services-tasks:[15.0.1,16.0.0) -> 15.0.1 (*)
++--- com.google.firebase:firebase-messaging:17.0.0
+|    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    +--- com.google.firebase:firebase-common:16.0.0
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    \--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    +--- com.google.firebase:firebase-iid:[16.0.0] -> 16.0.0
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-stats:15.0.1
+|    |    |    \--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    |    +--- com.google.firebase:firebase-common:16.0.0 (*)
+|    |    \--- com.google.firebase:firebase-iid-interop:16.0.0
+|    |         +--- com.google.android.gms:play-services-base:15.0.1 (*)
+|    |         \--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    \--- com.google.firebase:firebase-measurement-connector:16.0.0
+|         \--- com.google.android.gms:play-services-basement:15.0.1 (*)
++--- com.google.firebase:firebase-core:16.0.1
+|    +--- com.google.firebase:firebase-analytics:16.0.1
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|    |    +--- com.google.android.gms:play-services-stats:15.0.1 (*)
+|    |    +--- com.google.firebase:firebase-analytics-impl:[16.1.1] -> 16.1.1
+|    |    |    +--- com.google.android.gms:play-services-ads-identifier:15.0.1
+|    |    |    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|    |    |    +--- com.google.android.gms:play-services-stats:15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    |    |    +--- com.google.firebase:firebase-common:16.0.0 (*)
+|    |    |    \--- com.google.firebase:firebase-iid:16.0.0 (*)
+|    |    \--- com.google.firebase:firebase-common:16.0.0 (*)
+|    \--- com.google.firebase:firebase-measurement-connector-impl:16.0.1
+|         +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|         +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|         +--- com.google.firebase:firebase-analytics:[16.0.1] -> 16.0.1 (*)
+|         +--- com.google.firebase:firebase-analytics-impl:[16.1.1] -> 16.1.1 (*)
+|         +--- com.google.firebase:firebase-common:16.0.0 (*)
+|         \--- com.google.firebase:firebase-measurement-connector:16.0.0 (*)
++--- com.github.ceryle:RadioRealButton:v2.1.1
+|    \--- com.android.support:appcompat-v7:25.3.1 -> 27.0.2 (*)
++--- org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2
+\--- com.ramotion.cardslider:card-slider:0.3.0
+     +--- com.android.support:appcompat-v7:26.1.0 -> 27.0.2 (*)
+     +--- com.android.support:recyclerview-v7:26.1.0 -> 27.0.2 (*)
+     +--- com.android.support:design:26.1.0 -> 27.0.2 (*)
+     \--- com.android.support:cardview-v7:26.1.0 -> 27.0.0 (*)
+
+debugCompileOnly - Compile only dependencies for 'debug' sources. (n)
+No dependencies
+
+debugImplementation - Implementation only dependencies for 'debug' sources. (n)
+\--- com.amitshekhar.android:debug-db:1.0.3 (n)
+
+debugMetadataElements (n)
+No dependencies
+
+debugMetadataValues - Metadata Values dependencies for the base Split
+No dependencies
+
+debugProvided - Provided dependencies for 'debug' sources (deprecated: use 'debugCompileOnly' instead). (n)
+No dependencies
+
+debugRuntimeClasspath - Resolved configuration for runtime for variant: debug
++--- com.amitshekhar.android:debug-db:1.0.3
+|    +--- com.google.code.gson:gson:2.8.0 -> 2.8.2
+|    +--- net.zetetic:android-database-sqlcipher:3.5.7
+|    \--- android.arch.persistence.room:runtime:1.0.0
+|         +--- android.arch.persistence.room:common:1.0.0
+|         |    \--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         +--- android.arch.persistence:db-framework:1.0.0
+|         |    +--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         |    \--- android.arch.persistence:db:1.0.0
+|         |         \--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         +--- android.arch.persistence:db:1.0.0 (*)
+|         +--- android.arch.core:runtime:1.0.0
+|         |    +--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         |    \--- android.arch.core:common:1.0.0
+|         |         \--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         \--- com.android.support:support-core-utils:26.1.0 -> 27.0.2
+|              +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|              \--- com.android.support:support-compat:27.0.2
+|                   +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|                   \--- android.arch.lifecycle:runtime:1.0.3
+|                        +--- android.arch.lifecycle:common:1.0.3
+|                        \--- android.arch.core:common:1.0.0 (*)
++--- com.android.support:multidex:1.0.2
++--- project :library
+|    \--- com.android.support:appcompat-v7:27.0.0 -> 27.0.2
+|         +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         +--- com.android.support:support-core-utils:27.0.2 (*)
+|         +--- com.android.support:support-fragment:27.0.2
+|         |    +--- com.android.support:support-compat:27.0.2 (*)
+|         |    +--- com.android.support:support-core-ui:27.0.2
+|         |    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         |    |    \--- com.android.support:support-compat:27.0.2 (*)
+|         |    +--- com.android.support:support-core-utils:27.0.2 (*)
+|         |    \--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         +--- com.android.support:support-vector-drawable:27.0.2
+|         |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         |    \--- com.android.support:support-compat:27.0.2 (*)
+|         \--- com.android.support:animated-vector-drawable:27.0.2
+|              +--- com.android.support:support-vector-drawable:27.0.2 (*)
+|              \--- com.android.support:support-core-ui:27.0.2 (*)
++--- project :btsdk
++--- com.android.support:appcompat-v7:27.0.0 -> 27.0.2 (*)
++--- com.android.support:recyclerview-v7:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    +--- com.android.support:support-compat:27.0.2 (*)
+|    \--- com.android.support:support-core-ui:27.0.2 (*)
++--- com.android.support:cardview-v7:27.0.0
+|    \--- com.android.support:support-annotations:27.0.0
++--- com.android.support:design:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-v4:27.0.2
+|    |    +--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-media-compat:27.0.2
+|    |    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    |    |    \--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-core-utils:27.0.2 (*)
+|    |    +--- com.android.support:support-core-ui:27.0.2 (*)
+|    |    \--- com.android.support:support-fragment:27.0.2 (*)
+|    +--- com.android.support:appcompat-v7:27.0.2 (*)
+|    +--- com.android.support:recyclerview-v7:27.0.2 (*)
+|    \--- com.android.support:transition:27.0.2
+|         +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         \--- com.android.support:support-compat:27.0.2 (*)
++--- com.android.support:support-vector-drawable:27.0.0 -> 27.0.2 (*)
++--- com.android.support:animated-vector-drawable:27.0.0 -> 27.0.2 (*)
++--- uk.co.chrisjenx:calligraphy:2.2.0
+|    \--- com.android.support:appcompat-v7:23.1.1 -> 27.0.2 (*)
++--- com.amitshekhar.android:rx2-android-networking:1.0.1
+|    +--- io.reactivex.rxjava2:rxandroid:2.0.1
+|    |    \--- io.reactivex.rxjava2:rxjava:2.0.1 -> 2.1.7
+|    |         \--- org.reactivestreams:reactive-streams:1.0.1
+|    +--- io.reactivex.rxjava2:rxjava:2.1.7 (*)
+|    \--- com.amitshekhar.android:android-networking:1.0.1
+|         +--- com.squareup.okhttp3:okhttp:3.9.1 -> 3.10.0
+|         |    \--- com.squareup.okio:okio:1.14.0
+|         +--- com.google.code.gson:gson:2.8.2
+|         \--- com.android.support:appcompat-v7:27.0.2 (*)
++--- com.github.bumptech.glide:glide:3.7.0
++--- com.google.code.gson:gson:2.8.0 -> 2.8.2
++--- org.greenrobot:greendao:3.2.0
+|    \--- org.greenrobot:greendao-api:3.2.0
++--- com.android.support.constraint:constraint-layout:1.0.2
+|    \--- com.android.support.constraint:constraint-layout-solver:1.0.2
++--- com.android.support:support-v4:26.1.0 -> 27.0.2 (*)
++--- com.google.dagger:dagger:2.8
+|    \--- javax.inject:javax.inject:1
++--- javax.inject:javax.inject:1
++--- io.reactivex.rxjava2:rxjava:2.0.6 -> 2.1.7 (*)
++--- io.reactivex.rxjava2:rxandroid:2.0.1 (*)
++--- com.jakewharton:butterknife:8.6.0
+|    +--- com.jakewharton:butterknife-annotations:8.6.0
+|    |    \--- com.android.support:support-annotations:25.1.0 -> 27.0.0
+|    +--- com.android.support:support-annotations:25.1.0 -> 27.0.0
+|    \--- com.android.support:support-compat:25.1.0 -> 27.0.2 (*)
++--- com.mindorks:placeholderview:0.6.1
+|    \--- com.android.support:recyclerview-v7:25.+ -> 27.0.2 (*)
++--- com.jakewharton.timber:timber:4.5.1
++--- com.journeyapps:zxing-android-embedded:3.6.0
+|    +--- com.google.zxing:core:3.3.2
+|    \--- com.android.support:support-v4:25.3.1 -> 27.0.2 (*)
++--- me.dm7.barcodescanner:zxing:1.9.8
+|    +--- me.dm7.barcodescanner:core:1.9.8
+|    |    \--- com.android.support:support-v4:25.3.1 -> 27.0.2 (*)
+|    \--- com.google.zxing:core:3.3.0 -> 3.3.2
++--- me.dm7.barcodescanner:zbar:1.9.8
+|    \--- me.dm7.barcodescanner:core:1.9.8 (*)
++--- com.basgeekball:awesome-validation:4.1
+|    +--- com.google.guava:guava:24.0-android
+|    |    +--- org.checkerframework:checker-compat-qual:2.0.0
+|    |    +--- com.google.errorprone:error_prone_annotations:2.1.3
+|    |    +--- com.google.j2objc:j2objc-annotations:1.1
+|    |    \--- org.codehaus.mojo:animal-sniffer-annotations:1.14
+|    +--- com.android.support:design:27.0.2 (*)
+|    \--- com.android.support.constraint:constraint-layout:1.0.2 (*)
++--- com.github.ratty3697:android-smart-animation-library:1.6
+|    +--- com.android.support:appcompat-v7:23.0.1 -> 27.0.2 (*)
+|    \--- com.nineoldandroids:library:2.4.0
++--- br.com.vivareal:cuid-android:0.1.0
+|    \--- com.android.support:appcompat-v7:25.0.1 -> 27.0.2 (*)
++--- com.github.Shashank02051997:FancyAlertDialog-Android:0.1
+|    +--- com.android.support:cardview-v7:26.1.0 -> 27.0.0 (*)
+|    \--- com.android.support:appcompat-v7:26.1.0 -> 27.0.2 (*)
++--- com.miguelcatalan:materialsearchview:1.4.0
+|    +--- com.android.support:appcompat-v7:23.1.1 -> 27.0.2 (*)
+|    \--- com.android.support:design:23.1.1 -> 27.0.2 (*)
++--- com.squareup.picasso:picasso:2.71828
+|    +--- com.squareup.okhttp3:okhttp:3.10.0 (*)
+|    +--- com.android.support:support-annotations:27.1.0 -> 27.0.0
+|    \--- com.android.support:exifinterface:27.1.0
+|         \--- com.android.support:support-annotations:27.1.0 -> 27.0.0
++--- com.github.tajchert:nammu:1.1.1
+|    \--- com.android.support:support-v4:23.1.0 -> 27.0.2 (*)
++--- com.google.android.gms:play-services-plus:15.0.1
+|    +--- com.google.android.gms:play-services-audience:[15.0.1] -> 15.0.1
+|    |    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1
+|    |    |    +--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1
+|    |    |    |    \--- com.android.support:support-v4:26.1.0 -> 27.0.2 (*)
+|    |    |    \--- com.google.android.gms:play-services-tasks:[15.0.1] -> 15.0.1
+|    |    |         \--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1 (*)
+|    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
++--- com.google.android.gms:play-services-location:15.0.1
+|    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-places-placereport:[15.0.1,16.0.0) -> 15.0.1
+|    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    \--- com.google.android.gms:play-services-tasks:[15.0.1,16.0.0) -> 15.0.1 (*)
++--- com.google.firebase:firebase-messaging:17.0.0
+|    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    +--- com.google.firebase:firebase-common:16.0.0
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    \--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    +--- com.google.firebase:firebase-iid:[16.0.0] -> 16.0.0
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-stats:15.0.1
+|    |    |    \--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    |    +--- com.google.firebase:firebase-common:16.0.0 (*)
+|    |    \--- com.google.firebase:firebase-iid-interop:16.0.0
+|    |         +--- com.google.android.gms:play-services-base:15.0.1 (*)
+|    |         \--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    \--- com.google.firebase:firebase-measurement-connector:16.0.0
+|         \--- com.google.android.gms:play-services-basement:15.0.1 (*)
++--- com.google.firebase:firebase-core:16.0.1
+|    +--- com.google.firebase:firebase-analytics:16.0.1
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|    |    +--- com.google.android.gms:play-services-stats:15.0.1 (*)
+|    |    +--- com.google.firebase:firebase-analytics-impl:[16.1.1] -> 16.1.1
+|    |    |    +--- com.google.android.gms:play-services-ads-identifier:15.0.1
+|    |    |    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|    |    |    +--- com.google.android.gms:play-services-stats:15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    |    |    +--- com.google.firebase:firebase-common:16.0.0 (*)
+|    |    |    \--- com.google.firebase:firebase-iid:16.0.0 (*)
+|    |    \--- com.google.firebase:firebase-common:16.0.0 (*)
+|    \--- com.google.firebase:firebase-measurement-connector-impl:16.0.1
+|         +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|         +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|         +--- com.google.firebase:firebase-analytics:[16.0.1] -> 16.0.1 (*)
+|         +--- com.google.firebase:firebase-analytics-impl:[16.1.1] -> 16.1.1 (*)
+|         +--- com.google.firebase:firebase-common:16.0.0 (*)
+|         \--- com.google.firebase:firebase-measurement-connector:16.0.0 (*)
++--- com.github.ceryle:RadioRealButton:v2.1.1
+|    \--- com.android.support:appcompat-v7:25.3.1 -> 27.0.2 (*)
++--- org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2
+\--- com.ramotion.cardslider:card-slider:0.3.0
+     +--- com.android.support:appcompat-v7:26.1.0 -> 27.0.2 (*)
+     +--- com.android.support:recyclerview-v7:26.1.0 -> 27.0.2 (*)
+     +--- com.android.support:design:26.1.0 -> 27.0.2 (*)
+     \--- com.android.support:cardview-v7:26.1.0 -> 27.0.0 (*)
+
+debugRuntimeElements - Runtime elements for debug (n)
+No dependencies
+
+debugRuntimeOnly - Runtime only dependencies for 'debug' sources. (n)
+No dependencies
+
+debugUnitTestAnnotationProcessorClasspath - Resolved configuration for annotation-processor for variant: debugUnitTest
+\--- com.google.dagger:dagger-compiler:2.8
+     +--- com.google.dagger:dagger:2.8
+     |    \--- javax.inject:javax.inject:1
+     +--- com.google.dagger:dagger-producers:2.8
+     |    +--- com.google.dagger:dagger:2.8 (*)
+     |    \--- com.google.guava:guava:20.0-rc1
+     \--- com.google.guava:guava:20.0-rc1
+
+debugUnitTestCompileClasspath - Resolved configuration for compilation for variant: debugUnitTest
++--- com.amitshekhar.android:debug-db:1.0.3
+|    +--- com.google.code.gson:gson:2.8.0 -> 2.8.2
+|    +--- net.zetetic:android-database-sqlcipher:3.5.7
+|    \--- android.arch.persistence.room:runtime:1.0.0
+|         +--- android.arch.persistence.room:common:1.0.0
+|         |    \--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         +--- android.arch.persistence:db-framework:1.0.0
+|         |    +--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         |    \--- android.arch.persistence:db:1.0.0
+|         |         \--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         +--- android.arch.persistence:db:1.0.0 (*)
+|         +--- android.arch.core:runtime:1.0.0
+|         |    +--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         |    \--- android.arch.core:common:1.0.0
+|         |         \--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         \--- com.android.support:support-core-utils:26.1.0 -> 27.0.2
+|              +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|              \--- com.android.support:support-compat:27.0.2
+|                   +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|                   \--- android.arch.lifecycle:runtime:1.0.3
+|                        +--- android.arch.lifecycle:common:1.0.3
+|                        \--- android.arch.core:common:1.0.0 (*)
++--- project :library
++--- project :btsdk
++--- com.android.support:appcompat-v7:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    +--- com.android.support:support-core-utils:27.0.2 (*)
+|    +--- com.android.support:support-fragment:27.0.2
+|    |    +--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-core-ui:27.0.2
+|    |    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    |    |    \--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-core-utils:27.0.2 (*)
+|    |    \--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    +--- com.android.support:support-vector-drawable:27.0.2
+|    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    |    \--- com.android.support:support-compat:27.0.2 (*)
+|    \--- com.android.support:animated-vector-drawable:27.0.2
+|         +--- com.android.support:support-vector-drawable:27.0.2 (*)
+|         \--- com.android.support:support-core-ui:27.0.2 (*)
++--- com.android.support:recyclerview-v7:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    +--- com.android.support:support-compat:27.0.2 (*)
+|    \--- com.android.support:support-core-ui:27.0.2 (*)
++--- com.android.support:cardview-v7:27.0.0
+|    \--- com.android.support:support-annotations:27.0.0
++--- com.android.support:design:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-v4:27.0.2
+|    |    +--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-media-compat:27.0.2
+|    |    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    |    |    \--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-core-utils:27.0.2 (*)
+|    |    +--- com.android.support:support-core-ui:27.0.2 (*)
+|    |    \--- com.android.support:support-fragment:27.0.2 (*)
+|    +--- com.android.support:appcompat-v7:27.0.2 (*)
+|    +--- com.android.support:recyclerview-v7:27.0.2 (*)
+|    \--- com.android.support:transition:27.0.2
+|         +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         \--- com.android.support:support-compat:27.0.2 (*)
++--- com.android.support:support-vector-drawable:27.0.0 -> 27.0.2 (*)
++--- com.android.support:animated-vector-drawable:27.0.0 -> 27.0.2 (*)
++--- uk.co.chrisjenx:calligraphy:2.2.0
+|    \--- com.android.support:appcompat-v7:23.1.1 -> 27.0.2 (*)
++--- com.amitshekhar.android:rx2-android-networking:1.0.1
+|    +--- io.reactivex.rxjava2:rxandroid:2.0.1
+|    |    \--- io.reactivex.rxjava2:rxjava:2.0.1 -> 2.1.7
+|    |         \--- org.reactivestreams:reactive-streams:1.0.1
+|    +--- io.reactivex.rxjava2:rxjava:2.1.7 (*)
+|    \--- com.amitshekhar.android:android-networking:1.0.1
+|         +--- com.squareup.okhttp3:okhttp:3.9.1 -> 3.10.0
+|         |    \--- com.squareup.okio:okio:1.14.0
+|         +--- com.google.code.gson:gson:2.8.2
+|         \--- com.android.support:appcompat-v7:27.0.2 (*)
++--- com.github.bumptech.glide:glide:3.7.0
++--- com.google.code.gson:gson:2.8.0 -> 2.8.2
++--- org.greenrobot:greendao:3.2.0
+|    \--- org.greenrobot:greendao-api:3.2.0
++--- com.android.support.constraint:constraint-layout:1.0.2
+|    \--- com.android.support.constraint:constraint-layout-solver:1.0.2
++--- com.android.support:support-v4:26.1.0 -> 27.0.2 (*)
++--- com.google.dagger:dagger:2.8
+|    \--- javax.inject:javax.inject:1
++--- javax.inject:javax.inject:1
++--- io.reactivex.rxjava2:rxjava:2.0.6 -> 2.1.7 (*)
++--- io.reactivex.rxjava2:rxandroid:2.0.1 (*)
++--- com.jakewharton:butterknife:8.6.0
+|    +--- com.jakewharton:butterknife-annotations:8.6.0
+|    |    \--- com.android.support:support-annotations:25.1.0 -> 27.0.0
+|    +--- com.android.support:support-annotations:25.1.0 -> 27.0.0
+|    \--- com.android.support:support-compat:25.1.0 -> 27.0.2 (*)
++--- com.mindorks:placeholderview:0.6.1
+|    \--- com.android.support:recyclerview-v7:25.+ -> 27.0.2 (*)
++--- com.jakewharton.timber:timber:4.5.1
++--- com.journeyapps:zxing-android-embedded:3.6.0
+|    +--- com.google.zxing:core:3.3.2
+|    \--- com.android.support:support-v4:25.3.1 -> 27.0.2 (*)
++--- me.dm7.barcodescanner:zxing:1.9.8
+|    +--- me.dm7.barcodescanner:core:1.9.8
+|    |    \--- com.android.support:support-v4:25.3.1 -> 27.0.2 (*)
+|    \--- com.google.zxing:core:3.3.0 -> 3.3.2
++--- me.dm7.barcodescanner:zbar:1.9.8
+|    \--- me.dm7.barcodescanner:core:1.9.8 (*)
++--- com.basgeekball:awesome-validation:4.1
+|    +--- com.google.guava:guava:24.0-android
+|    |    +--- org.checkerframework:checker-compat-qual:2.0.0
+|    |    +--- com.google.errorprone:error_prone_annotations:2.1.3
+|    |    +--- com.google.j2objc:j2objc-annotations:1.1
+|    |    \--- org.codehaus.mojo:animal-sniffer-annotations:1.14
+|    +--- com.android.support:design:27.0.2 (*)
+|    \--- com.android.support.constraint:constraint-layout:1.0.2 (*)
++--- com.github.ratty3697:android-smart-animation-library:1.6
+|    +--- com.android.support:appcompat-v7:23.0.1 -> 27.0.2 (*)
+|    \--- com.nineoldandroids:library:2.4.0
++--- br.com.vivareal:cuid-android:0.1.0
+|    \--- com.android.support:appcompat-v7:25.0.1 -> 27.0.2 (*)
++--- com.github.Shashank02051997:FancyAlertDialog-Android:0.1
+|    +--- com.android.support:cardview-v7:26.1.0 -> 27.0.0 (*)
+|    \--- com.android.support:appcompat-v7:26.1.0 -> 27.0.2 (*)
++--- com.miguelcatalan:materialsearchview:1.4.0
+|    +--- com.android.support:appcompat-v7:23.1.1 -> 27.0.2 (*)
+|    \--- com.android.support:design:23.1.1 -> 27.0.2 (*)
++--- com.squareup.picasso:picasso:2.71828
+|    +--- com.squareup.okhttp3:okhttp:3.10.0 (*)
+|    +--- com.android.support:support-annotations:27.1.0 -> 27.0.0
+|    \--- com.android.support:exifinterface:27.1.0
+|         \--- com.android.support:support-annotations:27.1.0 -> 27.0.0
++--- com.github.tajchert:nammu:1.1.1
+|    \--- com.android.support:support-v4:23.1.0 -> 27.0.2 (*)
++--- com.google.android.gms:play-services-plus:15.0.1
+|    +--- com.google.android.gms:play-services-audience:[15.0.1] -> 15.0.1
+|    |    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1
+|    |    |    +--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1
+|    |    |    |    \--- com.android.support:support-v4:26.1.0 -> 27.0.2 (*)
+|    |    |    \--- com.google.android.gms:play-services-tasks:[15.0.1] -> 15.0.1
+|    |    |         \--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1 (*)
+|    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
++--- com.google.android.gms:play-services-location:15.0.1
+|    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-places-placereport:[15.0.1,16.0.0) -> 15.0.1
+|    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    \--- com.google.android.gms:play-services-tasks:[15.0.1,16.0.0) -> 15.0.1 (*)
++--- com.google.firebase:firebase-messaging:17.0.0
+|    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    +--- com.google.firebase:firebase-common:16.0.0
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    \--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    +--- com.google.firebase:firebase-iid:[16.0.0] -> 16.0.0
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-stats:15.0.1
+|    |    |    \--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    |    +--- com.google.firebase:firebase-common:16.0.0 (*)
+|    |    \--- com.google.firebase:firebase-iid-interop:16.0.0
+|    |         +--- com.google.android.gms:play-services-base:15.0.1 (*)
+|    |         \--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    \--- com.google.firebase:firebase-measurement-connector:16.0.0
+|         \--- com.google.android.gms:play-services-basement:15.0.1 (*)
++--- com.google.firebase:firebase-core:16.0.1
+|    +--- com.google.firebase:firebase-analytics:16.0.1
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|    |    +--- com.google.android.gms:play-services-stats:15.0.1 (*)
+|    |    +--- com.google.firebase:firebase-analytics-impl:[16.1.1] -> 16.1.1
+|    |    |    +--- com.google.android.gms:play-services-ads-identifier:15.0.1
+|    |    |    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|    |    |    +--- com.google.android.gms:play-services-stats:15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    |    |    +--- com.google.firebase:firebase-common:16.0.0 (*)
+|    |    |    \--- com.google.firebase:firebase-iid:16.0.0 (*)
+|    |    \--- com.google.firebase:firebase-common:16.0.0 (*)
+|    \--- com.google.firebase:firebase-measurement-connector-impl:16.0.1
+|         +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|         +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|         +--- com.google.firebase:firebase-analytics:[16.0.1] -> 16.0.1 (*)
+|         +--- com.google.firebase:firebase-analytics-impl:[16.1.1] -> 16.1.1 (*)
+|         +--- com.google.firebase:firebase-common:16.0.0 (*)
+|         \--- com.google.firebase:firebase-measurement-connector:16.0.0 (*)
++--- com.github.ceryle:RadioRealButton:v2.1.1
+|    \--- com.android.support:appcompat-v7:25.3.1 -> 27.0.2 (*)
++--- org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2
++--- com.ramotion.cardslider:card-slider:0.3.0
+|    +--- com.android.support:appcompat-v7:26.1.0 -> 27.0.2 (*)
+|    +--- com.android.support:recyclerview-v7:26.1.0 -> 27.0.2 (*)
+|    +--- com.android.support:design:26.1.0 -> 27.0.2 (*)
+|    \--- com.android.support:cardview-v7:26.1.0 -> 27.0.0 (*)
++--- junit:junit:4.12
+|    \--- org.hamcrest:hamcrest-core:1.3
+\--- org.mockito:mockito-core:2.7.1
+     +--- net.bytebuddy:byte-buddy:1.6.5
+     +--- net.bytebuddy:byte-buddy-agent:1.6.5
+     \--- org.objenesis:objenesis:2.5
+
+debugUnitTestRuntimeClasspath - Resolved configuration for runtime for variant: debugUnitTest
++--- com.amitshekhar.android:debug-db:1.0.3
+|    +--- com.google.code.gson:gson:2.8.0 -> 2.8.2
+|    +--- net.zetetic:android-database-sqlcipher:3.5.7
+|    \--- android.arch.persistence.room:runtime:1.0.0
+|         +--- android.arch.persistence.room:common:1.0.0
+|         |    \--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         +--- android.arch.persistence:db-framework:1.0.0
+|         |    +--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         |    \--- android.arch.persistence:db:1.0.0
+|         |         \--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         +--- android.arch.persistence:db:1.0.0 (*)
+|         +--- android.arch.core:runtime:1.0.0
+|         |    +--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         |    \--- android.arch.core:common:1.0.0
+|         |         \--- com.android.support:support-annotations:26.1.0 -> 27.0.0
+|         \--- com.android.support:support-core-utils:26.1.0 -> 27.0.2
+|              +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|              \--- com.android.support:support-compat:27.0.2
+|                   +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|                   \--- android.arch.lifecycle:runtime:1.0.3
+|                        +--- android.arch.lifecycle:common:1.0.3
+|                        \--- android.arch.core:common:1.0.0 (*)
++--- project :library
+|    \--- com.android.support:appcompat-v7:27.0.0 -> 27.0.2
+|         +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         +--- com.android.support:support-core-utils:27.0.2 (*)
+|         +--- com.android.support:support-fragment:27.0.2
+|         |    +--- com.android.support:support-compat:27.0.2 (*)
+|         |    +--- com.android.support:support-core-ui:27.0.2
+|         |    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         |    |    \--- com.android.support:support-compat:27.0.2 (*)
+|         |    +--- com.android.support:support-core-utils:27.0.2 (*)
+|         |    \--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         +--- com.android.support:support-vector-drawable:27.0.2
+|         |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         |    \--- com.android.support:support-compat:27.0.2 (*)
+|         \--- com.android.support:animated-vector-drawable:27.0.2
+|              +--- com.android.support:support-vector-drawable:27.0.2 (*)
+|              \--- com.android.support:support-core-ui:27.0.2 (*)
++--- project :btsdk
++--- com.android.support:appcompat-v7:27.0.0 -> 27.0.2 (*)
++--- com.android.support:recyclerview-v7:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    +--- com.android.support:support-compat:27.0.2 (*)
+|    \--- com.android.support:support-core-ui:27.0.2 (*)
++--- com.android.support:cardview-v7:27.0.0
+|    \--- com.android.support:support-annotations:27.0.0
++--- com.android.support:design:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-v4:27.0.2
+|    |    +--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-media-compat:27.0.2
+|    |    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    |    |    \--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-core-utils:27.0.2 (*)
+|    |    +--- com.android.support:support-core-ui:27.0.2 (*)
+|    |    \--- com.android.support:support-fragment:27.0.2 (*)
+|    +--- com.android.support:appcompat-v7:27.0.2 (*)
+|    +--- com.android.support:recyclerview-v7:27.0.2 (*)
+|    \--- com.android.support:transition:27.0.2
+|         +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         \--- com.android.support:support-compat:27.0.2 (*)
++--- com.android.support:support-vector-drawable:27.0.0 -> 27.0.2 (*)
++--- com.android.support:animated-vector-drawable:27.0.0 -> 27.0.2 (*)
++--- uk.co.chrisjenx:calligraphy:2.2.0
+|    \--- com.android.support:appcompat-v7:23.1.1 -> 27.0.2 (*)
++--- com.amitshekhar.android:rx2-android-networking:1.0.1
+|    +--- io.reactivex.rxjava2:rxandroid:2.0.1
+|    |    \--- io.reactivex.rxjava2:rxjava:2.0.1 -> 2.1.7
+|    |         \--- org.reactivestreams:reactive-streams:1.0.1
+|    +--- io.reactivex.rxjava2:rxjava:2.1.7 (*)
+|    \--- com.amitshekhar.android:android-networking:1.0.1
+|         +--- com.squareup.okhttp3:okhttp:3.9.1 -> 3.10.0
+|         |    \--- com.squareup.okio:okio:1.14.0
+|         +--- com.google.code.gson:gson:2.8.2
+|         \--- com.android.support:appcompat-v7:27.0.2 (*)
++--- com.github.bumptech.glide:glide:3.7.0
++--- com.google.code.gson:gson:2.8.0 -> 2.8.2
++--- org.greenrobot:greendao:3.2.0
+|    \--- org.greenrobot:greendao-api:3.2.0
++--- com.android.support.constraint:constraint-layout:1.0.2
+|    \--- com.android.support.constraint:constraint-layout-solver:1.0.2
++--- com.android.support:support-v4:26.1.0 -> 27.0.2 (*)
++--- com.google.dagger:dagger:2.8
+|    \--- javax.inject:javax.inject:1
++--- javax.inject:javax.inject:1
++--- io.reactivex.rxjava2:rxjava:2.0.6 -> 2.1.7 (*)
++--- io.reactivex.rxjava2:rxandroid:2.0.1 (*)
++--- com.jakewharton:butterknife:8.6.0
+|    +--- com.jakewharton:butterknife-annotations:8.6.0
+|    |    \--- com.android.support:support-annotations:25.1.0 -> 27.0.0
+|    +--- com.android.support:support-annotations:25.1.0 -> 27.0.0
+|    \--- com.android.support:support-compat:25.1.0 -> 27.0.2 (*)
++--- com.mindorks:placeholderview:0.6.1
+|    \--- com.android.support:recyclerview-v7:25.+ -> 27.0.2 (*)
++--- com.jakewharton.timber:timber:4.5.1
++--- com.journeyapps:zxing-android-embedded:3.6.0
+|    +--- com.google.zxing:core:3.3.2
+|    \--- com.android.support:support-v4:25.3.1 -> 27.0.2 (*)
++--- me.dm7.barcodescanner:zxing:1.9.8
+|    +--- me.dm7.barcodescanner:core:1.9.8
+|    |    \--- com.android.support:support-v4:25.3.1 -> 27.0.2 (*)
+|    \--- com.google.zxing:core:3.3.0 -> 3.3.2
++--- me.dm7.barcodescanner:zbar:1.9.8
+|    \--- me.dm7.barcodescanner:core:1.9.8 (*)
++--- com.basgeekball:awesome-validation:4.1
+|    +--- com.google.guava:guava:24.0-android
+|    |    +--- org.checkerframework:checker-compat-qual:2.0.0
+|    |    +--- com.google.errorprone:error_prone_annotations:2.1.3
+|    |    +--- com.google.j2objc:j2objc-annotations:1.1
+|    |    \--- org.codehaus.mojo:animal-sniffer-annotations:1.14
+|    +--- com.android.support:design:27.0.2 (*)
+|    \--- com.android.support.constraint:constraint-layout:1.0.2 (*)
++--- com.github.ratty3697:android-smart-animation-library:1.6
+|    +--- com.android.support:appcompat-v7:23.0.1 -> 27.0.2 (*)
+|    \--- com.nineoldandroids:library:2.4.0
++--- br.com.vivareal:cuid-android:0.1.0
+|    \--- com.android.support:appcompat-v7:25.0.1 -> 27.0.2 (*)
++--- com.github.Shashank02051997:FancyAlertDialog-Android:0.1
+|    +--- com.android.support:cardview-v7:26.1.0 -> 27.0.0 (*)
+|    \--- com.android.support:appcompat-v7:26.1.0 -> 27.0.2 (*)
++--- com.miguelcatalan:materialsearchview:1.4.0
+|    +--- com.android.support:appcompat-v7:23.1.1 -> 27.0.2 (*)
+|    \--- com.android.support:design:23.1.1 -> 27.0.2 (*)
++--- com.squareup.picasso:picasso:2.71828
+|    +--- com.squareup.okhttp3:okhttp:3.10.0 (*)
+|    +--- com.android.support:support-annotations:27.1.0 -> 27.0.0
+|    \--- com.android.support:exifinterface:27.1.0
+|         \--- com.android.support:support-annotations:27.1.0 -> 27.0.0
++--- com.github.tajchert:nammu:1.1.1
+|    \--- com.android.support:support-v4:23.1.0 -> 27.0.2 (*)
++--- com.google.android.gms:play-services-plus:15.0.1
+|    +--- com.google.android.gms:play-services-audience:[15.0.1] -> 15.0.1
+|    |    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1
+|    |    |    +--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1
+|    |    |    |    \--- com.android.support:support-v4:26.1.0 -> 27.0.2 (*)
+|    |    |    \--- com.google.android.gms:play-services-tasks:[15.0.1] -> 15.0.1
+|    |    |         \--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1 (*)
+|    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
++--- com.google.android.gms:play-services-location:15.0.1
+|    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-places-placereport:[15.0.1,16.0.0) -> 15.0.1
+|    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    \--- com.google.android.gms:play-services-tasks:[15.0.1,16.0.0) -> 15.0.1 (*)
++--- com.google.firebase:firebase-messaging:17.0.0
+|    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    +--- com.google.firebase:firebase-common:16.0.0
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    \--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    +--- com.google.firebase:firebase-iid:[16.0.0] -> 16.0.0
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-stats:15.0.1
+|    |    |    \--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    |    +--- com.google.firebase:firebase-common:16.0.0 (*)
+|    |    \--- com.google.firebase:firebase-iid-interop:16.0.0
+|    |         +--- com.google.android.gms:play-services-base:15.0.1 (*)
+|    |         \--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    \--- com.google.firebase:firebase-measurement-connector:16.0.0
+|         \--- com.google.android.gms:play-services-basement:15.0.1 (*)
++--- com.google.firebase:firebase-core:16.0.1
+|    +--- com.google.firebase:firebase-analytics:16.0.1
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|    |    +--- com.google.android.gms:play-services-stats:15.0.1 (*)
+|    |    +--- com.google.firebase:firebase-analytics-impl:[16.1.1] -> 16.1.1
+|    |    |    +--- com.google.android.gms:play-services-ads-identifier:15.0.1
+|    |    |    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|    |    |    +--- com.google.android.gms:play-services-stats:15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    |    |    +--- com.google.firebase:firebase-common:16.0.0 (*)
+|    |    |    \--- com.google.firebase:firebase-iid:16.0.0 (*)
+|    |    \--- com.google.firebase:firebase-common:16.0.0 (*)
+|    \--- com.google.firebase:firebase-measurement-connector-impl:16.0.1
+|         +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|         +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|         +--- com.google.firebase:firebase-analytics:[16.0.1] -> 16.0.1 (*)
+|         +--- com.google.firebase:firebase-analytics-impl:[16.1.1] -> 16.1.1 (*)
+|         +--- com.google.firebase:firebase-common:16.0.0 (*)
+|         \--- com.google.firebase:firebase-measurement-connector:16.0.0 (*)
++--- com.github.ceryle:RadioRealButton:v2.1.1
+|    \--- com.android.support:appcompat-v7:25.3.1 -> 27.0.2 (*)
++--- org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2
++--- com.ramotion.cardslider:card-slider:0.3.0
+|    +--- com.android.support:appcompat-v7:26.1.0 -> 27.0.2 (*)
+|    +--- com.android.support:recyclerview-v7:26.1.0 -> 27.0.2 (*)
+|    +--- com.android.support:design:26.1.0 -> 27.0.2 (*)
+|    \--- com.android.support:cardview-v7:26.1.0 -> 27.0.0 (*)
++--- junit:junit:4.12
+|    \--- org.hamcrest:hamcrest-core:1.3
+\--- org.mockito:mockito-core:2.7.1
+     +--- net.bytebuddy:byte-buddy:1.6.5
+     +--- net.bytebuddy:byte-buddy-agent:1.6.5
+     \--- org.objenesis:objenesis:2.5
+
+debugWearApp - Link to a wear app to embed for object 'debug'. (n)
+No dependencies
+
+debugWearBundling - Resolved Configuration for wear app bundling for variant: debug
+No dependencies
+
+default - Configuration for default artifacts.
+No dependencies
+
+findbugs - The FindBugs libraries to be used for this project.
+\--- com.google.code.findbugs:findbugs:3.0.1
+     +--- net.jcip:jcip-annotations:1.0
+     +--- com.google.code.findbugs:jsr305:2.0.1
+     +--- com.google.code.findbugs:bcel-findbugs:6.0
+     +--- com.google.code.findbugs:jFormatString:2.0.1
+     +--- dom4j:dom4j:1.6.1
+     |    \--- xml-apis:xml-apis:1.0.b2
+     +--- org.ow2.asm:asm-debug-all:5.0.2
+     +--- org.ow2.asm:asm-commons:5.0.2
+     |    \--- org.ow2.asm:asm-tree:5.0.2
+     |         \--- org.ow2.asm:asm:5.0.2
+     +--- commons-lang:commons-lang:2.6
+     +--- com.apple:AppleJavaExtensions:1.4
+     \--- jaxen:jaxen:1.1.6
+
+findbugsPlugins - The FindBugs plugins to be used for this project.
+No dependencies
+
+implementation - Implementation only dependencies for 'main' sources. (n)
++--- unspecified (n)
++--- project library (n)
++--- project btsdk (n)
++--- com.android.support:appcompat-v7:27.0.0 (n)
++--- com.android.support:recyclerview-v7:27.0.0 (n)
++--- com.android.support:cardview-v7:27.0.0 (n)
++--- com.android.support:design:27.0.0 (n)
++--- com.android.support:support-vector-drawable:27.0.0 (n)
++--- com.android.support:animated-vector-drawable:27.0.0 (n)
++--- uk.co.chrisjenx:calligraphy:2.2.0 (n)
++--- com.amitshekhar.android:rx2-android-networking:1.0.1 (n)
++--- com.github.bumptech.glide:glide:3.7.0 (n)
++--- com.google.code.gson:gson:2.8.0 (n)
++--- org.greenrobot:greendao:3.2.0 (n)
++--- com.android.support.constraint:constraint-layout:1.0.2 (n)
++--- com.android.support:support-v4:26.1.0 (n)
++--- com.google.dagger:dagger:2.8 (n)
++--- javax.inject:javax.inject:1 (n)
++--- io.reactivex.rxjava2:rxjava:2.0.6 (n)
++--- io.reactivex.rxjava2:rxandroid:2.0.1 (n)
++--- com.jakewharton:butterknife:8.6.0 (n)
++--- com.mindorks:placeholderview:0.6.1 (n)
++--- com.jakewharton.timber:timber:4.5.1 (n)
++--- com.journeyapps:zxing-android-embedded:3.6.0 (n)
++--- me.dm7.barcodescanner:zxing:1.9.8 (n)
++--- me.dm7.barcodescanner:zbar:1.9.8 (n)
++--- com.basgeekball:awesome-validation:4.1 (n)
++--- com.github.ratty3697:android-smart-animation-library:1.6 (n)
++--- br.com.vivareal:cuid-android:0.1.0 (n)
++--- com.github.Shashank02051997:FancyAlertDialog-Android:0.1 (n)
++--- com.miguelcatalan:materialsearchview:1.4.0 (n)
++--- com.squareup.picasso:picasso:2.71828 (n)
++--- com.github.tajchert:nammu:1.1.1 (n)
++--- com.google.android.gms:play-services-plus:15.0.1 (n)
++--- com.google.android.gms:play-services-location:15.0.1 (n)
++--- com.google.firebase:firebase-messaging:17.0.0 (n)
++--- com.google.firebase:firebase-core:16.0.1 (n)
++--- com.github.ceryle:RadioRealButton:v2.1.1 (n)
++--- org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2 (n)
+\--- com.ramotion.cardslider:card-slider:0.3.0 (n)
+
+lintChecks - Configuration to apply external lint check jar
+No dependencies
+
+lintClassPath - The lint embedded classpath
+\--- com.android.tools.lint:lint-gradle:26.2.1
+     +--- com.android.tools:sdk-common:26.2.1
+     |    +--- com.android.tools:sdklib:26.2.1
+     |    |    +--- com.android.tools.layoutlib:layoutlib-api:26.2.1
+     |    |    |    +--- com.android.tools:common:26.2.1
+     |    |    |    |    +--- com.android.tools:annotations:26.2.1
+     |    |    |    |    +--- com.google.guava:guava:23.0
+     |    |    |    |    |    +--- com.google.code.findbugs:jsr305:1.3.9
+     |    |    |    |    |    +--- com.google.errorprone:error_prone_annotations:2.0.18
+     |    |    |    |    |    +--- com.google.j2objc:j2objc-annotations:1.1
+     |    |    |    |    |    \--- org.codehaus.mojo:animal-sniffer-annotations:1.14
+     |    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.71
+     |    |    |    |         +--- org.jetbrains.kotlin:kotlin-stdlib:1.2.71
+     |    |    |    |         |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.2.71
+     |    |    |    |         |    \--- org.jetbrains:annotations:13.0
+     |    |    |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.71
+     |    |    |    |              \--- org.jetbrains.kotlin:kotlin-stdlib:1.2.71 (*)
+     |    |    |    +--- net.sf.kxml:kxml2:2.3.0
+     |    |    |    +--- com.android.tools:annotations:26.2.1
+     |    |    |    \--- org.jetbrains:annotations:13.0
+     |    |    +--- com.android.tools:dvlib:26.2.1
+     |    |    |    \--- com.android.tools:common:26.2.1 (*)
+     |    |    +--- com.android.tools:repository:26.2.1
+     |    |    |    +--- com.android.tools:common:26.2.1 (*)
+     |    |    |    +--- com.sun.activation:javax.activation:1.2.0
+     |    |    |    +--- org.apache.commons:commons-compress:1.12
+     |    |    |    +--- org.glassfish.jaxb:jaxb-runtime:2.2.11
+     |    |    |    |    +--- org.glassfish.jaxb:jaxb-core:2.2.11
+     |    |    |    |    |    +--- javax.xml.bind:jaxb-api:2.2.12-b140109.1041
+     |    |    |    |    |    +--- org.glassfish.jaxb:txw2:2.2.11
+     |    |    |    |    |    \--- com.sun.istack:istack-commons-runtime:2.21
+     |    |    |    |    +--- org.jvnet.staxex:stax-ex:1.7.7
+     |    |    |    |    \--- com.sun.xml.fastinfoset:FastInfoset:1.2.13
+     |    |    |    +--- com.google.jimfs:jimfs:1.1
+     |    |    |    |    \--- com.google.guava:guava:18.0 -> 23.0 (*)
+     |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.71 (*)
+     |    |    +--- com.google.code.gson:gson:2.8.0
+     |    |    +--- org.apache.commons:commons-compress:1.12
+     |    |    +--- org.apache.httpcomponents:httpmime:4.5.2
+     |    |    |    \--- org.apache.httpcomponents:httpclient:4.5.2
+     |    |    |         +--- org.apache.httpcomponents:httpcore:4.4.4 -> 4.4.5
+     |    |    |         +--- commons-logging:commons-logging:1.2
+     |    |    |         \--- commons-codec:commons-codec:1.9
+     |    |    \--- org.apache.httpcomponents:httpcore:4.4.5
+     |    +--- com.android.tools.build:builder-test-api:3.2.1
+     |    |    \--- com.android.tools.ddms:ddmlib:26.2.1
+     |    |         +--- com.android.tools:common:26.2.1 (*)
+     |    |         \--- net.sf.kxml:kxml2:2.3.0
+     |    +--- com.android.tools.build:builder-model:3.2.1
+     |    |    \--- com.android.tools:annotations:26.2.1
+     |    +--- com.android.tools.ddms:ddmlib:26.2.1 (*)
+     |    +--- org.bouncycastle:bcpkix-jdk15on:1.56
+     |    |    \--- org.bouncycastle:bcprov-jdk15on:1.56
+     |    +--- org.bouncycastle:bcprov-jdk15on:1.56
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.71 (*)
+     |    +--- org.jetbrains.kotlin:kotlin-reflect:1.2.0
+     |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.2.0 -> 1.2.71 (*)
+     |    +--- com.google.protobuf:protobuf-java:3.4.0
+     |    \--- javax.inject:javax.inject:1
+     +--- com.android.tools.build:builder:3.2.1
+     |    +--- com.android.tools.build:builder-model:3.2.1 (*)
+     |    +--- com.android.tools.build:builder-test-api:3.2.1 (*)
+     |    +--- com.android.tools:sdklib:26.2.1 (*)
+     |    +--- com.android.tools:sdk-common:26.2.1 (*)
+     |    +--- com.android.tools:common:26.2.1 (*)
+     |    +--- com.android.tools.build:manifest-merger:26.2.1
+     |    |    +--- com.android.tools:common:26.2.1 (*)
+     |    |    +--- com.android.tools:sdklib:26.2.1 (*)
+     |    |    +--- com.android.tools:sdk-common:26.2.1 (*)
+     |    |    +--- com.google.code.gson:gson:2.8.0
+     |    |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.71 (*)
+     |    |    \--- net.sf.kxml:kxml2:2.3.0
+     |    +--- com.android.tools.ddms:ddmlib:26.2.1 (*)
+     |    +--- com.android.tools.analytics-library:protos:26.2.1
+     |    |    \--- com.google.protobuf:protobuf-java:3.4.0
+     |    +--- com.android.tools.analytics-library:shared:26.2.1
+     |    |    +--- com.android.tools.analytics-library:protos:26.2.1 (*)
+     |    |    +--- com.android.tools:annotations:26.2.1
+     |    |    +--- com.android.tools:common:26.2.1 (*)
+     |    |    +--- com.google.guava:guava:23.0 (*)
+     |    |    \--- com.google.code.gson:gson:2.8.0
+     |    +--- com.android.tools.analytics-library:tracker:26.2.1
+     |    |    +--- com.android.tools:annotations:26.2.1
+     |    |    +--- com.android.tools:common:26.2.1 (*)
+     |    |    +--- com.android.tools.analytics-library:protos:26.2.1 (*)
+     |    |    +--- com.android.tools.analytics-library:shared:26.2.1 (*)
+     |    |    +--- com.google.protobuf:protobuf-java:3.4.0
+     |    |    \--- com.google.guava:guava:23.0 (*)
+     |    +--- com.android.tools.build:apksig:3.2.1
+     |    +--- com.android.tools.build:apkzlib:3.2.1
+     |    |    +--- com.google.code.findbugs:jsr305:1.3.9
+     |    |    +--- com.google.guava:guava:23.0 (*)
+     |    |    +--- org.bouncycastle:bcpkix-jdk15on:1.56 (*)
+     |    |    +--- org.bouncycastle:bcprov-jdk15on:1.56
+     |    |    \--- com.android.tools.build:apksig:3.2.1
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.71 (*)
+     |    +--- com.squareup:javawriter:2.5.0
+     |    +--- org.bouncycastle:bcpkix-jdk15on:1.56 (*)
+     |    +--- org.bouncycastle:bcprov-jdk15on:1.56
+     |    +--- org.ow2.asm:asm:6.0
+     |    +--- org.ow2.asm:asm-tree:6.0
+     |    |    \--- org.ow2.asm:asm:6.0
+     |    +--- org.ow2.asm:asm-commons:6.0
+     |    |    \--- org.ow2.asm:asm-tree:6.0 (*)
+     |    +--- org.ow2.asm:asm-util:6.0
+     |    |    \--- org.ow2.asm:asm-tree:6.0 (*)
+     |    +--- it.unimi.dsi:fastutil:7.2.0
+     |    +--- net.sf.jopt-simple:jopt-simple:4.9
+     |    \--- com.googlecode.json-simple:json-simple:1.1
+     +--- com.android.tools.build:builder-model:3.2.1 (*)
+     +--- com.android.tools.external.com-intellij:intellij-core:26.2.1
+     |    \--- org.jetbrains.trove4j:trove4j:20160824
+     +--- com.android.tools.external.org-jetbrains:uast:26.2.1
+     +--- com.android.tools.build:manifest-merger:26.2.1 (*)
+     +--- com.android.tools.lint:lint:26.2.1
+     |    +--- com.android.tools.lint:lint-checks:26.2.1
+     |    |    +--- com.android.tools.lint:lint-api:26.2.1
+     |    |    |    +--- com.android.tools:sdk-common:26.2.1 (*)
+     |    |    |    +--- com.android.tools.build:builder-model:3.2.1 (*)
+     |    |    |    +--- com.google.guava:guava:23.0 (*)
+     |    |    |    +--- com.android.tools.lint:lint-kotlin:26.2.1
+     |    |    |    |    +--- com.android.tools.external.com-intellij:intellij-core:26.2.1 (*)
+     |    |    |    |    +--- com.android.tools.external.com-intellij:kotlin-compiler:26.2.1
+     |    |    |    |    +--- com.android.tools.external.org-jetbrains:uast:26.2.1
+     |    |    |    |    +--- org.jetbrains.kotlin:kotlin-reflect:1.2.0 (*)
+     |    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.71 (*)
+     |    |    |    +--- com.android.tools.external.com-intellij:intellij-core:26.2.1 (*)
+     |    |    |    +--- com.android.tools.external.org-jetbrains:uast:26.2.1
+     |    |    |    +--- com.android.tools.build:manifest-merger:26.2.1 (*)
+     |    |    |    +--- org.ow2.asm:asm:6.0
+     |    |    |    +--- org.ow2.asm:asm-tree:6.0 (*)
+     |    |    |    +--- org.jetbrains.kotlin:kotlin-reflect:1.2.0 (*)
+     |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.71 (*)
+     |    |    +--- com.google.guava:guava:23.0 (*)
+     |    |    +--- com.android.tools.external.com-intellij:intellij-core:26.2.1 (*)
+     |    |    +--- com.android.tools.external.org-jetbrains:uast:26.2.1
+     |    |    \--- org.ow2.asm:asm-analysis:6.0
+     |    |         \--- org.ow2.asm:asm-tree:6.0 (*)
+     |    +--- com.android.tools.lint:lint-kotlin:26.2.1 (*)
+     |    +--- com.google.guava:guava:23.0 (*)
+     |    +--- com.android.tools.external.org-jetbrains:uast:26.2.1
+     |    +--- com.android.tools.external.com-intellij:kotlin-compiler:26.2.1
+     |    +--- com.android.tools.build:manifest-merger:26.2.1 (*)
+     |    +--- com.android.tools.analytics-library:shared:26.2.1 (*)
+     |    +--- com.android.tools.analytics-library:protos:26.2.1 (*)
+     |    +--- com.android.tools.analytics-library:tracker:26.2.1 (*)
+     |    +--- org.jetbrains.kotlin:kotlin-reflect:1.2.0 (*)
+     |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.71 (*)
+     +--- com.android.tools.lint:lint-gradle-api:26.2.1
+     |    +--- com.android.tools:sdklib:26.2.1 (*)
+     |    +--- com.android.tools.build:builder-model:3.2.1 (*)
+     |    +--- com.android.tools.build:gradle-api:3.2.1
+     |    |    +--- com.android.tools.build:builder-model:3.2.1 (*)
+     |    |    +--- com.android.tools.build:builder-test-api:3.2.1 (*)
+     |    |    +--- com.google.guava:guava:23.0 (*)
+     |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.71 (*)
+     |    +--- org.jetbrains.kotlin:kotlin-reflect:1.2.0 (*)
+     |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.71 (*)
+     |    \--- com.google.guava:guava:23.0 (*)
+     +--- org.codehaus.groovy:groovy-all:2.4.12
+     +--- org.jetbrains.kotlin:kotlin-reflect:1.2.0 (*)
+     \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.71 (*)
+
+pmd - The PMD libraries to be used for this project.
+\--- net.sourceforge.pmd:pmd-java:5.6.1
+     +--- jaxen:jaxen:1.1.6
+     +--- net.java.dev.javacc:javacc:5.0
+     +--- net.sourceforge.pmd:pmd-core:5.6.1
+     |    +--- com.beust:jcommander:1.48
+     |    +--- commons-io:commons-io:2.4
+     |    +--- jaxen:jaxen:1.1.6
+     |    +--- net.java.dev.javacc:javacc:5.0
+     |    +--- net.sourceforge.saxon:saxon:9.1.0.8
+     |    +--- org.apache.commons:commons-lang3:3.4
+     |    +--- org.ow2.asm:asm:5.0.4
+     |    \--- com.google.code.gson:gson:2.5
+     +--- net.sourceforge.saxon:saxon:9.1.0.8
+     \--- org.ow2.asm:asm:5.0.4
+
+provided - Provided dependencies for 'main' sources (deprecated: use 'compileOnly' instead). (n)
+No dependencies
+
+releaseAnnotationProcessor - Classpath for the annotation processor for 'release'. (n)
+No dependencies
+
+releaseAnnotationProcessorClasspath - Resolved configuration for annotation-processor for variant: release
++--- com.google.dagger:dagger-compiler:2.8
+|    +--- com.google.dagger:dagger:2.8
+|    |    \--- javax.inject:javax.inject:1
+|    +--- com.google.dagger:dagger-producers:2.8
+|    |    +--- com.google.dagger:dagger:2.8 (*)
+|    |    \--- com.google.guava:guava:20.0-rc1
+|    \--- com.google.guava:guava:20.0-rc1
+\--- com.jakewharton:butterknife-compiler:8.6.0
+     +--- com.jakewharton:butterknife-annotations:8.6.0
+     |    \--- com.android.support:support-annotations:25.1.0 -> 27.0.0
+     +--- com.google.auto:auto-common:0.6
+     |    \--- com.google.guava:guava:18.0 -> 20.0-rc1
+     \--- com.squareup:javapoet:1.8.0
+
+releaseApi - API dependencies for 'release' sources. (n)
+No dependencies
+
+releaseApiElements - API elements for release (n)
+No dependencies
+
+releaseApk - Apk dependencies for 'release' sources (deprecated: use 'releaseRuntimeOnly' instead). (n)
+No dependencies
+
+releaseBundleElements - Bundle elements for release (n)
+No dependencies
+
+releaseCompile - Compile dependencies for 'release' sources (deprecated: use 'releaseImplementation' instead). (n)
+No dependencies
+
+releaseCompileClasspath - Resolved configuration for compilation for variant: release
++--- javax.annotation:jsr250-api:1.0
++--- project :library
++--- project :btsdk
++--- com.android.support:appcompat-v7:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    +--- com.android.support:support-core-utils:27.0.2
+|    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    |    \--- com.android.support:support-compat:27.0.2
+|    |         +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    |         \--- android.arch.lifecycle:runtime:1.0.3
+|    |              +--- android.arch.lifecycle:common:1.0.3
+|    |              \--- android.arch.core:common:1.0.0
+|    +--- com.android.support:support-fragment:27.0.2
+|    |    +--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-core-ui:27.0.2
+|    |    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    |    |    \--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-core-utils:27.0.2 (*)
+|    |    \--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    +--- com.android.support:support-vector-drawable:27.0.2
+|    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    |    \--- com.android.support:support-compat:27.0.2 (*)
+|    \--- com.android.support:animated-vector-drawable:27.0.2
+|         +--- com.android.support:support-vector-drawable:27.0.2 (*)
+|         \--- com.android.support:support-core-ui:27.0.2 (*)
++--- com.android.support:recyclerview-v7:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    +--- com.android.support:support-compat:27.0.2 (*)
+|    \--- com.android.support:support-core-ui:27.0.2 (*)
++--- com.android.support:cardview-v7:27.0.0
+|    \--- com.android.support:support-annotations:27.0.0
++--- com.android.support:design:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-v4:27.0.2
+|    |    +--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-media-compat:27.0.2
+|    |    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    |    |    \--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-core-utils:27.0.2 (*)
+|    |    +--- com.android.support:support-core-ui:27.0.2 (*)
+|    |    \--- com.android.support:support-fragment:27.0.2 (*)
+|    +--- com.android.support:appcompat-v7:27.0.2 (*)
+|    +--- com.android.support:recyclerview-v7:27.0.2 (*)
+|    \--- com.android.support:transition:27.0.2
+|         +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         \--- com.android.support:support-compat:27.0.2 (*)
++--- com.android.support:support-vector-drawable:27.0.0 -> 27.0.2 (*)
++--- com.android.support:animated-vector-drawable:27.0.0 -> 27.0.2 (*)
++--- uk.co.chrisjenx:calligraphy:2.2.0
+|    \--- com.android.support:appcompat-v7:23.1.1 -> 27.0.2 (*)
++--- com.amitshekhar.android:rx2-android-networking:1.0.1
+|    +--- io.reactivex.rxjava2:rxandroid:2.0.1
+|    |    \--- io.reactivex.rxjava2:rxjava:2.0.1 -> 2.1.7
+|    |         \--- org.reactivestreams:reactive-streams:1.0.1
+|    +--- io.reactivex.rxjava2:rxjava:2.1.7 (*)
+|    \--- com.amitshekhar.android:android-networking:1.0.1
+|         +--- com.squareup.okhttp3:okhttp:3.9.1 -> 3.10.0
+|         |    \--- com.squareup.okio:okio:1.14.0
+|         +--- com.google.code.gson:gson:2.8.2
+|         \--- com.android.support:appcompat-v7:27.0.2 (*)
++--- com.github.bumptech.glide:glide:3.7.0
++--- com.google.code.gson:gson:2.8.0 -> 2.8.2
++--- org.greenrobot:greendao:3.2.0
+|    \--- org.greenrobot:greendao-api:3.2.0
++--- com.android.support.constraint:constraint-layout:1.0.2
+|    \--- com.android.support.constraint:constraint-layout-solver:1.0.2
++--- com.android.support:support-v4:26.1.0 -> 27.0.2 (*)
++--- com.google.dagger:dagger:2.8
+|    \--- javax.inject:javax.inject:1
++--- javax.inject:javax.inject:1
++--- io.reactivex.rxjava2:rxjava:2.0.6 -> 2.1.7 (*)
++--- io.reactivex.rxjava2:rxandroid:2.0.1 (*)
++--- com.jakewharton:butterknife:8.6.0
+|    +--- com.jakewharton:butterknife-annotations:8.6.0
+|    |    \--- com.android.support:support-annotations:25.1.0 -> 27.0.0
+|    +--- com.android.support:support-annotations:25.1.0 -> 27.0.0
+|    \--- com.android.support:support-compat:25.1.0 -> 27.0.2 (*)
++--- com.mindorks:placeholderview:0.6.1
+|    \--- com.android.support:recyclerview-v7:25.+ -> 27.0.2 (*)
++--- com.jakewharton.timber:timber:4.5.1
++--- com.journeyapps:zxing-android-embedded:3.6.0
+|    +--- com.google.zxing:core:3.3.2
+|    \--- com.android.support:support-v4:25.3.1 -> 27.0.2 (*)
++--- me.dm7.barcodescanner:zxing:1.9.8
+|    +--- me.dm7.barcodescanner:core:1.9.8
+|    |    \--- com.android.support:support-v4:25.3.1 -> 27.0.2 (*)
+|    \--- com.google.zxing:core:3.3.0 -> 3.3.2
++--- me.dm7.barcodescanner:zbar:1.9.8
+|    \--- me.dm7.barcodescanner:core:1.9.8 (*)
++--- com.basgeekball:awesome-validation:4.1
+|    +--- com.google.guava:guava:24.0-android
+|    |    +--- org.checkerframework:checker-compat-qual:2.0.0
+|    |    +--- com.google.errorprone:error_prone_annotations:2.1.3
+|    |    +--- com.google.j2objc:j2objc-annotations:1.1
+|    |    \--- org.codehaus.mojo:animal-sniffer-annotations:1.14
+|    +--- com.android.support:design:27.0.2 (*)
+|    \--- com.android.support.constraint:constraint-layout:1.0.2 (*)
++--- com.github.ratty3697:android-smart-animation-library:1.6
+|    +--- com.android.support:appcompat-v7:23.0.1 -> 27.0.2 (*)
+|    \--- com.nineoldandroids:library:2.4.0
++--- br.com.vivareal:cuid-android:0.1.0
+|    \--- com.android.support:appcompat-v7:25.0.1 -> 27.0.2 (*)
++--- com.github.Shashank02051997:FancyAlertDialog-Android:0.1
+|    +--- com.android.support:cardview-v7:26.1.0 -> 27.0.0 (*)
+|    \--- com.android.support:appcompat-v7:26.1.0 -> 27.0.2 (*)
++--- com.miguelcatalan:materialsearchview:1.4.0
+|    +--- com.android.support:appcompat-v7:23.1.1 -> 27.0.2 (*)
+|    \--- com.android.support:design:23.1.1 -> 27.0.2 (*)
++--- com.squareup.picasso:picasso:2.71828
+|    +--- com.squareup.okhttp3:okhttp:3.10.0 (*)
+|    +--- com.android.support:support-annotations:27.1.0 -> 27.0.0
+|    \--- com.android.support:exifinterface:27.1.0
+|         \--- com.android.support:support-annotations:27.1.0 -> 27.0.0
++--- com.github.tajchert:nammu:1.1.1
+|    \--- com.android.support:support-v4:23.1.0 -> 27.0.2 (*)
++--- com.google.android.gms:play-services-plus:15.0.1
+|    +--- com.google.android.gms:play-services-audience:[15.0.1] -> 15.0.1
+|    |    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1
+|    |    |    +--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1
+|    |    |    |    \--- com.android.support:support-v4:26.1.0 -> 27.0.2 (*)
+|    |    |    \--- com.google.android.gms:play-services-tasks:[15.0.1] -> 15.0.1
+|    |    |         \--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1 (*)
+|    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
++--- com.google.android.gms:play-services-location:15.0.1
+|    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-places-placereport:[15.0.1,16.0.0) -> 15.0.1
+|    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    \--- com.google.android.gms:play-services-tasks:[15.0.1,16.0.0) -> 15.0.1 (*)
++--- com.google.firebase:firebase-messaging:17.0.0
+|    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    +--- com.google.firebase:firebase-common:16.0.0
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    \--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    +--- com.google.firebase:firebase-iid:[16.0.0] -> 16.0.0
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-stats:15.0.1
+|    |    |    \--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    |    +--- com.google.firebase:firebase-common:16.0.0 (*)
+|    |    \--- com.google.firebase:firebase-iid-interop:16.0.0
+|    |         +--- com.google.android.gms:play-services-base:15.0.1 (*)
+|    |         \--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    \--- com.google.firebase:firebase-measurement-connector:16.0.0
+|         \--- com.google.android.gms:play-services-basement:15.0.1 (*)
++--- com.google.firebase:firebase-core:16.0.1
+|    +--- com.google.firebase:firebase-analytics:16.0.1
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|    |    +--- com.google.android.gms:play-services-stats:15.0.1 (*)
+|    |    +--- com.google.firebase:firebase-analytics-impl:[16.1.1] -> 16.1.1
+|    |    |    +--- com.google.android.gms:play-services-ads-identifier:15.0.1
+|    |    |    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|    |    |    +--- com.google.android.gms:play-services-stats:15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    |    |    +--- com.google.firebase:firebase-common:16.0.0 (*)
+|    |    |    \--- com.google.firebase:firebase-iid:16.0.0 (*)
+|    |    \--- com.google.firebase:firebase-common:16.0.0 (*)
+|    \--- com.google.firebase:firebase-measurement-connector-impl:16.0.1
+|         +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|         +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|         +--- com.google.firebase:firebase-analytics:[16.0.1] -> 16.0.1 (*)
+|         +--- com.google.firebase:firebase-analytics-impl:[16.1.1] -> 16.1.1 (*)
+|         +--- com.google.firebase:firebase-common:16.0.0 (*)
+|         \--- com.google.firebase:firebase-measurement-connector:16.0.0 (*)
++--- com.github.ceryle:RadioRealButton:v2.1.1
+|    \--- com.android.support:appcompat-v7:25.3.1 -> 27.0.2 (*)
++--- org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2
++--- com.ramotion.cardslider:card-slider:0.3.0
+|    +--- com.android.support:appcompat-v7:26.1.0 -> 27.0.2 (*)
+|    +--- com.android.support:recyclerview-v7:26.1.0 -> 27.0.2 (*)
+|    +--- com.android.support:design:26.1.0 -> 27.0.2 (*)
+|    \--- com.android.support:cardview-v7:26.1.0 -> 27.0.0 (*)
+\--- com.android.support:multidex:1.0.2
+
+releaseCompileOnly - Compile only dependencies for 'release' sources. (n)
+No dependencies
+
+releaseImplementation - Implementation only dependencies for 'release' sources. (n)
+No dependencies
+
+releaseMetadataElements (n)
+No dependencies
+
+releaseMetadataValues - Metadata Values dependencies for the base Split
+No dependencies
+
+releaseProvided - Provided dependencies for 'release' sources (deprecated: use 'releaseCompileOnly' instead). (n)
+No dependencies
+
+releaseRuntimeClasspath - Resolved configuration for runtime for variant: release
++--- project :library
+|    \--- com.android.support:appcompat-v7:27.0.0 -> 27.0.2
+|         +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         +--- com.android.support:support-core-utils:27.0.2
+|         |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         |    \--- com.android.support:support-compat:27.0.2
+|         |         +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         |         \--- android.arch.lifecycle:runtime:1.0.3
+|         |              +--- android.arch.lifecycle:common:1.0.3
+|         |              \--- android.arch.core:common:1.0.0
+|         +--- com.android.support:support-fragment:27.0.2
+|         |    +--- com.android.support:support-compat:27.0.2 (*)
+|         |    +--- com.android.support:support-core-ui:27.0.2
+|         |    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         |    |    \--- com.android.support:support-compat:27.0.2 (*)
+|         |    +--- com.android.support:support-core-utils:27.0.2 (*)
+|         |    \--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         +--- com.android.support:support-vector-drawable:27.0.2
+|         |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         |    \--- com.android.support:support-compat:27.0.2 (*)
+|         \--- com.android.support:animated-vector-drawable:27.0.2
+|              +--- com.android.support:support-vector-drawable:27.0.2 (*)
+|              \--- com.android.support:support-core-ui:27.0.2 (*)
++--- project :btsdk
++--- com.android.support:appcompat-v7:27.0.0 -> 27.0.2 (*)
++--- com.android.support:recyclerview-v7:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    +--- com.android.support:support-compat:27.0.2 (*)
+|    \--- com.android.support:support-core-ui:27.0.2 (*)
++--- com.android.support:cardview-v7:27.0.0
+|    \--- com.android.support:support-annotations:27.0.0
++--- com.android.support:design:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-v4:27.0.2
+|    |    +--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-media-compat:27.0.2
+|    |    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    |    |    \--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-core-utils:27.0.2 (*)
+|    |    +--- com.android.support:support-core-ui:27.0.2 (*)
+|    |    \--- com.android.support:support-fragment:27.0.2 (*)
+|    +--- com.android.support:appcompat-v7:27.0.2 (*)
+|    +--- com.android.support:recyclerview-v7:27.0.2 (*)
+|    \--- com.android.support:transition:27.0.2
+|         +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         \--- com.android.support:support-compat:27.0.2 (*)
++--- com.android.support:support-vector-drawable:27.0.0 -> 27.0.2 (*)
++--- com.android.support:animated-vector-drawable:27.0.0 -> 27.0.2 (*)
++--- uk.co.chrisjenx:calligraphy:2.2.0
+|    \--- com.android.support:appcompat-v7:23.1.1 -> 27.0.2 (*)
++--- com.amitshekhar.android:rx2-android-networking:1.0.1
+|    +--- io.reactivex.rxjava2:rxandroid:2.0.1
+|    |    \--- io.reactivex.rxjava2:rxjava:2.0.1 -> 2.1.7
+|    |         \--- org.reactivestreams:reactive-streams:1.0.1
+|    +--- io.reactivex.rxjava2:rxjava:2.1.7 (*)
+|    \--- com.amitshekhar.android:android-networking:1.0.1
+|         +--- com.squareup.okhttp3:okhttp:3.9.1 -> 3.10.0
+|         |    \--- com.squareup.okio:okio:1.14.0
+|         +--- com.google.code.gson:gson:2.8.2
+|         \--- com.android.support:appcompat-v7:27.0.2 (*)
++--- com.github.bumptech.glide:glide:3.7.0
++--- com.google.code.gson:gson:2.8.0 -> 2.8.2
++--- org.greenrobot:greendao:3.2.0
+|    \--- org.greenrobot:greendao-api:3.2.0
++--- com.android.support.constraint:constraint-layout:1.0.2
+|    \--- com.android.support.constraint:constraint-layout-solver:1.0.2
++--- com.android.support:support-v4:26.1.0 -> 27.0.2 (*)
++--- com.google.dagger:dagger:2.8
+|    \--- javax.inject:javax.inject:1
++--- javax.inject:javax.inject:1
++--- io.reactivex.rxjava2:rxjava:2.0.6 -> 2.1.7 (*)
++--- io.reactivex.rxjava2:rxandroid:2.0.1 (*)
++--- com.jakewharton:butterknife:8.6.0
+|    +--- com.jakewharton:butterknife-annotations:8.6.0
+|    |    \--- com.android.support:support-annotations:25.1.0 -> 27.0.0
+|    +--- com.android.support:support-annotations:25.1.0 -> 27.0.0
+|    \--- com.android.support:support-compat:25.1.0 -> 27.0.2 (*)
++--- com.mindorks:placeholderview:0.6.1
+|    \--- com.android.support:recyclerview-v7:25.+ -> 27.0.2 (*)
++--- com.jakewharton.timber:timber:4.5.1
++--- com.journeyapps:zxing-android-embedded:3.6.0
+|    +--- com.google.zxing:core:3.3.2
+|    \--- com.android.support:support-v4:25.3.1 -> 27.0.2 (*)
++--- me.dm7.barcodescanner:zxing:1.9.8
+|    +--- me.dm7.barcodescanner:core:1.9.8
+|    |    \--- com.android.support:support-v4:25.3.1 -> 27.0.2 (*)
+|    \--- com.google.zxing:core:3.3.0 -> 3.3.2
++--- me.dm7.barcodescanner:zbar:1.9.8
+|    \--- me.dm7.barcodescanner:core:1.9.8 (*)
++--- com.basgeekball:awesome-validation:4.1
+|    +--- com.google.guava:guava:24.0-android
+|    |    +--- org.checkerframework:checker-compat-qual:2.0.0
+|    |    +--- com.google.errorprone:error_prone_annotations:2.1.3
+|    |    +--- com.google.j2objc:j2objc-annotations:1.1
+|    |    \--- org.codehaus.mojo:animal-sniffer-annotations:1.14
+|    +--- com.android.support:design:27.0.2 (*)
+|    \--- com.android.support.constraint:constraint-layout:1.0.2 (*)
++--- com.github.ratty3697:android-smart-animation-library:1.6
+|    +--- com.android.support:appcompat-v7:23.0.1 -> 27.0.2 (*)
+|    \--- com.nineoldandroids:library:2.4.0
++--- br.com.vivareal:cuid-android:0.1.0
+|    \--- com.android.support:appcompat-v7:25.0.1 -> 27.0.2 (*)
++--- com.github.Shashank02051997:FancyAlertDialog-Android:0.1
+|    +--- com.android.support:cardview-v7:26.1.0 -> 27.0.0 (*)
+|    \--- com.android.support:appcompat-v7:26.1.0 -> 27.0.2 (*)
++--- com.miguelcatalan:materialsearchview:1.4.0
+|    +--- com.android.support:appcompat-v7:23.1.1 -> 27.0.2 (*)
+|    \--- com.android.support:design:23.1.1 -> 27.0.2 (*)
++--- com.squareup.picasso:picasso:2.71828
+|    +--- com.squareup.okhttp3:okhttp:3.10.0 (*)
+|    +--- com.android.support:support-annotations:27.1.0 -> 27.0.0
+|    \--- com.android.support:exifinterface:27.1.0
+|         \--- com.android.support:support-annotations:27.1.0 -> 27.0.0
++--- com.github.tajchert:nammu:1.1.1
+|    \--- com.android.support:support-v4:23.1.0 -> 27.0.2 (*)
++--- com.google.android.gms:play-services-plus:15.0.1
+|    +--- com.google.android.gms:play-services-audience:[15.0.1] -> 15.0.1
+|    |    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1
+|    |    |    +--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1
+|    |    |    |    \--- com.android.support:support-v4:26.1.0 -> 27.0.2 (*)
+|    |    |    \--- com.google.android.gms:play-services-tasks:[15.0.1] -> 15.0.1
+|    |    |         \--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1 (*)
+|    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
++--- com.google.android.gms:play-services-location:15.0.1
+|    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-places-placereport:[15.0.1,16.0.0) -> 15.0.1
+|    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    \--- com.google.android.gms:play-services-tasks:[15.0.1,16.0.0) -> 15.0.1 (*)
++--- com.google.firebase:firebase-messaging:17.0.0
+|    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    +--- com.google.firebase:firebase-common:16.0.0
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    \--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    +--- com.google.firebase:firebase-iid:[16.0.0] -> 16.0.0
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-stats:15.0.1
+|    |    |    \--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    |    +--- com.google.firebase:firebase-common:16.0.0 (*)
+|    |    \--- com.google.firebase:firebase-iid-interop:16.0.0
+|    |         +--- com.google.android.gms:play-services-base:15.0.1 (*)
+|    |         \--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    \--- com.google.firebase:firebase-measurement-connector:16.0.0
+|         \--- com.google.android.gms:play-services-basement:15.0.1 (*)
++--- com.google.firebase:firebase-core:16.0.1
+|    +--- com.google.firebase:firebase-analytics:16.0.1
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|    |    +--- com.google.android.gms:play-services-stats:15.0.1 (*)
+|    |    +--- com.google.firebase:firebase-analytics-impl:[16.1.1] -> 16.1.1
+|    |    |    +--- com.google.android.gms:play-services-ads-identifier:15.0.1
+|    |    |    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|    |    |    +--- com.google.android.gms:play-services-stats:15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    |    |    +--- com.google.firebase:firebase-common:16.0.0 (*)
+|    |    |    \--- com.google.firebase:firebase-iid:16.0.0 (*)
+|    |    \--- com.google.firebase:firebase-common:16.0.0 (*)
+|    \--- com.google.firebase:firebase-measurement-connector-impl:16.0.1
+|         +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|         +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|         +--- com.google.firebase:firebase-analytics:[16.0.1] -> 16.0.1 (*)
+|         +--- com.google.firebase:firebase-analytics-impl:[16.1.1] -> 16.1.1 (*)
+|         +--- com.google.firebase:firebase-common:16.0.0 (*)
+|         \--- com.google.firebase:firebase-measurement-connector:16.0.0 (*)
++--- com.github.ceryle:RadioRealButton:v2.1.1
+|    \--- com.android.support:appcompat-v7:25.3.1 -> 27.0.2 (*)
++--- org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2
++--- com.ramotion.cardslider:card-slider:0.3.0
+|    +--- com.android.support:appcompat-v7:26.1.0 -> 27.0.2 (*)
+|    +--- com.android.support:recyclerview-v7:26.1.0 -> 27.0.2 (*)
+|    +--- com.android.support:design:26.1.0 -> 27.0.2 (*)
+|    \--- com.android.support:cardview-v7:26.1.0 -> 27.0.0 (*)
+\--- com.android.support:multidex:1.0.2
+
+releaseRuntimeElements - Runtime elements for release (n)
+No dependencies
+
+releaseRuntimeOnly - Runtime only dependencies for 'release' sources. (n)
+No dependencies
+
+releaseUnitTestAnnotationProcessorClasspath - Resolved configuration for annotation-processor for variant: releaseUnitTest
+\--- com.google.dagger:dagger-compiler:2.8
+     +--- com.google.dagger:dagger:2.8
+     |    \--- javax.inject:javax.inject:1
+     +--- com.google.dagger:dagger-producers:2.8
+     |    +--- com.google.dagger:dagger:2.8 (*)
+     |    \--- com.google.guava:guava:20.0-rc1
+     \--- com.google.guava:guava:20.0-rc1
+
+releaseUnitTestCompileClasspath - Resolved configuration for compilation for variant: releaseUnitTest
++--- project :library
++--- project :btsdk
++--- com.android.support:appcompat-v7:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    +--- com.android.support:support-core-utils:27.0.2
+|    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    |    \--- com.android.support:support-compat:27.0.2
+|    |         +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    |         \--- android.arch.lifecycle:runtime:1.0.3
+|    |              +--- android.arch.lifecycle:common:1.0.3
+|    |              \--- android.arch.core:common:1.0.0
+|    +--- com.android.support:support-fragment:27.0.2
+|    |    +--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-core-ui:27.0.2
+|    |    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    |    |    \--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-core-utils:27.0.2 (*)
+|    |    \--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    +--- com.android.support:support-vector-drawable:27.0.2
+|    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    |    \--- com.android.support:support-compat:27.0.2 (*)
+|    \--- com.android.support:animated-vector-drawable:27.0.2
+|         +--- com.android.support:support-vector-drawable:27.0.2 (*)
+|         \--- com.android.support:support-core-ui:27.0.2 (*)
++--- com.android.support:recyclerview-v7:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    +--- com.android.support:support-compat:27.0.2 (*)
+|    \--- com.android.support:support-core-ui:27.0.2 (*)
++--- com.android.support:cardview-v7:27.0.0
+|    \--- com.android.support:support-annotations:27.0.0
++--- com.android.support:design:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-v4:27.0.2
+|    |    +--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-media-compat:27.0.2
+|    |    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    |    |    \--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-core-utils:27.0.2 (*)
+|    |    +--- com.android.support:support-core-ui:27.0.2 (*)
+|    |    \--- com.android.support:support-fragment:27.0.2 (*)
+|    +--- com.android.support:appcompat-v7:27.0.2 (*)
+|    +--- com.android.support:recyclerview-v7:27.0.2 (*)
+|    \--- com.android.support:transition:27.0.2
+|         +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         \--- com.android.support:support-compat:27.0.2 (*)
++--- com.android.support:support-vector-drawable:27.0.0 -> 27.0.2 (*)
++--- com.android.support:animated-vector-drawable:27.0.0 -> 27.0.2 (*)
++--- uk.co.chrisjenx:calligraphy:2.2.0
+|    \--- com.android.support:appcompat-v7:23.1.1 -> 27.0.2 (*)
++--- com.amitshekhar.android:rx2-android-networking:1.0.1
+|    +--- io.reactivex.rxjava2:rxandroid:2.0.1
+|    |    \--- io.reactivex.rxjava2:rxjava:2.0.1 -> 2.1.7
+|    |         \--- org.reactivestreams:reactive-streams:1.0.1
+|    +--- io.reactivex.rxjava2:rxjava:2.1.7 (*)
+|    \--- com.amitshekhar.android:android-networking:1.0.1
+|         +--- com.squareup.okhttp3:okhttp:3.9.1 -> 3.10.0
+|         |    \--- com.squareup.okio:okio:1.14.0
+|         +--- com.google.code.gson:gson:2.8.2
+|         \--- com.android.support:appcompat-v7:27.0.2 (*)
++--- com.github.bumptech.glide:glide:3.7.0
++--- com.google.code.gson:gson:2.8.0 -> 2.8.2
++--- org.greenrobot:greendao:3.2.0
+|    \--- org.greenrobot:greendao-api:3.2.0
++--- com.android.support.constraint:constraint-layout:1.0.2
+|    \--- com.android.support.constraint:constraint-layout-solver:1.0.2
++--- com.android.support:support-v4:26.1.0 -> 27.0.2 (*)
++--- com.google.dagger:dagger:2.8
+|    \--- javax.inject:javax.inject:1
++--- javax.inject:javax.inject:1
++--- io.reactivex.rxjava2:rxjava:2.0.6 -> 2.1.7 (*)
++--- io.reactivex.rxjava2:rxandroid:2.0.1 (*)
++--- com.jakewharton:butterknife:8.6.0
+|    +--- com.jakewharton:butterknife-annotations:8.6.0
+|    |    \--- com.android.support:support-annotations:25.1.0 -> 27.0.0
+|    +--- com.android.support:support-annotations:25.1.0 -> 27.0.0
+|    \--- com.android.support:support-compat:25.1.0 -> 27.0.2 (*)
++--- com.mindorks:placeholderview:0.6.1
+|    \--- com.android.support:recyclerview-v7:25.+ -> 27.0.2 (*)
++--- com.jakewharton.timber:timber:4.5.1
++--- com.journeyapps:zxing-android-embedded:3.6.0
+|    +--- com.google.zxing:core:3.3.2
+|    \--- com.android.support:support-v4:25.3.1 -> 27.0.2 (*)
++--- me.dm7.barcodescanner:zxing:1.9.8
+|    +--- me.dm7.barcodescanner:core:1.9.8
+|    |    \--- com.android.support:support-v4:25.3.1 -> 27.0.2 (*)
+|    \--- com.google.zxing:core:3.3.0 -> 3.3.2
++--- me.dm7.barcodescanner:zbar:1.9.8
+|    \--- me.dm7.barcodescanner:core:1.9.8 (*)
++--- com.basgeekball:awesome-validation:4.1
+|    +--- com.google.guava:guava:24.0-android
+|    |    +--- org.checkerframework:checker-compat-qual:2.0.0
+|    |    +--- com.google.errorprone:error_prone_annotations:2.1.3
+|    |    +--- com.google.j2objc:j2objc-annotations:1.1
+|    |    \--- org.codehaus.mojo:animal-sniffer-annotations:1.14
+|    +--- com.android.support:design:27.0.2 (*)
+|    \--- com.android.support.constraint:constraint-layout:1.0.2 (*)
++--- com.github.ratty3697:android-smart-animation-library:1.6
+|    +--- com.android.support:appcompat-v7:23.0.1 -> 27.0.2 (*)
+|    \--- com.nineoldandroids:library:2.4.0
++--- br.com.vivareal:cuid-android:0.1.0
+|    \--- com.android.support:appcompat-v7:25.0.1 -> 27.0.2 (*)
++--- com.github.Shashank02051997:FancyAlertDialog-Android:0.1
+|    +--- com.android.support:cardview-v7:26.1.0 -> 27.0.0 (*)
+|    \--- com.android.support:appcompat-v7:26.1.0 -> 27.0.2 (*)
++--- com.miguelcatalan:materialsearchview:1.4.0
+|    +--- com.android.support:appcompat-v7:23.1.1 -> 27.0.2 (*)
+|    \--- com.android.support:design:23.1.1 -> 27.0.2 (*)
++--- com.squareup.picasso:picasso:2.71828
+|    +--- com.squareup.okhttp3:okhttp:3.10.0 (*)
+|    +--- com.android.support:support-annotations:27.1.0 -> 27.0.0
+|    \--- com.android.support:exifinterface:27.1.0
+|         \--- com.android.support:support-annotations:27.1.0 -> 27.0.0
++--- com.github.tajchert:nammu:1.1.1
+|    \--- com.android.support:support-v4:23.1.0 -> 27.0.2 (*)
++--- com.google.android.gms:play-services-plus:15.0.1
+|    +--- com.google.android.gms:play-services-audience:[15.0.1] -> 15.0.1
+|    |    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1
+|    |    |    +--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1
+|    |    |    |    \--- com.android.support:support-v4:26.1.0 -> 27.0.2 (*)
+|    |    |    \--- com.google.android.gms:play-services-tasks:[15.0.1] -> 15.0.1
+|    |    |         \--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1 (*)
+|    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
++--- com.google.android.gms:play-services-location:15.0.1
+|    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-places-placereport:[15.0.1,16.0.0) -> 15.0.1
+|    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    \--- com.google.android.gms:play-services-tasks:[15.0.1,16.0.0) -> 15.0.1 (*)
++--- com.google.firebase:firebase-messaging:17.0.0
+|    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    +--- com.google.firebase:firebase-common:16.0.0
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    \--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    +--- com.google.firebase:firebase-iid:[16.0.0] -> 16.0.0
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-stats:15.0.1
+|    |    |    \--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    |    +--- com.google.firebase:firebase-common:16.0.0 (*)
+|    |    \--- com.google.firebase:firebase-iid-interop:16.0.0
+|    |         +--- com.google.android.gms:play-services-base:15.0.1 (*)
+|    |         \--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    \--- com.google.firebase:firebase-measurement-connector:16.0.0
+|         \--- com.google.android.gms:play-services-basement:15.0.1 (*)
++--- com.google.firebase:firebase-core:16.0.1
+|    +--- com.google.firebase:firebase-analytics:16.0.1
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|    |    +--- com.google.android.gms:play-services-stats:15.0.1 (*)
+|    |    +--- com.google.firebase:firebase-analytics-impl:[16.1.1] -> 16.1.1
+|    |    |    +--- com.google.android.gms:play-services-ads-identifier:15.0.1
+|    |    |    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|    |    |    +--- com.google.android.gms:play-services-stats:15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    |    |    +--- com.google.firebase:firebase-common:16.0.0 (*)
+|    |    |    \--- com.google.firebase:firebase-iid:16.0.0 (*)
+|    |    \--- com.google.firebase:firebase-common:16.0.0 (*)
+|    \--- com.google.firebase:firebase-measurement-connector-impl:16.0.1
+|         +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|         +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|         +--- com.google.firebase:firebase-analytics:[16.0.1] -> 16.0.1 (*)
+|         +--- com.google.firebase:firebase-analytics-impl:[16.1.1] -> 16.1.1 (*)
+|         +--- com.google.firebase:firebase-common:16.0.0 (*)
+|         \--- com.google.firebase:firebase-measurement-connector:16.0.0 (*)
++--- com.github.ceryle:RadioRealButton:v2.1.1
+|    \--- com.android.support:appcompat-v7:25.3.1 -> 27.0.2 (*)
++--- org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2
++--- com.ramotion.cardslider:card-slider:0.3.0
+|    +--- com.android.support:appcompat-v7:26.1.0 -> 27.0.2 (*)
+|    +--- com.android.support:recyclerview-v7:26.1.0 -> 27.0.2 (*)
+|    +--- com.android.support:design:26.1.0 -> 27.0.2 (*)
+|    \--- com.android.support:cardview-v7:26.1.0 -> 27.0.0 (*)
++--- junit:junit:4.12
+|    \--- org.hamcrest:hamcrest-core:1.3
+\--- org.mockito:mockito-core:2.7.1
+     +--- net.bytebuddy:byte-buddy:1.6.5
+     +--- net.bytebuddy:byte-buddy-agent:1.6.5
+     \--- org.objenesis:objenesis:2.5
+
+releaseUnitTestRuntimeClasspath - Resolved configuration for runtime for variant: releaseUnitTest
++--- project :library
+|    \--- com.android.support:appcompat-v7:27.0.0 -> 27.0.2
+|         +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         +--- com.android.support:support-core-utils:27.0.2
+|         |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         |    \--- com.android.support:support-compat:27.0.2
+|         |         +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         |         \--- android.arch.lifecycle:runtime:1.0.3
+|         |              +--- android.arch.lifecycle:common:1.0.3
+|         |              \--- android.arch.core:common:1.0.0
+|         +--- com.android.support:support-fragment:27.0.2
+|         |    +--- com.android.support:support-compat:27.0.2 (*)
+|         |    +--- com.android.support:support-core-ui:27.0.2
+|         |    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         |    |    \--- com.android.support:support-compat:27.0.2 (*)
+|         |    +--- com.android.support:support-core-utils:27.0.2 (*)
+|         |    \--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         +--- com.android.support:support-vector-drawable:27.0.2
+|         |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         |    \--- com.android.support:support-compat:27.0.2 (*)
+|         \--- com.android.support:animated-vector-drawable:27.0.2
+|              +--- com.android.support:support-vector-drawable:27.0.2 (*)
+|              \--- com.android.support:support-core-ui:27.0.2 (*)
++--- project :btsdk
++--- com.android.support:appcompat-v7:27.0.0 -> 27.0.2 (*)
++--- com.android.support:recyclerview-v7:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    +--- com.android.support:support-compat:27.0.2 (*)
+|    \--- com.android.support:support-core-ui:27.0.2 (*)
++--- com.android.support:cardview-v7:27.0.0
+|    \--- com.android.support:support-annotations:27.0.0
++--- com.android.support:design:27.0.0 -> 27.0.2
+|    +--- com.android.support:support-v4:27.0.2
+|    |    +--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-media-compat:27.0.2
+|    |    |    +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|    |    |    \--- com.android.support:support-compat:27.0.2 (*)
+|    |    +--- com.android.support:support-core-utils:27.0.2 (*)
+|    |    +--- com.android.support:support-core-ui:27.0.2 (*)
+|    |    \--- com.android.support:support-fragment:27.0.2 (*)
+|    +--- com.android.support:appcompat-v7:27.0.2 (*)
+|    +--- com.android.support:recyclerview-v7:27.0.2 (*)
+|    \--- com.android.support:transition:27.0.2
+|         +--- com.android.support:support-annotations:27.0.2 -> 27.0.0
+|         \--- com.android.support:support-compat:27.0.2 (*)
++--- com.android.support:support-vector-drawable:27.0.0 -> 27.0.2 (*)
++--- com.android.support:animated-vector-drawable:27.0.0 -> 27.0.2 (*)
++--- uk.co.chrisjenx:calligraphy:2.2.0
+|    \--- com.android.support:appcompat-v7:23.1.1 -> 27.0.2 (*)
++--- com.amitshekhar.android:rx2-android-networking:1.0.1
+|    +--- io.reactivex.rxjava2:rxandroid:2.0.1
+|    |    \--- io.reactivex.rxjava2:rxjava:2.0.1 -> 2.1.7
+|    |         \--- org.reactivestreams:reactive-streams:1.0.1
+|    +--- io.reactivex.rxjava2:rxjava:2.1.7 (*)
+|    \--- com.amitshekhar.android:android-networking:1.0.1
+|         +--- com.squareup.okhttp3:okhttp:3.9.1 -> 3.10.0
+|         |    \--- com.squareup.okio:okio:1.14.0
+|         +--- com.google.code.gson:gson:2.8.2
+|         \--- com.android.support:appcompat-v7:27.0.2 (*)
++--- com.github.bumptech.glide:glide:3.7.0
++--- com.google.code.gson:gson:2.8.0 -> 2.8.2
++--- org.greenrobot:greendao:3.2.0
+|    \--- org.greenrobot:greendao-api:3.2.0
++--- com.android.support.constraint:constraint-layout:1.0.2
+|    \--- com.android.support.constraint:constraint-layout-solver:1.0.2
++--- com.android.support:support-v4:26.1.0 -> 27.0.2 (*)
++--- com.google.dagger:dagger:2.8
+|    \--- javax.inject:javax.inject:1
++--- javax.inject:javax.inject:1
++--- io.reactivex.rxjava2:rxjava:2.0.6 -> 2.1.7 (*)
++--- io.reactivex.rxjava2:rxandroid:2.0.1 (*)
++--- com.jakewharton:butterknife:8.6.0
+|    +--- com.jakewharton:butterknife-annotations:8.6.0
+|    |    \--- com.android.support:support-annotations:25.1.0 -> 27.0.0
+|    +--- com.android.support:support-annotations:25.1.0 -> 27.0.0
+|    \--- com.android.support:support-compat:25.1.0 -> 27.0.2 (*)
++--- com.mindorks:placeholderview:0.6.1
+|    \--- com.android.support:recyclerview-v7:25.+ -> 27.0.2 (*)
++--- com.jakewharton.timber:timber:4.5.1
++--- com.journeyapps:zxing-android-embedded:3.6.0
+|    +--- com.google.zxing:core:3.3.2
+|    \--- com.android.support:support-v4:25.3.1 -> 27.0.2 (*)
++--- me.dm7.barcodescanner:zxing:1.9.8
+|    +--- me.dm7.barcodescanner:core:1.9.8
+|    |    \--- com.android.support:support-v4:25.3.1 -> 27.0.2 (*)
+|    \--- com.google.zxing:core:3.3.0 -> 3.3.2
++--- me.dm7.barcodescanner:zbar:1.9.8
+|    \--- me.dm7.barcodescanner:core:1.9.8 (*)
++--- com.basgeekball:awesome-validation:4.1
+|    +--- com.google.guava:guava:24.0-android
+|    |    +--- org.checkerframework:checker-compat-qual:2.0.0
+|    |    +--- com.google.errorprone:error_prone_annotations:2.1.3
+|    |    +--- com.google.j2objc:j2objc-annotations:1.1
+|    |    \--- org.codehaus.mojo:animal-sniffer-annotations:1.14
+|    +--- com.android.support:design:27.0.2 (*)
+|    \--- com.android.support.constraint:constraint-layout:1.0.2 (*)
++--- com.github.ratty3697:android-smart-animation-library:1.6
+|    +--- com.android.support:appcompat-v7:23.0.1 -> 27.0.2 (*)
+|    \--- com.nineoldandroids:library:2.4.0
++--- br.com.vivareal:cuid-android:0.1.0
+|    \--- com.android.support:appcompat-v7:25.0.1 -> 27.0.2 (*)
++--- com.github.Shashank02051997:FancyAlertDialog-Android:0.1
+|    +--- com.android.support:cardview-v7:26.1.0 -> 27.0.0 (*)
+|    \--- com.android.support:appcompat-v7:26.1.0 -> 27.0.2 (*)
++--- com.miguelcatalan:materialsearchview:1.4.0
+|    +--- com.android.support:appcompat-v7:23.1.1 -> 27.0.2 (*)
+|    \--- com.android.support:design:23.1.1 -> 27.0.2 (*)
++--- com.squareup.picasso:picasso:2.71828
+|    +--- com.squareup.okhttp3:okhttp:3.10.0 (*)
+|    +--- com.android.support:support-annotations:27.1.0 -> 27.0.0
+|    \--- com.android.support:exifinterface:27.1.0
+|         \--- com.android.support:support-annotations:27.1.0 -> 27.0.0
++--- com.github.tajchert:nammu:1.1.1
+|    \--- com.android.support:support-v4:23.1.0 -> 27.0.2 (*)
++--- com.google.android.gms:play-services-plus:15.0.1
+|    +--- com.google.android.gms:play-services-audience:[15.0.1] -> 15.0.1
+|    |    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1
+|    |    |    +--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1
+|    |    |    |    \--- com.android.support:support-v4:26.1.0 -> 27.0.2 (*)
+|    |    |    \--- com.google.android.gms:play-services-tasks:[15.0.1] -> 15.0.1
+|    |    |         \--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1 (*)
+|    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
++--- com.google.android.gms:play-services-location:15.0.1
+|    +--- com.google.android.gms:play-services-base:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    +--- com.google.android.gms:play-services-places-placereport:[15.0.1,16.0.0) -> 15.0.1
+|    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    \--- com.google.android.gms:play-services-tasks:[15.0.1,16.0.0) -> 15.0.1 (*)
++--- com.google.firebase:firebase-messaging:17.0.0
+|    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    +--- com.google.firebase:firebase-common:16.0.0
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    \--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    +--- com.google.firebase:firebase-iid:[16.0.0] -> 16.0.0
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-stats:15.0.1
+|    |    |    \--- com.google.android.gms:play-services-basement:[15.0.1] -> 15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    |    +--- com.google.firebase:firebase-common:16.0.0 (*)
+|    |    \--- com.google.firebase:firebase-iid-interop:16.0.0
+|    |         +--- com.google.android.gms:play-services-base:15.0.1 (*)
+|    |         \--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    \--- com.google.firebase:firebase-measurement-connector:16.0.0
+|         \--- com.google.android.gms:play-services-basement:15.0.1 (*)
++--- com.google.firebase:firebase-core:16.0.1
+|    +--- com.google.firebase:firebase-analytics:16.0.1
+|    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|    |    +--- com.google.android.gms:play-services-stats:15.0.1 (*)
+|    |    +--- com.google.firebase:firebase-analytics-impl:[16.1.1] -> 16.1.1
+|    |    |    +--- com.google.android.gms:play-services-ads-identifier:15.0.1
+|    |    |    |    \--- com.google.android.gms:play-services-basement:[15.0.1,16.0.0) -> 15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|    |    |    +--- com.google.android.gms:play-services-stats:15.0.1 (*)
+|    |    |    +--- com.google.android.gms:play-services-tasks:15.0.1 (*)
+|    |    |    +--- com.google.firebase:firebase-common:16.0.0 (*)
+|    |    |    \--- com.google.firebase:firebase-iid:16.0.0 (*)
+|    |    \--- com.google.firebase:firebase-common:16.0.0 (*)
+|    \--- com.google.firebase:firebase-measurement-connector-impl:16.0.1
+|         +--- com.google.android.gms:play-services-basement:15.0.1 (*)
+|         +--- com.google.android.gms:play-services-measurement-base:[16.0.0] -> 16.0.0
+|         +--- com.google.firebase:firebase-analytics:[16.0.1] -> 16.0.1 (*)
+|         +--- com.google.firebase:firebase-analytics-impl:[16.1.1] -> 16.1.1 (*)
+|         +--- com.google.firebase:firebase-common:16.0.0 (*)
+|         \--- com.google.firebase:firebase-measurement-connector:16.0.0 (*)
++--- com.github.ceryle:RadioRealButton:v2.1.1
+|    \--- com.android.support:appcompat-v7:25.3.1 -> 27.0.2 (*)
++--- org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2
++--- com.ramotion.cardslider:card-slider:0.3.0
+|    +--- com.android.support:appcompat-v7:26.1.0 -> 27.0.2 (*)
+|    +--- com.android.support:recyclerview-v7:26.1.0 -> 27.0.2 (*)
+|    +--- com.android.support:design:26.1.0 -> 27.0.2 (*)
+|    \--- com.android.support:cardview-v7:26.1.0 -> 27.0.0 (*)
++--- junit:junit:4.12
+|    \--- org.hamcrest:hamcrest-core:1.3
+\--- org.mockito:mockito-core:2.7.1
+     +--- net.bytebuddy:byte-buddy:1.6.5
+     +--- net.bytebuddy:byte-buddy-agent:1.6.5
+     \--- org.objenesis:objenesis:2.5
+
+releaseWearApp - Link to a wear app to embed for object 'release'. (n)
+No dependencies
+
+releaseWearBundling - Resolved Configuration for wear app bundling for variant: release
+No dependencies
+
+runtimeOnly - Runtime only dependencies for 'main' sources. (n)
+No dependencies
+
+testAnnotationProcessor - Classpath for the annotation processor for 'test'. (n)
+\--- com.google.dagger:dagger-compiler:2.8 (n)
+
+testApi - API dependencies for 'test' sources. (n)
+No dependencies
+
+testApk - Apk dependencies for 'test' sources (deprecated: use 'testRuntimeOnly' instead). (n)
+No dependencies
+
+testCompile - Compile dependencies for 'test' sources (deprecated: use 'testImplementation' instead).
+No dependencies
+
+testCompileOnly - Compile only dependencies for 'test' sources. (n)
+No dependencies
+
+testDebugAnnotationProcessor - Classpath for the annotation processor for 'testDebug'. (n)
+No dependencies
+
+testDebugApi - API dependencies for 'testDebug' sources. (n)
+No dependencies
+
+testDebugApk - Apk dependencies for 'testDebug' sources (deprecated: use 'testDebugRuntimeOnly' instead). (n)
+No dependencies
+
+testDebugCompile - Compile dependencies for 'testDebug' sources (deprecated: use 'testDebugImplementation' instead). (n)
+No dependencies
+
+testDebugCompileOnly - Compile only dependencies for 'testDebug' sources. (n)
+No dependencies
+
+testDebugImplementation - Implementation only dependencies for 'testDebug' sources. (n)
+No dependencies
+
+testDebugProvided - Provided dependencies for 'testDebug' sources (deprecated: use 'testDebugCompileOnly' instead). (n)
+No dependencies
+
+testDebugRuntimeOnly - Runtime only dependencies for 'testDebug' sources. (n)
+No dependencies
+
+testDebugWearApp - Link to a wear app to embed for object 'testDebug'. (n)
+No dependencies
+
+testImplementation - Implementation only dependencies for 'test' sources. (n)
++--- junit:junit:4.12 (n)
+\--- org.mockito:mockito-core:2.7.1 (n)
+
+testProvided - Provided dependencies for 'test' sources (deprecated: use 'testCompileOnly' instead). (n)
+No dependencies
+
+testReleaseAnnotationProcessor - Classpath for the annotation processor for 'testRelease'. (n)
+No dependencies
+
+testReleaseApi - API dependencies for 'testRelease' sources. (n)
+No dependencies
+
+testReleaseApk - Apk dependencies for 'testRelease' sources (deprecated: use 'testReleaseRuntimeOnly' instead). (n)
+No dependencies
+
+testReleaseCompile - Compile dependencies for 'testRelease' sources (deprecated: use 'testReleaseImplementation' instead). (n)
+No dependencies
+
+testReleaseCompileOnly - Compile only dependencies for 'testRelease' sources. (n)
+No dependencies
+
+testReleaseImplementation - Implementation only dependencies for 'testRelease' sources. (n)
+No dependencies
+
+testReleaseProvided - Provided dependencies for 'testRelease' sources (deprecated: use 'testReleaseCompileOnly' instead). (n)
+No dependencies
+
+testReleaseRuntimeOnly - Runtime only dependencies for 'testRelease' sources. (n)
+No dependencies
+
+testReleaseWearApp - Link to a wear app to embed for object 'testRelease'. (n)
+No dependencies
+
+testRuntimeOnly - Runtime only dependencies for 'test' sources. (n)
+No dependencies
+
+testWearApp - Link to a wear app to embed for object 'test'. (n)
+No dependencies
+
+wearApp - Link to a wear app to embed for object 'main'. (n)
+No dependencies
+
+(*) - dependencies omitted (listed previously)
+
+(n) - Not resolved (configuration is not meant to be resolved)
+
+A web-based, searchable dependency report is available by adding the --scan option.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+See https://docs.gradle.org/4.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 3s
+1 actionable task: 1 executed

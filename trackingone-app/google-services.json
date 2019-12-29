@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "182227437887",
+    "firebase_url": "https://vialmx-aff95.firebaseio.com",
+    "project_id": "vialmx-aff95",
+    "storage_bucket": "vialmx-aff95.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:182227437887:android:daa4e324e7f8f8cd",
+        "android_client_info": {
+          "package_name": "com.spyc.trackingone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "182227437887-854gc1sure7if5lq4hq927fkhl6ktt21.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.spyc.trackingone",
+            "certificate_hash": "1ec9b07e7bedc667be89ce6cae2de836b1017d65"
+          }
+        },
+        {
+          "client_id": "182227437887-ft3n5k65p315njcdakugj6f699fjdu85.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZRXgP6AqT4-3F2vWAJhEtp0UZD2P07Aw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "182227437887-ft3n5k65p315njcdakugj6f699fjdu85.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

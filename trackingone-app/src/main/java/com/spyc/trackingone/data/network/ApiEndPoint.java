@@ -1,0 +1,50 @@
+package com.spyc.trackingone.data.network;
+
+import com.spyc.trackingone.BuildConfig;
+
+/**
+ * Created by Jorge Namitle on 24/03/2018.
+ */
+
+public final class ApiEndPoint {
+
+    public static final String ENDPOINT_GOOGLE_LOGIN = BuildConfig.BASE_URL
+            + "/588d14f4100000a9072d2943";
+
+    public static final String ENDPOINT_FACEBOOK_LOGIN = BuildConfig.BASE_URL
+            + "/588d15d3100000ae072d2944";
+
+    public static final String ENDPOINT_LOGOUT = BuildConfig.BASE_URL
+            + "/588d161c100000a9072d2946";
+
+    public static final String ENDPOINT_CURRENT_USER = BuildConfig.VIAL_URL
+            + "/api/v1/user";
+
+
+
+    public static final String URL_EMBARQUES = BuildConfig.TRACKING_URL
+            + "/shipping-schedules";
+
+    public static final String ENDPOINT_SERVER_LOGIN = BuildConfig.TRACKING_URL
+            + "/login";
+
+    public static final String IN_PARKING_SPACE = BuildConfig.TRACKING_URL
+            + "/shipping-schedules/{shipping-schedules}/leave-in-parking-space";
+
+    public static final String IN_RAMP = BuildConfig.TRACKING_URL
+            + "/shipping-schedules/{shipping-schedules}/leave-in-ramp";
+
+    public static final String FROM_RAMP = BuildConfig.TRACKING_URL
+            + "/shipping-schedules/{shipping-schedules}/leave-from-ramp";
+
+    public static final String FROM_PARKING_SPACE = BuildConfig.TRACKING_URL
+            + "/shipping-schedules/{shipping-schedules}/leave-from-parking-space";
+
+    public static  final String POST_SENDEMAIL = BuildConfig.VIAL_URL
+            + "/api/v1/penalties/{penalty}/emails/send";
+
+    private ApiEndPoint() {
+        // This class is
+        // publicly instantiable
+    }
+}

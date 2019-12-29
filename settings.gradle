@@ -1,0 +1,2 @@
+
+include ':trackingone-app', ':library',':btsdk'

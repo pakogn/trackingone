@@ -1,0 +1,176 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+apply from: '../config/quality/quality.gradle'
+
+android {
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.spyc.trackingone"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        multiDexEnabled true
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        debug {
+            buildConfigField("String", "BASE_URL", "\"http://www.mocky.io/v2\"")
+            buildConfigField("String", "API_KEY", "\"ABCXYZ123TEST\"")
+            buildConfigField("String", "TRACKING_URL", "\"http://189.198.134.26/WSTrackingOneYarda/api\"")
+            buildConfigField("String", "VIAL_URL", "\"http://app.vialmx.com\"")
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "BASE_URL", "\"http://www.mocky.io/v2\"")
+            buildConfigField("String", "API_KEY", "\"ABCXYZ123TEST\"")
+            buildConfigField("String", "TRACKING_URL", "\"http://189.198.134.26/WSTrackingOneYarda/api\"")
+            buildConfigField("String", "VIAL_URL", "\"http://app.vialmx.com\"")
+        }
+    }
+    buildToolsVersion '28.0.3'
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+
+    }
+    dataBinding {
+        enabled = true
+    }
+
+}
+
+greendao {
+    schemaVersion 1
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation(project(':library'))
+    // implementation(project(':zixng'))
+    implementation(project(':btsdk'))
+    // api files('libs/core-3.2.1.jar')
+    api files('libs/top-usdk-service-1.0.2.jar')
+    // android support libraries
+    //noinspection GradleCompatible
+    implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:design:$rootProject.supportLibraryVersion"
+    // noinspection GradleComp
+    // atible
+    implementation "com.android.support:support-vector-drawable:$rootProject.supportLibraryVersion"
+    // noinspection GradleCompatible
+    implementation "com.android.support:animated-vector-drawable:$rootProject.supportLibraryVersion"
+
+    // font
+    implementation "uk.co.chrisjenx:calligraphy:$rootProject.calligraphyVersion"
+
+    // network
+    implementation "com.amitshekhar.android:rx2-android-networking:$rootProject.rx2FastAndroidNetworking"
+
+    // image
+    implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+
+    // parser
+    implementation "com.google.code.gson:gson:$rootProject.gsonVersion"
+
+    // database
+    implementation "org.greenrobot:greendao:$rootProject.greenDaoVersion"
+
+    // debug database
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:support-v4:26.1.0'
+
+    debugImplementation "com.amitshekhar.android:debug-db:$rootProject.debugDBVersion"
+
+    // dependency injection
+    implementation "com.google.dagger:dagger:$rootProject.dagger2Version"
+    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
+    compileOnly 'javax.annotation:jsr250-api:1.0'
+    implementation 'javax.inject:javax.inject:1'
+
+    // reactive
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxjava2Version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroidVersion"
+
+    // code generator for view
+    implementation "com.jakewharton:butterknife:$rootProject.butterKnifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.butterKnifeVersion"
+    // swipe view
+    implementation "com.mindorks:placeholderview:$rootProject.placeholderviewVersion"
+    // logger
+    implementation "com.jakewharton.timber:timber:$rootProject.timberVersion"
+
+    // QR reed barcode and Qr  zxing
+    implementation "com.journeyapps:zxing-android-embedded:$rootProject.zxingAndroid"
+    implementation "me.dm7.barcodescanner:zxing:$rootProject.zxingZbar"
+    implementation "me.dm7.barcodescanner:zbar:$rootProject.zxingZbar"
+    //implementation 'com.google.zxing:core:3.3.0'
+
+    // Validation
+    implementation "com.basgeekball:awesome-validation:$rootProject.awesome"
+
+    //animation
+    implementation "com.github.ratty3697:android-smart-animation-library:$rootProject.animation"
+
+    // cuid
+    implementation "br.com.vivareal:cuid-android:$rootProject.cuid"
+
+    // pop pop
+    implementation "com.github.Shashank02051997:FancyAlertDialog-Android:$rootProject.fancyAlertDialog"
+
+    // materialsearchview
+    implementation "com.miguelcatalan:materialsearchview:$rootProject.materialsearchview"
+    // picasso
+    implementation "com.squareup.picasso:picasso:$rootProject.picasso"
+    //
+    implementation "com.github.tajchert:nammu:$rootProject.tajchert"
+
+    implementation 'com.jaredrummler:material-spinner:1.3.1'
+
+    implementation "com.google.android.gms:play-services-plus:$rootProject.googleService"
+    implementation "com.google.android.gms:play-services-location:$rootProject.googleService"
+    implementation "com.google.firebase:firebase-messaging:$rootProject.firebaseMess"
+    implementation "com.google.firebase:firebase-core:$rootProject.firebaseCore"
+
+    //signaturepad
+
+    implementation 'com.github.gcacace:signature-pad:1.2.1'
+
+    implementation 'com.github.ceryle:RadioRealButton:v2.1.1'
+
+    implementation 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+    implementation 'com.github.bumptech.glide:glide:3.6.1'
+
+    // slide cardslider-modificado
+    implementation 'com.ramotion.cardslider:card-slider:0.3.0'
+    // material spinner selection
+    implementation 'com.jaredrummler:material-spinner:1.3.0'
+    // dependencies for local unit tests
+    testImplementation "junit:junit:$rootProject.ext.junitVersion"
+    testImplementation "org.mockito:mockito-core:$rootProject.mockitoVersion"
+    testAnnotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
+
+    // UI Testing
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"
+    androidTestImplementation "com.android.support.test.espresso:espresso-intents:$rootProject.espressoVersion"
+    androidTestImplementation "org.mockito:mockito-core:$rootProject.mockitoVersion"
+    androidTestAnnotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
+
+}
+
+configurations.all {
+    resolutionStrategy.force "com.android.support:support-annotations:$supportLibraryVersion"
+}
+
+apply plugin: 'com.google.gms.google-services'

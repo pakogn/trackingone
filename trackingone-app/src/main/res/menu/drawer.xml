@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@+id/nav_item_embarques"
+            android:checked="true"
+            android:title="@string/opt1" />
+        <item
+            android:id="@+id/nav_item_opt2"
+            android:checked="true"
+            android:title="@string/opt2" />
+        <item
+            android:id="@+id/nav_item_opt3"
+            android:checked="true"
+            android:title="@string/opt3" />
+        <item
+            android:id="@+id/nav_item_opt4"
+            android:checked="true"
+            android:title="@string/opt4" />
+        <item
+            android:id="@+id/nav_item_opt5"
+            android:checked="true"
+            android:title="@string/opt5" />
+        <item
+            android:id="@+id/nav_item_opt6"
+            android:checked="true"
+            android:title="@string/opt6" />
+        <item
+            android:id="@+id/nav_item_logout"
+            style="@style/TextStyle.Title"
+            android:checked="true"
+            android:title="@string/logout" />
+    </group>
+</menu>
