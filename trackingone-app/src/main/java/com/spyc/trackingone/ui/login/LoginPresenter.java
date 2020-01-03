@@ -59,23 +59,35 @@ public class LoginPresenter<V extends LoginContract> extends BasePresenter<V>
                     @Override
                     public void accept(LoginResponse response) throws Exception {
                         Log.e("TOKEN=ID-USER::::::","" + response.getId());
+                        Log.e("AUTH-USER::::::","" + response.getAuth());
                         getDataManager().updateApiAccessInfo(
                                 response.getId()
                         );
 
                         getDataManager().updateUserInfo(
                                 response.getId(),
+                                response.getAuth(),
                                 DataManager.LoggedInMode.LOGGED_IN_MODE_SERVER,
                                 response.getName(),
                                 response.getUsername()
                         );
+
+
 
                         if (!isViewAttached()) {
                             return;
                         }
 
                         getMvpView().hideLoading();
-                        getMvpView().openMainActivity();
+
+                        if(response.getAuth() == 7) {
+                            getMvpView().abrirPerfilTrafico(); // primer perfil 7
+                        }
+                        if(response.getAuth() == 8) {
+                            getMvpView().abrirPerfilMulero(); // segundo perfil 8
+                        } else {
+                            getMvpView().showMessage("Ingresa un usuario valido");
+                        }
 
                     }
                 }, new Consumer<Throwable>() {

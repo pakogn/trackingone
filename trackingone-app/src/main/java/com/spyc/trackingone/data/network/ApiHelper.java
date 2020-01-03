@@ -31,6 +31,14 @@ public interface ApiHelper {
 
     Single<CurrentUserResponse> getCurrentUserApiCall();
 
-    Single<List<FilaEmbarqueResponse>> getEmbarqueApiCall();
+    Single<List<FilaEmbarqueResponse>> getEmbarqueApiCall(String id);
+
+    Single postInRamp(String id);
+
+    Single postFromRamp(String id);
+
+    Single postInParkingSpace(String id);
+
+    Single postFromParkingSpace(String id);
 
 }

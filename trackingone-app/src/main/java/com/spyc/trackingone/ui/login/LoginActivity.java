@@ -9,6 +9,7 @@ import android.widget.EditText;
 
 import com.spyc.trackingone.ui.Embarques.EmbarquesActivity;
 import com.spyc.trackingone.ui.base.BaseActivity;
+import com.spyc.trackingone.ui.embarquesMulero.EmbarquesMuleroActivity;
 import com.spyc.trackingone.ui.home.HomeActivity;
 
 import javax.inject.Inject;
@@ -61,11 +62,24 @@ public class LoginActivity extends BaseActivity implements LoginContract {
         sharedPreferences = this.getSharedPreferences("mindorks_pref", Context.MODE_PRIVATE);
         accessToken = sharedPreferences.getString("PREF_KEY_ACCESS_TOKEN", null);
         loginPresenter.onServerLoginClick(mEmailEditText.getText().toString(), mPasswordEditText.getText().toString());
-        //        openMainActivity();
     }
 
     @Override
     public void openMainActivity() {
+        Intent intent = EmbarquesActivity.getStartIntent(LoginActivity.this);
+        startActivity(intent);
+        finish();
+    }
+
+    @Override
+    public void abrirPerfilMulero() {
+        Intent intent = EmbarquesMuleroActivity.getStartIntent(LoginActivity.this);
+        startActivity(intent);
+        finish();
+    }
+
+    @Override
+    public void abrirPerfilTrafico() {
         Intent intent = EmbarquesActivity.getStartIntent(LoginActivity.this);
         startActivity(intent);
         finish();

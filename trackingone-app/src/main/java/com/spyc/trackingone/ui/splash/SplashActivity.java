@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import com.spyc.trackingone.ui.Embarques.EmbarquesActivity;
 import com.spyc.trackingone.ui.base.BaseActivity;
+import com.spyc.trackingone.ui.embarquesMulero.EmbarquesMuleroActivity;
 import com.spyc.trackingone.ui.home.HomeActivity;
 import com.spyc.trackingone.ui.login.LoginActivity;
 
@@ -51,7 +52,7 @@ public class SplashActivity extends BaseActivity implements SplashContract {
     }
 
     @Override
-    public void openHomeActivity() {
+    public void openEmbarquesTrafico() {
         Intent intent = EmbarquesActivity.getStartIntent(SplashActivity.this);
         startActivity(intent);
         finish();
@@ -60,6 +61,13 @@ public class SplashActivity extends BaseActivity implements SplashContract {
     @Override
     public void startSyncService() {
         //SyncService.start(this);
+    }
+
+    @Override
+    public void openEmbarquesMulero() {
+        Intent intent = EmbarquesMuleroActivity.getStartIntent(SplashActivity.this);
+        startActivity(intent);
+        finish();
     }
 
     @Override

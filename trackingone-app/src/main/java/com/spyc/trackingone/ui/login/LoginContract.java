@@ -7,5 +7,11 @@ import com.spyc.trackingone.ui.base.MvpViewContract;
  */
 
 public interface LoginContract extends MvpViewContract{
+
     void openMainActivity();
+
+    void abrirPerfilMulero();
+
+    void abrirPerfilTrafico();
+
 }

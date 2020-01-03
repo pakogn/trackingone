@@ -5,6 +5,7 @@ import com.spyc.trackingone.di.module.ActivityModule;
 import com.spyc.trackingone.ui.Embarques.EmbarquesActivity;
 import com.spyc.trackingone.ui.detalleEmbarque.DetalleEmbarque;
 import com.spyc.trackingone.ui.embarqueStatus.EmbarqueStatusActivity;
+import com.spyc.trackingone.ui.embarquesMulero.EmbarquesMuleroActivity;
 import com.spyc.trackingone.ui.home.HomeActivity;
 import com.spyc.trackingone.ui.login.LoginActivity;
 import com.spyc.trackingone.ui.splash.SplashActivity;
@@ -30,4 +31,6 @@ public interface ActivityComponent {
     void inject(DetalleEmbarque activity);
 
     void inject(EmbarqueStatusActivity activity);
+
+    void inject(EmbarquesMuleroActivity activity);
 }

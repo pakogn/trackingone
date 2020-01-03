@@ -1,15 +1,11 @@
-package com.spyc.trackingone.ui.Embarques;
+package com.spyc.trackingone.ui.embarquesMulero;
 
 import com.spyc.trackingone.data.network.model.FilaEmbarqueResponse;
 import com.spyc.trackingone.ui.base.MvpViewContract;
 
 import java.util.List;
 
-public interface EmbarquesContract extends MvpViewContract {
-
-    void filtrarPendientesEnRampa();
-
-    void filtrarPendientesEnCajon();
+public interface EmbarquesMuleroContract extends MvpViewContract {
 
     void actualizaEmbarques(List<FilaEmbarqueResponse> embarquesList);
 

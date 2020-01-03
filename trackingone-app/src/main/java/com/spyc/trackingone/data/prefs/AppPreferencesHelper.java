@@ -18,6 +18,8 @@ public class AppPreferencesHelper implements PreferencesHelper{
 
     private static final String PREF_KEY_USER_LOGGED_IN_MODE = "PREF_KEY_USER_LOGGED_IN_MODE";
     private static final String PREF_KEY_CURRENT_USER_ID = "PREF_KEY_CURRENT_USER_ID";
+    private static final String PREF_KEY_USER_AUHT_IN_MODE = "PREF_KEY_AUHT_LOGGED_IN_MODE";
+    private static final String PREF_KEY_CURRENT_USER_AUHT = "PREF_KEY_CURRENT_USER_AUHT";
     private static final String PREF_KEY_CURRENT_USER_NAME = "PREF_KEY_CURRENT_USER_NAME";
     private static final String PREF_KEY_CURRENT_USER_EMAIL = "PREF_KEY_CURRENT_USER_EMAIL";
     private static final String PREF_KEY_CURRENT_USER_PROFILE_PIC_URL
@@ -43,6 +45,18 @@ public class AppPreferencesHelper implements PreferencesHelper{
     public void setCurrentUserId(Long userId) {
         long id = userId == null ? AppConstants.NULL_INDEX : userId;
         mPrefs.edit().putLong(PREF_KEY_CURRENT_USER_ID, id).apply();
+    }
+
+    @Override
+    public Long getCurrentAuht() {
+        Long auth = mPrefs.getLong(PREF_KEY_CURRENT_USER_AUHT, AppConstants.NULL_INDEX);
+        return auth == AppConstants.NULL_INDEX ? null : auth;
+    }
+
+    @Override
+    public void setCurrentAuth(Long userAuth) {
+        long auth = userAuth == null ? AppConstants.NULL_INDEX : userAuth;
+        mPrefs.edit().putLong(PREF_KEY_CURRENT_USER_AUHT, auth).apply();
     }
 
     @Override

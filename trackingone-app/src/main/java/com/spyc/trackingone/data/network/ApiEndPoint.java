@@ -23,7 +23,7 @@ public final class ApiEndPoint {
 
 
     public static final String URL_EMBARQUES = BuildConfig.TRACKING_URL
-            + "/shipping-schedules";
+            + "/me/shipping-schedules";
 
     public static final String ENDPOINT_SERVER_LOGIN = BuildConfig.TRACKING_URL
             + "/login";
@@ -35,10 +35,10 @@ public final class ApiEndPoint {
             + "/shipping-schedules/{shipping-schedules}/leave-in-ramp";
 
     public static final String FROM_RAMP = BuildConfig.TRACKING_URL
-            + "/shipping-schedules/{shipping-schedules}/leave-from-ramp";
+            + "/shipping-schedules/{shipping-schedules}/move-from-ramp";
 
     public static final String FROM_PARKING_SPACE = BuildConfig.TRACKING_URL
-            + "/shipping-schedules/{shipping-schedules}/leave-from-parking-space";
+            + "/shipping-schedules/{shipping-schedules}/move-from-parking-space";
 
     public static  final String POST_SENDEMAIL = BuildConfig.VIAL_URL
             + "/api/v1/penalties/{penalty}/emails/send";

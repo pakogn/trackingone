@@ -28,10 +28,12 @@
         </TextView>
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/origin"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:ems="10"
+            android:enabled="false"
+            android:paddingLeft="8dp"
             android:layout_marginTop="6dp"
             android:background="@color/light_gray"
             android:inputType="textPersonName" />
@@ -41,15 +43,17 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:textStyle="bold"
-            android:text="ORIGEN">
+            android:text="DESTINO">
 
         </TextView>
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/destination"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:ems="10"
+            android:enabled="false"
+            android:paddingLeft="8dp"
             android:layout_marginTop="6dp"
             android:background="@color/light_gray"
             android:inputType="textPersonName" />
@@ -71,10 +75,11 @@
             </TextView>
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/container"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginTop="6dp"
+                android:paddingLeft="8dp"
                 android:background="@color/light_gray"
                 android:ems="10"
                 android:inputType="textPersonName" />
@@ -93,7 +98,7 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/alta"
+                    android:id="@+id/cancel"
                     style="@style/Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -110,10 +115,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/media1"
+                    android:id="@+id/btn_status"
                     style="@style/Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -122,13 +128,10 @@
                     android:textSize="12dp"
                     android:background="@drawable/ripple_drawable_button"
                     android:backgroundTint="@color/dark_gray"
-                    android:text="Mover desde cajón" />
-
+                    android:text="" />
 
             </LinearLayout>
         </LinearLayout>
-
-
 
     </LinearLayout>
 

@@ -1,4 +1,4 @@
-package com.spyc.trackingone.ui.Embarques;
+package com.spyc.trackingone.ui.embarquesMulero;
 
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
@@ -11,8 +11,10 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.spyc.trackingone.R;
 import com.spyc.trackingone.data.network.model.FilaEmbarqueResponse;
+import com.spyc.trackingone.ui.Embarques.EmbarquesAdapter;
 import com.spyc.trackingone.ui.base.BaseViewHolder;
 import com.spyc.trackingone.ui.detalleEmbarque.DetalleEmbarque;
+import com.spyc.trackingone.ui.embarqueStatus.EmbarqueStatusActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,17 +23,17 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class EmbarquesAdapter extends RecyclerView.Adapter<BaseViewHolder> {
+public class EmbarquesMuleroAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
     public static final int VIEW_TYPE_EMPTY = 0;
     public static final int VIEW_TYPE_NORMAL = 1;
 
+    Gson gson;
+
     private Callback mCallback;
     private List<FilaEmbarqueResponse> filaEmbarqueResponse;
 
-    Gson gson;
-
-    public EmbarquesAdapter(List<FilaEmbarqueResponse> embarqueResponseList) {
+    public EmbarquesMuleroAdapter(List<FilaEmbarqueResponse> embarqueResponseList) {
         filaEmbarqueResponse = embarqueResponseList;
     }
 
@@ -49,12 +51,12 @@ public class EmbarquesAdapter extends RecyclerView.Adapter<BaseViewHolder> {
     public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         switch (viewType) {
             case VIEW_TYPE_NORMAL:
-                return new ViewHolder(
-                        LayoutInflater.from(parent.getContext()).inflate(R.layout.row_embarque, parent, false));
+                return new EmbarquesMuleroAdapter.ViewHolder(
+                        LayoutInflater.from(parent.getContext()).inflate(R.layout.row_embarque_mulero, parent, false));
             case VIEW_TYPE_EMPTY:
             default:
-                return new EmptyViewHolder(
-                       LayoutInflater.from(parent.getContext()).inflate(R.layout.item_empty_view, parent, false));
+                return new EmbarquesMuleroAdapter.EmptyViewHolder(
+                        LayoutInflater.from(parent.getContext()).inflate(R.layout.item_empty_view, parent, false));
         }
     }
 
@@ -78,8 +80,10 @@ public class EmbarquesAdapter extends RecyclerView.Adapter<BaseViewHolder> {
     }
 
     public void addItems(List<FilaEmbarqueResponse> embarqueList) {
-        filaEmbarqueResponse.addAll(embarqueList);
-        notifyDataSetChanged();
+
+            filaEmbarqueResponse.addAll(embarqueList);
+            notifyDataSetChanged();
+
     }
 
     public interface Callback {
@@ -88,29 +92,35 @@ public class EmbarquesAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
     public class ViewHolder extends BaseViewHolder {
 
-        @BindView(R.id.fecha)
-        TextView fechaTextView;
+        @BindView(R.id.mu_embarque)
+        TextView muEmbarqueTextView;
 
-        @BindView(R.id.operador)
-        TextView operadorTextView;
+        @BindView(R.id.mu_fecha)
+        TextView muFechaTextView;
 
-        @BindView(R.id.no_embarque)
-        TextView no_embarqueTextView;
+        @BindView(R.id.mu_transportista)
+        TextView muTransportistaTextView;
 
-        @BindView(R.id.transportista)
-        TextView transportistaTextView;
+        @BindView(R.id.mu_no_caja)
+        TextView muNoCajaTextView;
 
-        @BindView(R.id.no_remolque)
-        TextView no_remolqueTextView;
+        @BindView(R.id.mu_no_embarque)
+        TextView muNoRemolqueTextView;
 
-        @BindView(R.id.no_tractor)
-        TextView no_tractorTextView;
+        @BindView(R.id.mu_no_remolque)
+        TextView muNoEmbarqueTextView;
 
-        @BindView(R.id.caja)
-        TextView cajaTextView;
+        @BindView(R.id.mu_no_tractor)
+        TextView muNoTractorTextView;
 
-        @BindView(R.id.placas)
-        TextView placasTextView;
+        @BindView(R.id.mu_tipo_movimiento)
+        TextView muTipoMovTextView;
+
+        @BindView(R.id.mu_cajon)
+        TextView muCajonTextView;
+
+        @BindView(R.id.mu_rampa)
+        TextView muRampaTextView;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -118,14 +128,16 @@ public class EmbarquesAdapter extends RecyclerView.Adapter<BaseViewHolder> {
         }
 
         protected void clear() {
-            fechaTextView.setText("");
-            operadorTextView.setText("");
-            no_embarqueTextView.setText("");
-            transportistaTextView.setText("");
-            no_remolqueTextView.setText("");
-            no_tractorTextView.setText("");
-            cajaTextView.setText("");
-            placasTextView.setText("");
+            muEmbarqueTextView.setText("");
+            muFechaTextView.setText("");
+            muTransportistaTextView.setText("");
+            muNoCajaTextView.setText("");
+            muNoEmbarqueTextView.setText("");
+            muNoRemolqueTextView.setText("");
+            muNoTractorTextView.setText("");
+            muTipoMovTextView.setText("");
+            muCajonTextView.setText("");
+            muRampaTextView.setText("");
         }
 
         public void onBind(int position) {
@@ -133,29 +145,36 @@ public class EmbarquesAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
             final FilaEmbarqueResponse fila = filaEmbarqueResponse.get(position);
 
+            if(fila.getShipping_number() != null) {
+                muEmbarqueTextView.setText(fila.getShipping_number());
+            }
+
             if(fila.getScheduled_date() != null) {
-                fechaTextView.setText(fila.getScheduled_date());
+                muFechaTextView.setText(fila.getScheduled_date());
             }
-            if(fila.getDriver_id() != null) {
-                operadorTextView.setText(fila.getDriver_id());
-            }
-            if (fila.getShipping_number() != null) {
-                no_embarqueTextView.setText(fila.getShipping_number());
-            }
-            if (fila.getCarrier_id() != null) {
-                transportistaTextView.setText(fila.getCarrier_id());
-            }
-            if (fila.getTrailer_number() != null) {
-                no_remolqueTextView.setText(fila.getTrailer_number());
-            }
-            if (fila.getTruck_number() != null) {
-                no_tractorTextView.setText(fila.getTruck_number());
+            if(fila.getCarrier_id() != null) {
+                muTransportistaTextView.setText(fila.getCarrier_id());
             }
             if (fila.getContainer() != null) {
-                cajaTextView.setText(fila.getContainer());
+                muNoCajaTextView.setText(fila.getContainer());
             }
-            if (fila.getLicense_plate() != null) {
-                placasTextView.setText(fila.getLicense_plate());
+            if (fila.getShipping_number() != null) {
+                muNoEmbarqueTextView.setText(fila.getShipping_number());
+            }
+            if (fila.getTrailer_number() != null) {
+                muNoRemolqueTextView.setText(fila.getTrailer_number());
+            }
+            if (fila.getTruck_number() != null) {
+                muNoTractorTextView.setText(fila.getTruck_number());
+            }
+            if (fila.getShipping_status_id() != null) {
+                muTipoMovTextView.setText(fila.getShipping_status_id());
+            }
+            if (fila.getInitial_parking_space() != null) {
+                muCajonTextView.setText(fila.getInitial_parking_space());
+            }
+            if (fila.getRamp() != null) {
+                muRampaTextView.setText(fila.getRamp());
             }
 
             itemView.setOnClickListener(new View.OnClickListener() {
@@ -164,7 +183,7 @@ public class EmbarquesAdapter extends RecyclerView.Adapter<BaseViewHolder> {
                     gson = new Gson();
                     String fEmbarquesJSON = gson.toJson(fila);
 
-                    Intent intent = new Intent(itemView.getContext(), DetalleEmbarque.class);
+                    Intent intent = new Intent(itemView.getContext(), EmbarqueStatusActivity.class);
                     intent.putExtra("idMulero", fEmbarquesJSON);
                     itemView.getContext().startActivity(intent);
                 }
@@ -206,5 +225,6 @@ public class EmbarquesAdapter extends RecyclerView.Adapter<BaseViewHolder> {
         filaEmbarqueResponse.addAll(newList);
         notifyDataSetChanged();
     }
+
 
 }

@@ -34,9 +34,11 @@ public class EmbarquesPresenter<V extends EmbarquesContract> extends BasePresent
 
     @Override
     public void cargandoTabla() {
+        String id = getDataManager().getCurrentUserId().toString();
+        Log.e("ID USER","-*-:"+id);
         getMvpView().showLoading();
         getCompositeDisposable().add((Disposable) getDataManager()
-            .getEmbarqueApiCall()
+            .getEmbarqueApiCall(id)
             .subscribeOn(getSchedulerProvider().io())
             .observeOn(getSchedulerProvider().ui())
             .subscribe(new Consumer<List<FilaEmbarqueResponse>>() {
@@ -90,6 +92,11 @@ public class EmbarquesPresenter<V extends EmbarquesContract> extends BasePresent
         final String currentUserEmail = getDataManager().getCurrentUserEmail();
         if(currentUserEmail != null && !currentUserEmail.isEmpty()){
             getMvpView().updateUserEmail(currentUserEmail);
+        }
+
+        final Long currentAuth = getDataManager().getCurrentAuht();
+        if(currentAuth != null) {
+            getMvpView().updateAuth(currentAuth);
         }
     }
 }

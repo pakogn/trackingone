@@ -10,8 +10,10 @@ public interface SplashContract extends MvpViewContract{
 
     void openLoginActivity();
 
-    void openHomeActivity();
+    void openEmbarquesTrafico();
 
     void startSyncService();
+
+    void openEmbarquesMulero();
 
 }

@@ -110,8 +110,28 @@ public class AppDataManager implements DataManager {
     }
 
     @Override
-    public Single<List<FilaEmbarqueResponse>> getEmbarqueApiCall() {
-        return mApiHelper.getEmbarqueApiCall();
+    public Single<List<FilaEmbarqueResponse>> getEmbarqueApiCall(String id) {
+        return mApiHelper.getEmbarqueApiCall(id);
+    }
+
+    @Override
+    public Single postInRamp(String id) {
+        return mApiHelper.postInRamp(id);
+    }
+
+    @Override
+    public Single postFromRamp(String id) {
+        return mApiHelper.postFromRamp(id);
+    }
+
+    @Override
+    public Single postInParkingSpace(String id) {
+        return mApiHelper.postInParkingSpace(id);
+    }
+
+    @Override
+    public Single postFromParkingSpace(String id) {
+        return mApiHelper.postFromParkingSpace(id);
     }
 
     @Override
@@ -149,6 +169,16 @@ public class AppDataManager implements DataManager {
     @Override
     public void setCurrentUserId(Long userId) {
         mPreferencesHelper.setCurrentUserId(userId);
+    }
+
+    @Override
+    public Long getCurrentAuht() {
+        return mPreferencesHelper.getCurrentAuht();
+    }
+
+    @Override
+    public void setCurrentAuth(Long auth) {
+        mPreferencesHelper.setCurrentAuth(auth);
     }
 
     @Override
@@ -191,15 +221,16 @@ public class AppDataManager implements DataManager {
     @Override
     public void updateUserInfo(
             Long userId,
+            Long auth,
             LoggedInMode loggedInMode,
             String userName,
             String email) {
 
         setCurrentUserId(userId);
+        setCurrentAuth(auth);
         setCurrentUserLoggedInMode(loggedInMode);
         setCurrentUserName(userName);
         setCurrentUserEmail(email);
-
     }
 
     @Override
@@ -241,6 +272,7 @@ public class AppDataManager implements DataManager {
     @Override
     public void setUserAsLoggedOut() {
         updateUserInfo(
+                null,
                 null,
                 DataManager.LoggedInMode.LOGGED_IN_MODE_LOGGED_OUT,
                 null,

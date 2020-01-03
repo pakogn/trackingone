@@ -1,14 +1,15 @@
-package com.spyc.trackingone.ui.Embarques;
+package com.spyc.trackingone.ui.embarquesMulero;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -21,13 +22,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.spyc.trackingone.R;
 import com.spyc.trackingone.data.network.model.FilaEmbarqueResponse;
+import com.spyc.trackingone.ui.Embarques.EmbarquesAdapter;
+import com.spyc.trackingone.ui.Embarques.EmbarquesContract;
+import com.spyc.trackingone.ui.Embarques.EmbarquesMvpPresenter;
 import com.spyc.trackingone.ui.base.BaseActivity;
-import com.spyc.trackingone.ui.detalleEmbarque.DetalleEmbarque;
-import com.spyc.trackingone.ui.embarqueStatus.EmbarqueStatusActivity;
 import com.spyc.trackingone.ui.login.LoginActivity;
 import com.topwise.cloudpos.aidl.AidlDeviceService;
 
@@ -38,16 +39,15 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
-public class EmbarquesActivity extends BaseActivity implements EmbarquesContract,
-EmbarquesAdapter.Callback, SearchView.OnQueryTextListener{
-
-    @Inject
-    EmbarquesMvpPresenter<EmbarquesContract> embarquesMvpPresenter;
+public class EmbarquesMuleroActivity extends BaseActivity implements EmbarquesMuleroContract,
+        EmbarquesMuleroAdapter.Callback, SearchView.OnQueryTextListener {
 
     @Inject
-    EmbarquesAdapter embarquesAdapter;
+    EmbarquesMuleroMvpPrensenter<EmbarquesMuleroContract> embarquesMuleroMvpPresenter;
+
+    @Inject
+    EmbarquesMuleroAdapter embarquesMuleroAdapter;
 
     @Inject
     LinearLayoutManager eLayoutManager;
@@ -75,28 +75,28 @@ EmbarquesAdapter.Callback, SearchView.OnQueryTextListener{
 
     private List<FilaEmbarqueResponse> newListEmbarques;
 
-    public static Intent getStartIntent(Context context) {
-        Intent intent = new Intent(context, EmbarquesActivity.class);
-        return intent;
-    }
-
     @Override
     public void onDeviceConnected(AidlDeviceService serviceManager) {
 
     }
 
+    public static Intent getStartIntent(Context context) {
+        Intent intent = new Intent(context, EmbarquesMuleroActivity.class);
+        return intent;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_embarques);
+        setContentView(R.layout.activity_embarques_mulero);
 
         getActivityComponent().inject(this);
 
         setUnBinder(ButterKnife.bind(this));
 
-        embarquesMvpPresenter.onAttach(this);
+        embarquesMuleroMvpPresenter.onAttach(this);
 
-        newListEmbarques = embarquesAdapter.getData();
+        newListEmbarques = embarquesMuleroAdapter.getData();
 
         setUp();
     }
@@ -115,9 +115,9 @@ EmbarquesAdapter.Callback, SearchView.OnQueryTextListener{
         eLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         eRecyclerView.setLayoutManager(eLayoutManager);
         eRecyclerView.setItemAnimator(new DefaultItemAnimator());
-        eRecyclerView.setAdapter(embarquesAdapter);
+        eRecyclerView.setAdapter(embarquesMuleroAdapter);
 
-        embarquesMvpPresenter.cargandoTabla();
+        embarquesMuleroMvpPresenter.cargandoTabla();
 
         homeDrawerToggle = new ActionBarDrawerToggle(
                 this,
@@ -140,8 +140,9 @@ EmbarquesAdapter.Callback, SearchView.OnQueryTextListener{
         homeDrawer.addDrawerListener(homeDrawerToggle);
         homeDrawerToggle.syncState();
         setupNavMenu();
-        embarquesMvpPresenter.onNavMenuCreated();
+        embarquesMuleroMvpPresenter.onNavMenuCreated();
     }
+
 
     void setupNavMenu() {
         View headerLayout = navigationView.getHeaderView(0);
@@ -157,7 +158,7 @@ EmbarquesAdapter.Callback, SearchView.OnQueryTextListener{
                         homeDrawer.closeDrawer(GravityCompat.START);
                         switch (item.getItemId()) {
                             case R.id.nav_item_logout:
-                                embarquesMvpPresenter.onDrawerOptionLogoutClick();
+                                embarquesMuleroMvpPresenter.onDrawerOptionLogoutClick();
                                 return true;
                             default:
                                 return false;
@@ -166,54 +167,10 @@ EmbarquesAdapter.Callback, SearchView.OnQueryTextListener{
                 });
     }
 
-    @Override
-    @OnClick(R.id.btn_rampa)
-    public void filtrarPendientesEnRampa() {
-        pendientesEnRampa();
-    }
-
-    @Override
-    @OnClick(R.id.btn_cajon)
-    public void filtrarPendientesEnCajon() {
-        pendientesEnCajon();
-    }
-
-    @OnClick(R.id.btn_todos)
-    public void filtrarTodos() {
-        embarquesMvpPresenter.cargandoTabla();
-    }
 
     @Override
     public void actualizaEmbarques(List<FilaEmbarqueResponse> embarquesList) {
-        embarquesAdapter.addItems(embarquesList);
-    }
-
-    public void pendientesEnCajon() {
-        ArrayList<FilaEmbarqueResponse> filterList = new ArrayList<FilaEmbarqueResponse>();
-        Log.e("TOTAL: ",""+embarquesAdapter.getItemCount());
-
-        for(int i=0; i<embarquesAdapter.getItemCount(); i++){
-            if( embarquesAdapter.getData().get(i).getRamp() == null){
-                filterList.add(embarquesAdapter.getData().get(i));
-            }
-        }
-        embarquesAdapter.getData().clear();
-        Log.d("DESPUES: ",""+filterList.size());
-        actualizaEmbarques(filterList);
-    }
-
-    public void pendientesEnRampa() {
-        ArrayList<FilaEmbarqueResponse> filterList = new ArrayList<FilaEmbarqueResponse>();
-        Log.e("TOTAL: ",""+embarquesAdapter.getItemCount());
-
-        for(int i=0; i<embarquesAdapter.getItemCount(); i++){
-            if( embarquesAdapter.getData().get(i).getRamp() != null && embarquesAdapter.getData().get(i).getInitial_parking_space() != null){
-                filterList.add(embarquesAdapter.getData().get(i));
-            }
-        }
-        embarquesAdapter.getData().clear();
-        Log.d("DESPUES: ",""+filterList.size());
-        actualizaEmbarques(filterList);
+        embarquesMuleroAdapter.addItems(embarquesList);
     }
 
     @Override
@@ -273,7 +230,7 @@ EmbarquesAdapter.Callback, SearchView.OnQueryTextListener{
     @Override
     public boolean onQueryTextChange(String newText) {
         final List<FilaEmbarqueResponse> filterModeList = filter(newListEmbarques, newText);
-        embarquesAdapter.setFilter(filterModeList);
+        embarquesMuleroAdapter.setFilter(filterModeList);
         return true;
     }
 
@@ -282,13 +239,14 @@ EmbarquesAdapter.Callback, SearchView.OnQueryTextListener{
 
         final List<FilaEmbarqueResponse> filteredModelList = new ArrayList<>();
         for (FilaEmbarqueResponse model : models) {
-            final String text = model.getLicense_plate().toLowerCase();
+            final String text = model.getContainer().toLowerCase();
             final String text1 = model.getShipping_number().toLowerCase();
-            final String text2 = model.getContainer().toLowerCase();
+            final String text2 = model.getCarrier_id().toLowerCase();
             final String text3 = model.getTruck_number().toLowerCase();
-            if (text.contains(query) || text1.contains(query) || text2.contains(query) || text3.contains(query)) {
+            if (text.contains(query) || text1.contains(query) ||text2.contains(query) || text3.contains(query)) {
                 filteredModelList.add(model);
             }
+
         }
         return filteredModelList;
     }
@@ -309,7 +267,7 @@ EmbarquesAdapter.Callback, SearchView.OnQueryTextListener{
                     @Override
                     public boolean onMenuItemActionCollapse(MenuItem item) {
                         // Do something when collapsed
-                        embarquesAdapter.setFilter(newListEmbarques);
+                        embarquesMuleroAdapter.setFilter(newListEmbarques);
                         return true; // Return true to collapse action view
                     }
 
@@ -329,7 +287,6 @@ EmbarquesAdapter.Callback, SearchView.OnQueryTextListener{
         if (homeDrawer != null)
             homeDrawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
     }
-
 
     @Override
     public void onBlogEmptyViewRetryClick() {

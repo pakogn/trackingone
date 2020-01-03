@@ -76,27 +76,42 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
 
+
         <activity
-            android:name=".ui.embarqueStatus.EmbarqueStatusActivity"
-            android:launchMode="singleTop" >
-        </activity>
+            android:name=".ui.Embarques.EmbarquesActivity"
+            android:launchMode="singleTop" />
+
         <activity
             android:name=".ui.detalleEmbarque.DetalleEmbarque"
-            android:launchMode="singleTop">
+            android:parentActivityName=".ui.Embarques.EmbarquesActivity"
+            android:windowSoftInputMode="adjustPan">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.spyc.trackingone.ui.Embarques.EmbarquesActivity" />
         </activity>
+
+        <activity android:name=".ui.embarquesMulero.EmbarquesMuleroActivity"></activity>
+
+        <activity
+            android:name=".ui.embarqueStatus.EmbarqueStatusActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ui.embarquesMulero.EmbarquesMuleroActivity"
+            android:windowSoftInputMode="adjustPan">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.spyc.trackingone.ui.embarquesMulero.EmbarquesMuleroActivity" />
+        </activity>
+
+
         <activity
             android:name=".ui.home.HomeActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.Embarques.EmbarquesActivity"
-            android:launchMode="singleTop"
-            android:parentActivityName=".ui.home.HomeActivity"
-            android:windowSoftInputMode="adjustPan">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.spyc.trackingone.ui.home.HomeActivity" />
-        </activity>
+
+
+
 
         <service android:name=".service.firebase.MyFirebaseMessagingService">
             <intent-filter>

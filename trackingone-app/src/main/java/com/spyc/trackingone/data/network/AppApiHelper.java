@@ -90,11 +90,43 @@ public class AppApiHelper implements ApiHelper {
     }
 
     @Override
-    public Single<List<FilaEmbarqueResponse>> getEmbarqueApiCall() {
+    public Single<List<FilaEmbarqueResponse>> getEmbarqueApiCall(String id) {
         return Rx2AndroidNetworking.get(ApiEndPoint.URL_EMBARQUES)
                 .addHeaders(mApiHeader.getProtectedApiHeader())
+                .addHeaders("Authorization", id)
                 .build()
                 .getObjectListSingle(FilaEmbarqueResponse.class);
     }
 
+    @Override
+    public Single postInRamp(String id) {
+        return  Rx2AndroidNetworking.post(ApiEndPoint.IN_RAMP.replace("{shipping-schedules}", id))
+                .addHeaders(mApiHeader.getPublicApiHeader())
+                .build()
+                .getObjectSingle(null);
+    }
+
+    @Override
+    public Single postFromRamp(String id) {
+        return  Rx2AndroidNetworking.post(ApiEndPoint.FROM_RAMP.replace("{shipping-schedules}", id))
+                .addHeaders(mApiHeader.getPublicApiHeader())
+                .build()
+                .getObjectSingle(null);
+    }
+
+    @Override
+    public Single postInParkingSpace(String id) {
+        return  Rx2AndroidNetworking.post(ApiEndPoint.IN_PARKING_SPACE.replace("{shipping-schedules}", id))
+                .addHeaders(mApiHeader.getPublicApiHeader())
+                .build()
+                .getObjectSingle(null);
+    }
+
+    @Override
+    public Single postFromParkingSpace(String id) {
+        return  Rx2AndroidNetworking.post(ApiEndPoint.FROM_PARKING_SPACE.replace("{shipping-schedules}", id))
+                .addHeaders(mApiHeader.getPublicApiHeader())
+                .build()
+                .getObjectSingle(null);
+    }
 }

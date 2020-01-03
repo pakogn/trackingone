@@ -69,7 +69,11 @@ public class SplashPresenter<V extends SplashContract> extends BasePresenter<V>
                 == DataManager.LoggedInMode.LOGGED_IN_MODE_LOGGED_OUT.getType()) {
             getMvpView().openLoginActivity();
         } else {
-            getMvpView().openHomeActivity();
+            Long condition = getDataManager().getCurrentAuht();
+            if(condition == 7)
+                getMvpView().openEmbarquesTrafico();
+            if(condition == 8)
+                getMvpView().openEmbarquesMulero();
         }
     }
 }

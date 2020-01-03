@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint. xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -193,7 +194,7 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/alta"
+                    android:id="@+id/Baja"
                     style="@style/Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -202,7 +203,7 @@
                     android:textSize="12dp"
                     android:background="@drawable/ripple_drawable_button"
                     android:backgroundTint="@color/dark_gray"
-                    android:text="Alta" />
+                    android:text="Baja" />
 
 
             </LinearLayout>
@@ -214,7 +215,7 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:id="@+id/media1"
+                    android:id="@+id/media"
                     style="@style/Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -223,7 +224,7 @@
                     android:textSize="12dp"
                     android:background="@drawable/ripple_drawable_button"
                     android:backgroundTint="@color/dark_gray"
-                    android:text="Media(15)" />
+                    android:text="Media" />
 
 
             </LinearLayout>
@@ -244,7 +245,7 @@
                     android:textSize="12dp"
                     android:background="@drawable/ripple_drawable_button"
                     android:backgroundTint="@color/dark_gray"
-                    android:text="Media(17)" />
+                    android:text="Alta" />
 
 
             </LinearLayout>
@@ -341,4 +342,4 @@
 
 
 
-</android.support.constraint.>
+</android.support.design.widget.CoordinatorLayout>

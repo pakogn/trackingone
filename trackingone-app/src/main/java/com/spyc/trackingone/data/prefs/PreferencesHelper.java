@@ -15,6 +15,10 @@ public interface PreferencesHelper {
 
     void setCurrentUserId(Long userId);
 
+    Long getCurrentAuht();
+
+    void setCurrentAuth(Long auth);
+
     String getCurrentUserName();
 
     void setCurrentUserName(String userName);

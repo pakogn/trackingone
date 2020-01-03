@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TableLayout
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:stretchColumns="0,1,2,3,4,5,6,7,8,9,10"
+        tools:ignore="MissingConstraints">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#000000">
+
+            <LinearLayout
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                >
+
+                <ImageButton
+                    android:id="@+id/embarque_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_gray"
+                    android:src="@drawable/truck_128"
+                    android:scaleType="fitCenter"
+                    android:textAppearance="@color/colorPrimary"></ImageButton>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/mu_embarque"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/mu_fecha"
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/mu_transportista"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:layout_column="3"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="13dp" />
+
+
+            <TextView
+                android:id="@+id/mu_no_caja"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:layout_column="4"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/mu_no_embarque"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:layout_column="5"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/mu_no_remolque"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:layout_column="6"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/mu_no_tractor"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_column="7"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/mu_tipo_movimiento"
+                android:layout_width="210dp"
+                android:layout_height="match_parent"
+                android:layout_column="8"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/mu_cajon"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:layout_column="9"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/mu_rampa"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:layout_column="10"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="13dp" />
+        </TableRow>
+
+    </TableLayout>
+</RelativeLayout>

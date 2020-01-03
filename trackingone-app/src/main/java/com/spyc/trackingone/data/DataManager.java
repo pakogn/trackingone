@@ -34,6 +34,7 @@ public interface DataManager extends DbHelper, PreferencesHelper, ApiHelper {
 
     void updateUserInfo(
             Long userId,
+            Long auth,
             LoggedInMode loggedInMode,
             String userName,
             String email

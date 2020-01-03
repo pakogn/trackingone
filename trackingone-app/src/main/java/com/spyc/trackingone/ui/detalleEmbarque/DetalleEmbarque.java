@@ -8,7 +8,9 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
 import com.spyc.trackingone.R;
+import com.spyc.trackingone.data.network.model.FilaEmbarqueResponse;
 import com.spyc.trackingone.ui.base.BaseActivity;
 import com.spyc.trackingone.ui.embarqueStatus.EmbarqueStatusActivity;
 import com.topwise.cloudpos.aidl.AidlDeviceService;
@@ -30,6 +32,7 @@ public class DetalleEmbarque extends BaseActivity implements DetalleEmbarqueCont
     @BindView(R.id.toolbar_title)
     TextView toolbar_title;
 
+    private FilaEmbarqueResponse fEmbarqueJson;
 
     public static Intent getStartIntent(Context context) {
         Intent intent = new Intent(context, DetalleEmbarque.class);
@@ -53,6 +56,11 @@ public class DetalleEmbarque extends BaseActivity implements DetalleEmbarqueCont
         detalleEmbarquePresenter.onAttach(this);
 
         setUp();
+
+        Gson gson = new Gson();
+
+        fEmbarqueJson = gson.fromJson(getIntent().getStringExtra("idMulero"), FilaEmbarqueResponse.class);
+        Log.e("","LLEGA ="+getIntent().getStringExtra("idMulero"));
     }
 
     @Override
