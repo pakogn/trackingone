@@ -1,5 +1,6 @@
 package com.spyc.trackingone.data.network;
 
+import com.spyc.trackingone.data.network.model.CombosResponse;
 import com.spyc.trackingone.data.network.model.CurrentUserResponse;
 import com.spyc.trackingone.data.network.model.EmailRequest;
 import com.spyc.trackingone.data.network.model.FilaEmbarqueResponse;
@@ -40,5 +41,7 @@ public interface ApiHelper {
     Single postInParkingSpace(String id);
 
     Single postFromParkingSpace(String id);
+
+    Single<List<CombosResponse>> getCombos();
 
 }

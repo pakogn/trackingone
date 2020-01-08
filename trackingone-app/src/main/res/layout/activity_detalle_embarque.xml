@@ -17,71 +17,85 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/barTop"
-        android:orientation="vertical">
-        <EditText
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="3dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="5dp"
-        android:background="@color/light_gray"
-        android:inputType="textPersonName"
-        android:padding="10dp"
-        android:text="Mulero" />
+        android:orientation="vertical">
+
+        <com.jaredrummler.materialspinner.MaterialSpinner
+            android:id="@+id/mulero1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mulero"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            android:background="#00000000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="Cajón Inicial"/>
 
         <EditText
             android:id="@+id/cajon_inicial"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_marginTop="3dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
             android:layout_marginBottom="5dp"
             android:background="@color/light_gray"
             android:inputType="textPersonName"
             android:padding="10dp"
-            android:text="Cajón inicial" />
+            android:text="" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="Rampa"/>
 
         <EditText
             android:id="@+id/rampa"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_marginTop="3dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
             android:layout_marginBottom="5dp"
             android:background="@color/light_gray"
             android:inputType="textPersonName"
             android:padding="10dp"
-            android:text="Rampa" />
+            android:text="" />
 
-        <EditText
+        <com.jaredrummler.materialspinner.MaterialSpinner
             android:id="@+id/mulero2"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="5dp"
-            android:background="@color/light_gray"
-            android:inputType="textPersonName"
-            android:padding="10dp"
-            android:text="Mulero" />
+            android:layout_height="wrap_content"
+            android:text="Mulero"
+            android:textSize="18dp"
+            android:layout_marginTop="1dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            android:background="#00000000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="Cajón Final"/>
 
         <EditText
             android:id="@+id/cajon_final"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_marginTop="3dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
             android:layout_marginBottom="5dp"
             android:background="@color/light_gray"
             android:inputType="textPersonName"
             android:padding="10dp"
-            android:text="Cajón Fínal" />
+            android:text="" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -90,9 +104,11 @@
             android:layout_marginEnd="16dp">
 
             <TextView
-                android:layout_width="70dp"
+                android:layout_width="90dp"
                 android:layout_height="wrap_content"
-                android:textSize="16dp"
+                android:textSize="18dp"
+                android:paddingTop="12dp"
+                android:textStyle="bold"
                 android:text="Prioridad">
 
             </TextView>
@@ -169,8 +185,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp">
+            android:layout_height="wrap_content">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -181,8 +196,6 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_marginEnd="11dp"
-            android:layout_marginStart="11dp"
             android:layout_height="75dp"
             android:orientation="horizontal">
 
@@ -254,27 +267,27 @@
 
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp">
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
 
             <TableLayout
 
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
                 android:stretchColumns="0,1"
                 tools:ignore="MissingConstraints">
 
+
+
                 <TableRow
                     android:layout_width="fill_parent"
                     android:layout_height="2dp"
                     android:layout_weight="1"
-                    android:background="#000000">
+                    android:background="#FFFFFF">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_column="0"
                         android:layout_margin="1dp"
@@ -308,7 +321,7 @@
 
                     <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_column="0"
                     android:layout_margin="1dp"
                     android:background="#FFFFFF"
@@ -318,8 +331,8 @@
                     android:textSize="13dp" />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_column="0"
                         android:layout_margin="1dp"
                         android:background="#FFFFFF"

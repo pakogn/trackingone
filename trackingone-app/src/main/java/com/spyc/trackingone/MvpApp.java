@@ -40,9 +40,11 @@ public class MvpApp extends Application{
         AppLogger.init();
 
         AndroidNetworking.initialize(getApplicationContext());
+
         if (BuildConfig.DEBUG) {
             AndroidNetworking.enableLogging(HttpLoggingInterceptor.Level.BODY);
         }
+
 
         CalligraphyConfig.initDefault(mCalligraphyConfig);
     }

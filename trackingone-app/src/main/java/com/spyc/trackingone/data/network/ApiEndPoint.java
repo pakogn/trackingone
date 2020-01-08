@@ -43,8 +43,7 @@ public final class ApiEndPoint {
     public static  final String POST_SENDEMAIL = BuildConfig.VIAL_URL
             + "/api/v1/penalties/{penalty}/emails/send";
 
-    private ApiEndPoint() {
-        // This class is
-        // publicly instantiable
-    }
+    public static  final String GET_COMBOS = BuildConfig.TRACKING_URL
+            + "/yard-mule-drivers/available";
+
 }

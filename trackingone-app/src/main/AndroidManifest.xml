@@ -79,7 +79,14 @@
 
         <activity
             android:name=".ui.Embarques.EmbarquesActivity"
-            android:launchMode="singleTop" />
+            android:launchMode="singleTop"
+            android:parentActivityName=".ui.Embarques.EmbarquesActivity"
+            android:windowSoftInputMode="adjustPan">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.spyc.trackingone.ui.Embarques.EmbarquesActivity" />
+        </activity>
 
         <activity
             android:name=".ui.detalleEmbarque.DetalleEmbarque"

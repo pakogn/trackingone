@@ -1,6 +1,7 @@
 package com.spyc.trackingone.data.network;
 
 import com.rx2androidnetworking.Rx2AndroidNetworking;
+import com.spyc.trackingone.data.network.model.CombosResponse;
 import com.spyc.trackingone.data.network.model.CurrentUserResponse;
 import com.spyc.trackingone.data.network.model.EmailRequest;
 import com.spyc.trackingone.data.network.model.FilaEmbarqueResponse;
@@ -129,4 +130,13 @@ public class AppApiHelper implements ApiHelper {
                 .build()
                 .getObjectSingle(null);
     }
+
+    @Override
+    public Single<List<CombosResponse>> getCombos() {
+        return Rx2AndroidNetworking.get(ApiEndPoint.GET_COMBOS)
+                .addHeaders(mApiHeader.getProtectedApiHeader())
+                .build()
+                .getObjectListSingle(CombosResponse.class);
+    }
+
 }

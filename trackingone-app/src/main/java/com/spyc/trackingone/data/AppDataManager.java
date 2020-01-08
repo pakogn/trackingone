@@ -12,6 +12,7 @@ import com.spyc.trackingone.data.db.model.Question;
 import com.spyc.trackingone.data.db.model.User;
 import com.spyc.trackingone.data.network.ApiHeader;
 import com.spyc.trackingone.data.network.ApiHelper;
+import com.spyc.trackingone.data.network.model.CombosResponse;
 import com.spyc.trackingone.data.network.model.CurrentUserResponse;
 import com.spyc.trackingone.data.network.model.EmailRequest;
 import com.spyc.trackingone.data.network.model.FilaEmbarqueResponse;
@@ -132,6 +133,11 @@ public class AppDataManager implements DataManager {
     @Override
     public Single postFromParkingSpace(String id) {
         return mApiHelper.postFromParkingSpace(id);
+    }
+
+    @Override
+    public Single<List<CombosResponse>> getCombos() {
+        return mApiHelper.getCombos();
     }
 
     @Override

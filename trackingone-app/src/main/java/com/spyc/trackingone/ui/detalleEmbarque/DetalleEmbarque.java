@@ -2,6 +2,7 @@ package com.spyc.trackingone.ui.detalleEmbarque;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -9,6 +10,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
+import com.jaredrummler.materialspinner.MaterialSpinner;
 import com.spyc.trackingone.R;
 import com.spyc.trackingone.data.network.model.FilaEmbarqueResponse;
 import com.spyc.trackingone.ui.base.BaseActivity;
@@ -73,6 +75,50 @@ public class DetalleEmbarque extends BaseActivity implements DetalleEmbarqueCont
             getSupportActionBar().setDisplayShowTitleEnabled(false);
             toolbar_title.setText(R.string.embarqueDetalle);
         }
+
+        detalleEmbarquePresenter.getCombos();
+
+        MaterialSpinner spinner = (MaterialSpinner) findViewById(R.id.mulero1);
+        spinner.setItems(
+                "Veracruz",
+                "Aguascalientes",
+                "Baja California",
+                "Baja California Sur",
+                "Campeche",
+                "Chihuahua",
+                "Chiapas",
+                "Coahuila",
+                "Colima",
+                "Durango",
+                "Guanajuato",
+                "Guerrero",
+                "Hidalgo",
+                "Jalisco",
+                "México",
+                "Michoacán",
+                "Morelos",
+                "Nayarit",
+                "Nuevo León",
+                "Oaxaca",
+                "Puebla",
+                "Querétaro",
+                "Quintana Roo",
+                "San Luis Potosí",
+                "Sinaloa",
+                "Sonora",
+                "Tabasco",
+                "Tamaulipas",
+                "Tlaxcala",
+                "Yucatán",
+                "Zacatecas"
+        );
+
+        spinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
+
+            @Override public void onItemSelected(MaterialSpinner view, int position, long id, String item) {
+                Snackbar.make(view, "Estado: " + item, Snackbar.LENGTH_LONG).show();
+            }
+        });
     }
 
 }

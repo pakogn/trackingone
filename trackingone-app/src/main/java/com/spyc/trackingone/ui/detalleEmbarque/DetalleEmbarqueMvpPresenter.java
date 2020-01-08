@@ -5,4 +5,7 @@ import com.spyc.trackingone.ui.base.MvpPresenter;
 
 @PerActivity
 public interface DetalleEmbarqueMvpPresenter<V extends DetalleEmbarqueContract> extends MvpPresenter<V> {
+
+    void getCombos();
+
 }
