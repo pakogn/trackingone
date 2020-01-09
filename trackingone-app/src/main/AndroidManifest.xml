@@ -64,6 +64,7 @@
             android:name=".ui.splash.SplashActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
+            android:noHistory="true"
             android:theme="@style/AppThemeFullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -80,6 +81,7 @@
         <activity
             android:name=".ui.Embarques.EmbarquesActivity"
             android:launchMode="singleTop"
+            android:noHistory="true"
             android:parentActivityName=".ui.Embarques.EmbarquesActivity"
             android:windowSoftInputMode="adjustPan">
 
@@ -98,7 +100,17 @@
                 android:value="com.spyc.trackingone.ui.Embarques.EmbarquesActivity" />
         </activity>
 
-        <activity android:name=".ui.embarquesMulero.EmbarquesMuleroActivity"></activity>
+        <activity
+            android:name=".ui.embarquesMulero.EmbarquesMuleroActivity"
+            android:launchMode="singleTop"
+            android:noHistory="true"
+            android:parentActivityName=".ui.embarquesMulero.EmbarquesMuleroActivity"
+            android:windowSoftInputMode="adjustPan">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.spyc.trackingone.ui.embarquesMulero.EmbarquesMuleroActivity" />
+        </activity>
 
         <activity
             android:name=".ui.embarqueStatus.EmbarqueStatusActivity"
@@ -120,7 +132,7 @@
 
 
 
-        <service android:name=".service.firebase.MyFirebaseMessagingService">
+        <!--<service android:name=".service.firebase.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
@@ -133,7 +145,7 @@
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
-            android:resource="@color/purple_dark2" />
+            android:resource="@color/purple_dark2" />-->
     </application>
 
 </manifest>

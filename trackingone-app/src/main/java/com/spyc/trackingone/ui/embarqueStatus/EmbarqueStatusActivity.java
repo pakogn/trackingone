@@ -136,19 +136,19 @@ public class EmbarqueStatusActivity extends BaseActivity implements EmbarqueStat
 
     void clickBtnStatus() {
         if(fEmbarqueJson.getMoved_from_parking_space_at() == null){
-            embarqueStatusMvpPresenter.fromParkingSpace(fEmbarqueJson.getId());
+            embarqueStatusMvpPresenter.fromParkingSpace(fEmbarqueJson.getId().toString());
             return;
         }
         if(fEmbarqueJson.getIn_ramp_at() ==  null) {
-            embarqueStatusMvpPresenter.InRamp(fEmbarqueJson.getId());
+            embarqueStatusMvpPresenter.InRamp(fEmbarqueJson.getId().toString());
             return;
         }
         if(fEmbarqueJson.getMoved_from_ramp_at() == null) {
-            embarqueStatusMvpPresenter.fromRamp(fEmbarqueJson.getId());
+            embarqueStatusMvpPresenter.fromRamp(fEmbarqueJson.getId().toString());
             return;
         }
         if(fEmbarqueJson.getIn_parking_space_at() == null) {
-            embarqueStatusMvpPresenter.inParkingSpace(fEmbarqueJson.getId());
+            embarqueStatusMvpPresenter.inParkingSpace(fEmbarqueJson.getId().toString());
             return;
         }
     }

@@ -153,7 +153,7 @@ public class EmbarquesMuleroAdapter extends RecyclerView.Adapter<BaseViewHolder>
                 muFechaTextView.setText(fila.getScheduled_date());
             }
             if(fila.getCarrier_id() != null) {
-                muTransportistaTextView.setText(fila.getCarrier_id());
+                muTransportistaTextView.setText(fila.getCarrier_id().toString());
             }
             if (fila.getContainer() != null) {
                 muNoCajaTextView.setText(fila.getContainer());
@@ -168,7 +168,7 @@ public class EmbarquesMuleroAdapter extends RecyclerView.Adapter<BaseViewHolder>
                 muNoTractorTextView.setText(fila.getTruck_number());
             }
             if (fila.getShipping_status_id() != null) {
-                muTipoMovTextView.setText(fila.getShipping_status_id());
+                muTipoMovTextView.setText(fila.getShipping_status_id().toString());
             }
             if (fila.getInitial_parking_space() != null) {
                 muCajonTextView.setText(fila.getInitial_parking_space());

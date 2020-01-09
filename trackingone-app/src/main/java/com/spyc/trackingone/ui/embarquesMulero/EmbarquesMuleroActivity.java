@@ -241,7 +241,7 @@ public class EmbarquesMuleroActivity extends BaseActivity implements EmbarquesMu
         for (FilaEmbarqueResponse model : models) {
             final String text = model.getContainer().toLowerCase();
             final String text1 = model.getShipping_number().toLowerCase();
-            final String text2 = model.getCarrier_id().toLowerCase();
+            final String text2 = model.getCarrier_id().toString().toLowerCase();
             final String text3 = model.getTruck_number().toLowerCase();
             if (text.contains(query) || text1.contains(query) ||text2.contains(query) || text3.contains(query)) {
                 filteredModelList.add(model);

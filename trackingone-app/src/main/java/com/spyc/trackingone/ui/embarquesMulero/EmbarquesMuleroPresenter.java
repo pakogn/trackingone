@@ -1,5 +1,6 @@
 package com.spyc.trackingone.ui.embarquesMulero;
 
+import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.androidnetworking.error.ANError;
@@ -33,7 +34,7 @@ public class EmbarquesMuleroPresenter<V extends EmbarquesMuleroContract> extends
         String id = getDataManager().getCurrentUserId().toString();
         Log.e("ID USER","-"+id);
         getMvpView().showLoading();
-        getCompositeDisposable().add((Disposable) getDataManager()
+        getCompositeDisposable().add(getDataManager()
                 .getEmbarqueApiCall(id)
                 .subscribeOn(getSchedulerProvider().io())
                 .observeOn(getSchedulerProvider().ui())
@@ -49,7 +50,7 @@ public class EmbarquesMuleroPresenter<V extends EmbarquesMuleroContract> extends
                     }
                 }, new Consumer<Throwable>() {
                     @Override
-                    public void accept(Throwable throwable) throws Exception {
+                    public void accept(@NonNull Throwable throwable) throws Exception {
                         if (!isViewAttached()) {
                             return;
                         }

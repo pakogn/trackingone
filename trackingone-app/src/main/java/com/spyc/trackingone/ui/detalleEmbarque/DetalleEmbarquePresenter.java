@@ -27,15 +27,15 @@ public class DetalleEmbarquePresenter<V extends DetalleEmbarqueContract> extends
     @Override
     public void getCombos() {
         getMvpView().showLoading();
-        getCompositeDisposable().add((Disposable) getDataManager()
+        getCompositeDisposable().add( getDataManager()
             .getCombos()
             .subscribeOn(getSchedulerProvider().io())
             .observeOn(getSchedulerProvider().ui())
                 .subscribe(new Consumer<List<CombosResponse>>() {
                     @Override
-                    public void accept(List<CombosResponse> combosResponses) throws Exception {
+                    public void accept(List<CombosResponse> combosResponse) throws Exception {
 
-                        Log.e("llega: ", ""+combosResponses.get(0).getName());
+                        Log.e("llega: ", ""+combosResponse);
                         getMvpView().hideLoading();
                     }
                 }, new Consumer<Throwable>() {

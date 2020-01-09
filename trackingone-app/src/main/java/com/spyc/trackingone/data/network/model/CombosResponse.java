@@ -30,12 +30,24 @@ public class CombosResponse {
     private String username;
 
     @Expose
+    @SerializedName("password")
+    private String password;
+
+    @Expose
     @SerializedName("auth")
     private Long auth;
 
     @Expose
     @SerializedName("status")
     private Boolean status;
+
+    @Expose
+    @SerializedName("contact_id")
+    private Long contact_id;
+
+    @Expose
+    @SerializedName("company_id")
+    private Long company_id;
 
     public Long getId() {
         return id;
@@ -99,6 +111,30 @@ public class CombosResponse {
 
     public void setContact(Contact contact) {
         this.contact = contact;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Long getContact_id() {
+        return contact_id;
+    }
+
+    public void setContact_id(Long contact_id) {
+        this.contact_id = contact_id;
+    }
+
+    public Long getCompany_id() {
+        return company_id;
+    }
+
+    public void setCompany_id(Long company_id) {
+        this.company_id = company_id;
     }
 
     public class Contact {

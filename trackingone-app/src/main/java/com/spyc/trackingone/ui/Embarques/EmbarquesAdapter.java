@@ -137,13 +137,13 @@ public class EmbarquesAdapter extends RecyclerView.Adapter<BaseViewHolder> {
                 fechaTextView.setText(fila.getScheduled_date());
             }
             if(fila.getDriver_id() != null) {
-                operadorTextView.setText(fila.getDriver_id());
+                operadorTextView.setText(fila.getDriver_id().toString());
             }
             if (fila.getShipping_number() != null) {
                 no_embarqueTextView.setText(fila.getShipping_number());
             }
             if (fila.getCarrier_id() != null) {
-                transportistaTextView.setText(fila.getCarrier_id());
+                transportistaTextView.setText(fila.getCarrier_id().toString());
             }
             if (fila.getTrailer_number() != null) {
                 no_remolqueTextView.setText(fila.getTrailer_number());
