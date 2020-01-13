@@ -49,6 +49,19 @@ public class CombosResponse {
     @SerializedName("company_id")
     private Long company_id;
 
+
+    @Expose
+    @SerializedName("first_name")
+    private String first_name;
+
+    public String getFirst_name() {
+        return first_name;
+    }
+
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
+    }
+
     public Long getId() {
         return id;
     }
@@ -166,16 +179,32 @@ public class CombosResponse {
         private Long ext_number;
         private Long int_number;
         private String neighborhood;
-        private Long latitud;
-        private Long longitude;
+        private Double latitud;
+        private Double longitude;
         private String state;
         private String country;
         private String city;
+
+        public Long getId() {
+            return id;
+        }
+
+        public void setId(Long id) {
+            this.id = id;
+        }
     }
 
     public class Email {
         private Long id;
         private String email_address;
+
+        public Long getId() {
+            return id;
+        }
+
+        public void setId(Long id) {
+            this.id = id;
+        }
     }
 
     @Override

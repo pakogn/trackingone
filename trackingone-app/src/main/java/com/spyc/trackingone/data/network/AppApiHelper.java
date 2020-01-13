@@ -1,14 +1,20 @@
 package com.spyc.trackingone.data.network;
 
 import com.androidnetworking.common.Priority;
+import com.androidnetworking.error.ANError;
+import com.androidnetworking.interfaces.JSONArrayRequestListener;
 import com.rx2androidnetworking.Rx2AndroidNetworking;
 import com.spyc.trackingone.data.network.model.CombosResponse;
 import com.spyc.trackingone.data.network.model.CurrentUserResponse;
 import com.spyc.trackingone.data.network.model.EmailRequest;
+import com.spyc.trackingone.data.network.model.EmbarquesAsigadosRequest;
+import com.spyc.trackingone.data.network.model.EmbarquesAsigadosResponse;
 import com.spyc.trackingone.data.network.model.FilaEmbarqueResponse;
 import com.spyc.trackingone.data.network.model.LoginRequest;
 import com.spyc.trackingone.data.network.model.LoginResponse;
 import com.spyc.trackingone.data.network.model.LogoutResponse;
+
+import org.json.JSONArray;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -93,11 +99,31 @@ public class AppApiHelper implements ApiHelper {
 
     @Override
     public Single<List<FilaEmbarqueResponse>> getEmbarqueApiCall(String id) {
-        return Rx2AndroidNetworking.get(ApiEndPoint.URL_EMBARQUES)
+
+
+         Rx2AndroidNetworking.get(ApiEndPoint.URL_EMBARQUES)
+                .addHeaders(mApiHeader.getProtectedApiHeader())
+                .addHeaders("Authorization", id)
+                .build().getAsJSONArray(new JSONArrayRequestListener() {
+                   @Override
+                   public void onResponse(JSONArray response) {
+
+                   }
+
+                   @Override
+                   public void onError(ANError anError) {
+
+                   }
+               });
+
+
+        Single<List<FilaEmbarqueResponse>> lst =        Rx2AndroidNetworking.get(ApiEndPoint.URL_EMBARQUES)
                 .addHeaders(mApiHeader.getProtectedApiHeader())
                 .addHeaders("Authorization", id)
                 .build()
                 .getObjectListSingle(FilaEmbarqueResponse.class);
+
+        return lst;
     }
 
     @Override
@@ -106,6 +132,15 @@ public class AppApiHelper implements ApiHelper {
                 .addHeaders(mApiHeader.getPublicApiHeader())
                 .build()
                 .getObjectSingle(null);
+    }
+
+    @Override
+    public Single<EmbarquesAsigadosResponse> postDetails(String id, EmbarquesAsigadosRequest request) {
+        return  Rx2AndroidNetworking.post(ApiEndPoint.POST_EMBARQUE_DETALLLES.replace("{id}", id))
+                .addHeaders(mApiHeader.getPublicApiHeader())
+                .addBodyParameter(request)
+                .build()
+                .getObjectSingle(EmbarquesAsigadosResponse.class);
     }
 
     @Override

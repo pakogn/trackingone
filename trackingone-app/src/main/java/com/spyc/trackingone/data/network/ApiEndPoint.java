@@ -45,5 +45,7 @@ public final class ApiEndPoint {
 
     public static  final String GET_COMBOS = BuildConfig.TRACKING_URL
             + "/yard-mule-drivers/available";
+    public static  final String POST_EMBARQUE_DETALLLES = BuildConfig.TRACKING_URL
+            + "/shipping-schedules/{id}/assign";
 
 }

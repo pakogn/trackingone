@@ -23,32 +23,30 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginTop="@dimen/barTop"
             android:orientation="vertical">
 
             <LinearLayout
                 android:id="@+id/linearLayout4"
                 android:layout_width="fill_parent"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
-
-
                 <Button
                     android:id="@+id/btn_todos"
                     style="@style/Button"
                     android:layout_gravity="center"
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
-                    android:scrollbarSize="9dp"
-                    android:backgroundTint="@color/gray"
                     android:background="@drawable/ripple_drawable_button"
+                    android:backgroundTint="@color/gray"
+                    android:scrollbarSize="9dp"
                     android:text="Todos" />
 
                 <Button
@@ -57,9 +55,9 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="1"
-                    android:scrollbarSize="9dp"
-                    android:backgroundTint="@color/gray"
                     android:background="@drawable/ripple_drawable_button"
+                    android:backgroundTint="@color/gray"
+                    android:scrollbarSize="9dp"
                     android:text="Pendientes en cajón" />
 
                 <Button
@@ -68,9 +66,9 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="1"
-                    android:scrollbarSize="9dp"
                     android:background="@drawable/ripple_drawable_button"
                     android:backgroundTint="@color/gray"
+                    android:scrollbarSize="9dp"
                     android:text="Pendientes en rampa" />
 
             </LinearLayout>
@@ -231,7 +229,14 @@
 
                 </HorizontalScrollView>
             </ScrollView>
+
         </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:visibility="gone" />
     </android.support.design.widget.CoordinatorLayout>
 
     <android.support.design.widget.NavigationView

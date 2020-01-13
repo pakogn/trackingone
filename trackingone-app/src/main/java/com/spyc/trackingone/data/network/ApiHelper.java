@@ -3,6 +3,8 @@ package com.spyc.trackingone.data.network;
 import com.spyc.trackingone.data.network.model.CombosResponse;
 import com.spyc.trackingone.data.network.model.CurrentUserResponse;
 import com.spyc.trackingone.data.network.model.EmailRequest;
+import com.spyc.trackingone.data.network.model.EmbarquesAsigadosRequest;
+import com.spyc.trackingone.data.network.model.EmbarquesAsigadosResponse;
 import com.spyc.trackingone.data.network.model.FilaEmbarqueResponse;
 import com.spyc.trackingone.data.network.model.LoginRequest;
 import com.spyc.trackingone.data.network.model.LoginResponse;
@@ -35,6 +37,7 @@ public interface ApiHelper {
     Single<List<FilaEmbarqueResponse>> getEmbarqueApiCall(String id);
 
     Single postInRamp(String id);
+    Single<EmbarquesAsigadosResponse> postDetails(String id, EmbarquesAsigadosRequest request);
 
     Single postFromRamp(String id);
 

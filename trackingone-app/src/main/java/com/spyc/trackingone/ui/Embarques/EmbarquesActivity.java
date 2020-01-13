@@ -3,7 +3,9 @@ package com.spyc.trackingone.ui.Embarques;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.MenuItemCompat;
@@ -20,6 +22,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AbsListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,7 +46,10 @@ import butterknife.OnClick;
 
 public class EmbarquesActivity extends BaseActivity implements EmbarquesContract,
 EmbarquesAdapter.Callback, SearchView.OnQueryTextListener{
-
+    Boolean isScrolling=false;
+    int currentItems,totalItems,scrollOutItems;
+    int indexActualSize=0;
+    //CoordinatorLayout coordinatorLayout;
     @Inject
     EmbarquesMvpPresenter<EmbarquesContract> embarquesMvpPresenter;
 
@@ -57,6 +64,8 @@ EmbarquesAdapter.Callback, SearchView.OnQueryTextListener{
 
     @BindView(R.id.toolbar_title)
     TextView toolbar_title;
+    @BindView(R.id.progress)
+    ProgressBar progressBar;
 
     @BindView(R.id.fila_embarque_recycler)
     RecyclerView eRecyclerView;
@@ -72,8 +81,11 @@ EmbarquesAdapter.Callback, SearchView.OnQueryTextListener{
     NavigationView navigationView;
 
     private ActionBarDrawerToggle homeDrawerToggle;
-
-    private List<FilaEmbarqueResponse> newListEmbarques;
+    private  int TOTAL_DATA_SHOW=15;
+   //private List<FilaEmbarqueResponse> newListEmbarques;
+    private List<FilaEmbarqueResponse> newListEmbarquesActual= new ArrayList<>();
+    private List<FilaEmbarqueResponse> newListEmbarquesTotal;
+    private List<FilaEmbarqueResponse> newListEmbarquesTotalBackup;
 
     public static Intent getStartIntent(Context context) {
         Intent intent = new Intent(context, EmbarquesActivity.class);
@@ -96,7 +108,7 @@ EmbarquesAdapter.Callback, SearchView.OnQueryTextListener{
 
         embarquesMvpPresenter.onAttach(this);
 
-        newListEmbarques = embarquesAdapter.getData();
+       // newListEmbarques = embarquesAdapter.getData();
 
         setUp();
     }
@@ -117,6 +129,27 @@ EmbarquesAdapter.Callback, SearchView.OnQueryTextListener{
         eRecyclerView.setItemAnimator(new DefaultItemAnimator());
         eRecyclerView.setAdapter(embarquesAdapter);
 
+        eRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+                if(newState == AbsListView.OnScrollListener.SCROLL_STATE_TOUCH_SCROLL ){
+                    isScrolling=true;
+                }
+            }
+
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                currentItems=eLayoutManager.getChildCount();
+                totalItems=eLayoutManager.getItemCount();
+                scrollOutItems=eLayoutManager.findFirstVisibleItemPosition();
+                if(isScrolling&&(currentItems+scrollOutItems==totalItems)&&(newListEmbarquesActual.size()<newListEmbarquesTotal.size())){
+                    isScrolling=false;
+                    fetchData();
+                }
+            }
+        });
         embarquesMvpPresenter.cargandoTabla();
 
         homeDrawerToggle = new ActionBarDrawerToggle(
@@ -141,6 +174,21 @@ EmbarquesAdapter.Callback, SearchView.OnQueryTextListener{
         homeDrawerToggle.syncState();
         setupNavMenu();
         embarquesMvpPresenter.onNavMenuCreated();
+    }
+
+    /**
+     * agrega los datos poco a poco
+     */
+    private void fetchData() {
+        progressBar.setVisibility(View.VISIBLE);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                addItems();
+                eRecyclerView.getAdapter().notifyDataSetChanged();
+                progressBar.setVisibility(View.GONE);
+            }
+        }, 700);
     }
 
     void setupNavMenu() {
@@ -187,10 +235,60 @@ EmbarquesAdapter.Callback, SearchView.OnQueryTextListener{
     public void filtrarTodos() {
         embarquesMvpPresenter.cargandoTabla();
     }
+    @OnClick(R.id.btn_cajon)
+    public void filtrarTodosCaja() {
+        embarquesMvpPresenter.cargandoTablaPendientesCajon();
+    }
+
+    @OnClick(R.id.btn_rampa)
+    public void filtrarTodosRampa() {
+        embarquesMvpPresenter.cargandoTablaPendientesRampa();
+    }
 
     @Override
     public void actualizaEmbarques(List<FilaEmbarqueResponse> embarquesList) {
-        embarquesAdapter.addItems(embarquesList);
+        addDataInAdapter(embarquesList,false);
+    }
+
+    @Override
+    public void actualizaEmbarquesPendientesCajon(List<FilaEmbarqueResponse> embarquesList) {
+        addDataInAdapter(embarquesList,true);
+    }
+
+    @Override
+    public void actualizaEmbarquesPendientesRampa(List<FilaEmbarqueResponse> embarquesList) {
+        addDataInAdapter(embarquesList,true);
+    }
+    public  void addDataInAdapter(List<FilaEmbarqueResponse> embarquesList,boolean filter){
+        indexActualSize=0;
+        newListEmbarquesTotal=embarquesList;
+          newListEmbarquesActual.clear();
+        newListEmbarquesTotalBackup=embarquesList;
+        embarquesAdapter.setAllData(embarquesList);
+        addItems();
+        //eRecyclerView.setAdapter(embarquesAdapter);
+        embarquesAdapter.clearData();
+        embarquesAdapter.addItems(newListEmbarquesActual);
+        embarquesAdapter.notifyDataSetChanged();
+    }
+
+    public  void addItems(){
+       if(newListEmbarquesTotal!=null){
+           int count =0;
+           for (int i =indexActualSize;i<newListEmbarquesTotal.size();i++){
+               if(count<=TOTAL_DATA_SHOW){
+                   count++;
+                   indexActualSize=i;
+                   embarquesAdapter.addItemsOne(newListEmbarquesTotal.get(i));
+                   newListEmbarquesActual.add(newListEmbarquesTotal.get(i));
+               }
+
+           }
+       }
+       if(newListEmbarquesActual.size()==newListEmbarquesTotal.size()){
+           Log.d("Se cargo toda la lista",""+newListEmbarquesActual.size());
+       }
+       Log.d("Total_Item actual:",""+newListEmbarquesActual.size());
     }
 
     public void pendientesEnCajon() {
@@ -277,7 +375,7 @@ EmbarquesAdapter.Callback, SearchView.OnQueryTextListener{
 
     @Override
     public boolean onQueryTextChange(String newText) {
-        final List<FilaEmbarqueResponse> filterModeList = filter(newListEmbarques, newText);
+        final List<FilaEmbarqueResponse> filterModeList = filter(newListEmbarquesTotalBackup, newText);
         embarquesAdapter.setFilter(filterModeList);
         return true;
     }
@@ -314,7 +412,7 @@ EmbarquesAdapter.Callback, SearchView.OnQueryTextListener{
                     @Override
                     public boolean onMenuItemActionCollapse(MenuItem item) {
                         // Do something when collapsed
-                        embarquesAdapter.setFilter(newListEmbarques);
+                        embarquesAdapter.setFilter(newListEmbarquesActual);
                         return true; // Return true to collapse action view
                     }
 

@@ -8,6 +8,7 @@ import com.spyc.trackingone.data.network.model.FilaEmbarqueResponse;
 import com.spyc.trackingone.ui.base.BasePresenter;
 import com.spyc.trackingone.utils.rx.SchedulerProvider;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -67,6 +68,97 @@ public class EmbarquesPresenter<V extends EmbarquesContract> extends BasePresent
                     }
                 }
             })
+        );
+    }
+
+    @Override
+    public void cargandoTablaPendientesCajon() {
+        String id = getDataManager().getCurrentUserId().toString();
+        Log.e("ID USER","-*-:"+id);
+        getMvpView().showLoading();
+        getCompositeDisposable().add((Disposable) getDataManager()
+                .getEmbarqueApiCall(id)
+                .subscribeOn(getSchedulerProvider().io())
+                .observeOn(getSchedulerProvider().ui())
+                .subscribe(new Consumer<List<FilaEmbarqueResponse>>() {
+                    @Override
+                    public void accept(List<FilaEmbarqueResponse> filaEmbarqueResponses) throws Exception {
+                        if (filaEmbarqueResponses != null && filaEmbarqueResponses.size() != 0) {
+                            Log.e("FILA:", "--"+filaEmbarqueResponses);
+
+                            List<FilaEmbarqueResponse> res= new ArrayList<>();
+
+                            for (FilaEmbarqueResponse item: filaEmbarqueResponses) {
+                                if(item.getMoved_from_parking_space_at()==null&&item.getMoved_from_ramp_at()==null&&item.getIn_parking_space_at()==null){
+                                    res.add(item);
+                                }
+                            }
+                            getMvpView().actualizaEmbarquesPendientesCajon(res);
+
+                        }
+                        getMvpView().hideLoading();
+                    }
+                }, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Throwable throwable) throws Exception {
+                        if (!isViewAttached()) {
+                            return;
+                        }
+
+                        getMvpView().hideLoading();
+
+                        // handle the error here
+                        if (throwable instanceof ANError) {
+                            ANError anError = (ANError) throwable;
+                            handleApiError(anError);
+                        }
+                    }
+                })
+        );
+    }
+
+    @Override
+    public void cargandoTablaPendientesRampa() {
+        String id = getDataManager().getCurrentUserId().toString();
+        Log.e("ID USER","-*-:"+id);
+        getMvpView().showLoading();
+        getCompositeDisposable().add((Disposable) getDataManager()
+                .getEmbarqueApiCall(id)
+                .subscribeOn(getSchedulerProvider().io())
+                .observeOn(getSchedulerProvider().ui())
+                .subscribe(new Consumer<List<FilaEmbarqueResponse>>() {
+                    @Override
+                    public void accept(List<FilaEmbarqueResponse> filaEmbarqueResponses) throws Exception {
+                        if (filaEmbarqueResponses != null && filaEmbarqueResponses.size() != 0) {
+                            Log.e("FILA:", "--"+filaEmbarqueResponses);
+                            List<FilaEmbarqueResponse> res= new ArrayList<>();
+
+                            for (FilaEmbarqueResponse item: filaEmbarqueResponses) {
+                                if(item.getMoved_from_parking_space_at()!=null&&item.getIn_ramp_at()!=null&&item.getMoved_from_ramp_at()==null&&item.getIn_parking_space_at()==null){
+                                    res.add(item);
+                                }
+                            }
+                            getMvpView().actualizaEmbarquesPendientesRampa(res);
+
+                        }
+                        getMvpView().hideLoading();
+                    }
+                }, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Throwable throwable) throws Exception {
+                        if (!isViewAttached()) {
+                            return;
+                        }
+
+                        getMvpView().hideLoading();
+
+                        // handle the error here
+                        if (throwable instanceof ANError) {
+                            ANError anError = (ANError) throwable;
+                            handleApiError(anError);
+                        }
+                    }
+                })
         );
     }
 

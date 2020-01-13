@@ -9,6 +9,8 @@ public interface EmbarquesMvpPresenter<V extends EmbarquesContract> extends MvpP
     void irDetalleEmbarque();
 
     void cargandoTabla();
+    void cargandoTablaPendientesCajon();
+    void cargandoTablaPendientesRampa();
 
     void onDrawerOptionLogoutClick();
 

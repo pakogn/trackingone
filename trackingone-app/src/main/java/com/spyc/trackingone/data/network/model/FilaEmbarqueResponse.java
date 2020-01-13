@@ -566,11 +566,11 @@ public class FilaEmbarqueResponse {
     public static  class Carrier {
         @Expose
         @SerializedName("address")
-        private String address;
+        private Address address;
 
         @Expose
         @SerializedName("user")
-        private String user;
+        private User user;
 
         @Expose
         @SerializedName("id")
@@ -616,19 +616,20 @@ public class FilaEmbarqueResponse {
         @SerializedName("formatted_deleted_at")
         private String formatted_deleted_at;
 
-        public String getAddress() {
+
+        public Address getAddress() {
             return address;
         }
 
-        public void setAddress(String address) {
+        public void setAddress(Address address) {
             this.address = address;
         }
 
-        public String getUser() {
+        public User getUser() {
             return user;
         }
 
-        public void setUser(String user) {
+        public void setUser(User user) {
             this.user = user;
         }
 
@@ -1235,7 +1236,7 @@ public class FilaEmbarqueResponse {
 
         @Expose
         @SerializedName("user")
-        private String user;
+        private User user;
 
         @Expose
         @SerializedName("id")
@@ -1297,11 +1298,11 @@ public class FilaEmbarqueResponse {
             this.incidence = incidence;
         }
 
-        public String getUser() {
+        public User getUser() {
             return user;
         }
 
-        public void setUser(String user) {
+        public void setUser(User user) {
             this.user = user;
         }
 

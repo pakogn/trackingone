@@ -15,6 +15,7 @@ import com.spyc.trackingone.data.network.ApiHelper;
 import com.spyc.trackingone.data.network.model.CombosResponse;
 import com.spyc.trackingone.data.network.model.CurrentUserResponse;
 import com.spyc.trackingone.data.network.model.EmailRequest;
+import com.spyc.trackingone.data.network.model.EmbarquesAsigadosRequest;
 import com.spyc.trackingone.data.network.model.FilaEmbarqueResponse;
 import com.spyc.trackingone.data.network.model.LoginRequest;
 import com.spyc.trackingone.data.network.model.LoginResponse;
@@ -118,6 +119,11 @@ public class AppDataManager implements DataManager {
     @Override
     public Single postInRamp(String id) {
         return mApiHelper.postInRamp(id);
+    }
+
+    @Override
+    public Single postDetails(String id, EmbarquesAsigadosRequest request) {
+        return mApiHelper.postDetails(id,request);
     }
 
     @Override

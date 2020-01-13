@@ -28,6 +28,7 @@ public class EmbarquesAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
     private Callback mCallback;
     private List<FilaEmbarqueResponse> filaEmbarqueResponse;
+    private List<FilaEmbarqueResponse> allData;
 
     Gson gson;
 
@@ -44,6 +45,13 @@ public class EmbarquesAdapter extends RecyclerView.Adapter<BaseViewHolder> {
         holder.onBind(position);
     }
 
+    public List<FilaEmbarqueResponse> getAllData() {
+        return allData;
+    }
+
+    public void setAllData(List<FilaEmbarqueResponse> allData) {
+        this.allData = allData;
+    }
 
     @Override
     public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -79,6 +87,14 @@ public class EmbarquesAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
     public void addItems(List<FilaEmbarqueResponse> embarqueList) {
         filaEmbarqueResponse.addAll(embarqueList);
+        notifyDataSetChanged();
+    }
+    public void addItemsOne(FilaEmbarqueResponse embarqueList) {
+        filaEmbarqueResponse.add(embarqueList);
+        notifyDataSetChanged();
+    }
+    public void clearData() {
+        filaEmbarqueResponse.clear();
         notifyDataSetChanged();
     }
 
@@ -163,9 +179,10 @@ public class EmbarquesAdapter extends RecyclerView.Adapter<BaseViewHolder> {
                 public void onClick(View v) {
                     gson = new Gson();
                     String fEmbarquesJSON = gson.toJson(fila);
-
+                    String allJsonList = gson.toJson(getAllData());
                     Intent intent = new Intent(itemView.getContext(), DetalleEmbarque.class);
                     intent.putExtra("idMulero", fEmbarquesJSON);
+                    intent.putExtra("AllList", allJsonList);
                     itemView.getContext().startActivity(intent);
                 }
             });

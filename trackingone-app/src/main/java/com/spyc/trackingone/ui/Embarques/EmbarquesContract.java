@@ -12,7 +12,8 @@ public interface EmbarquesContract extends MvpViewContract {
     void filtrarPendientesEnCajon();
 
     void actualizaEmbarques(List<FilaEmbarqueResponse> embarquesList);
-
+    void actualizaEmbarquesPendientesCajon(List<FilaEmbarqueResponse> embarquesList);
+    void actualizaEmbarquesPendientesRampa(List<FilaEmbarqueResponse> embarquesList);
     void updateUserName(String currentUserName);
 
     void updateUserEmail(String currentUserEmail);
