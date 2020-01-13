@@ -207,11 +207,6 @@ EmbarquesAdapter.Callback, SearchView.OnQueryTextListener{
                             case R.id.nav_item_logout:
                                 embarquesMvpPresenter.onDrawerOptionLogoutClick();
                                 return true;
-                            case R.id.nav_item_embarques:
-                                Intent intent = DetalleEmbarque.getStartIntent(EmbarquesActivity.this);
-                                startActivity(intent);
-                                finish();
-                                return true;
                             default:
                                 return false;
                         }
