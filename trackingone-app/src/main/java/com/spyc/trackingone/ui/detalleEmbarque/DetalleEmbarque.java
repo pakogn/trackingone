@@ -276,4 +276,11 @@ public class DetalleEmbarque extends BaseActivity implements DetalleEmbarqueCont
 
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent anterior = new  Intent (this, EmbarquesActivity.class);
+        startActivity(anterior);
+        finish ();
+    }
+
 }
