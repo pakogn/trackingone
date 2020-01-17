@@ -220,21 +220,6 @@ public class HomeActivity extends BaseActivity implements HomeContract {
                             case R.id.nav_item_embarques:
                                 homePresenter.irEmbarques();
                                 return true;
-                            case R.id.nav_item_opt2:
-                                homePresenter.irEmbarques();
-                                return true;
-                            case R.id.nav_item_opt3:
-                                homePresenter.irEmbarques();
-                                return true;
-                            case R.id.nav_item_opt4:
-                                homePresenter.irEmbarques();
-                                return true;
-                            case R.id.nav_item_opt5:
-                                homePresenter.irEmbarques();
-                                return true;
-                            case R.id.nav_item_opt6:
-                                homePresenter.irEmbarques();
-                                return true;
                             case R.id.nav_item_logout:
                                 homePresenter.onDrawerOptionLogoutClick();
                                 return true;

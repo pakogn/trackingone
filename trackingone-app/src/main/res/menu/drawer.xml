@@ -6,26 +6,6 @@
             android:checked="true"
             android:title="@string/opt1" />
         <item
-            android:id="@+id/nav_item_opt2"
-            android:checked="true"
-            android:title="@string/opt2" />
-        <item
-            android:id="@+id/nav_item_opt3"
-            android:checked="true"
-            android:title="@string/opt3" />
-        <item
-            android:id="@+id/nav_item_opt4"
-            android:checked="true"
-            android:title="@string/opt4" />
-        <item
-            android:id="@+id/nav_item_opt5"
-            android:checked="true"
-            android:title="@string/opt5" />
-        <item
-            android:id="@+id/nav_item_opt6"
-            android:checked="true"
-            android:title="@string/opt6" />
-        <item
             android:id="@+id/nav_item_logout"
             style="@style/TextStyle.Title"
             android:checked="true"

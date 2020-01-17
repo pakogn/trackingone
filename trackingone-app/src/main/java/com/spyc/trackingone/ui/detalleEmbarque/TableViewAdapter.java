@@ -44,8 +44,8 @@ public class TableViewAdapter extends RecyclerView.Adapter
         else {
 
             FilaEmbarqueResponse modal = embargueList.get(rowPos-1);
-            rowViewHolder.txtembargue.setText(modal.getShipping_priority()==null?"":modal.getShipping_priority()+"");
-            rowViewHolder.txtcaja.setText(modal.getInitial_parking_space()==null?"":modal.getInitial_parking_space()+"");
+            rowViewHolder.txtembargue.setText(modal.getShipping_number()==null?"":modal.getShipping_number()+"");
+            rowViewHolder.txtcaja.setText(modal.getContainer()==null?"":modal.getContainer()+"");
         }
     }
 
