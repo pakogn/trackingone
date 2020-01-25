@@ -4,6 +4,8 @@ package com.spyc.trackingone.data.network.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+
+
 public class FilaEmbarqueResponse {
 
 
@@ -722,6 +724,163 @@ public class FilaEmbarqueResponse {
         }
     }
 
+public static class Provider
+{
+    @Expose
+    @SerializedName("address")
+    private Address address;
+    @Expose
+    @SerializedName("contact")
+    private Contact contact;
+    @Expose
+    @SerializedName("id")
+    private Long id;
+
+    @Expose
+    @SerializedName("name")
+    private String name;
+
+    @Expose
+    @SerializedName("rfc")
+    private String rfc;
+
+    @Expose
+    @SerializedName("address_id")
+    private Long address_id;
+
+    @Expose
+    @SerializedName("contact_id")
+    private String contact_id;
+
+
+    @Expose
+    @SerializedName("activity")
+    private String  activity;
+
+    @Expose
+    @SerializedName("account")
+    private String  account;
+
+    @Expose
+    @SerializedName("bank")
+    private String  bank;
+
+    @Expose
+    @SerializedName("clabe")
+    private String  clabe;
+
+    @Expose
+    @SerializedName("certification")
+    private String  certification;
+
+    @Expose
+    @SerializedName("deleted")
+    private Boolean  deleted;
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public Contact getContact() {
+        return contact;
+    }
+
+    public void setContact(Contact contact) {
+        this.contact = contact;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getRfc() {
+        return rfc;
+    }
+
+    public void setRfc(String rfc) {
+        this.rfc = rfc;
+    }
+
+    public Long getAddress_id() {
+        return address_id;
+    }
+
+    public void setAddress_id(Long address_id) {
+        this.address_id = address_id;
+    }
+
+    public String getContact_id() {
+        return contact_id;
+    }
+
+    public void setContact_id(String contact_id) {
+        this.contact_id = contact_id;
+    }
+
+    public String getActivity() {
+        return activity;
+    }
+
+    public void setActivity(String activity) {
+        this.activity = activity;
+    }
+
+    public String getAccount() {
+        return account;
+    }
+
+    public void setAccount(String account) {
+        this.account = account;
+    }
+
+    public String getBank() {
+        return bank;
+    }
+
+    public void setBank(String bank) {
+        this.bank = bank;
+    }
+
+    public String getClabe() {
+        return clabe;
+    }
+
+    public void setClabe(String clabe) {
+        this.clabe = clabe;
+    }
+
+    public String getCertification() {
+        return certification;
+    }
+
+    public void setCertification(String certification) {
+        this.certification = certification;
+    }
+
+    public Boolean getDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(Boolean deleted) {
+        this.deleted = deleted;
+    }
+}
 
     public static class Client {
         @Expose
@@ -730,7 +889,7 @@ public class FilaEmbarqueResponse {
 
         @Expose
         @SerializedName("provider")
-        private String provider;
+        private Provider provider;
 
         @Expose
         @SerializedName("id")
@@ -772,11 +931,11 @@ public class FilaEmbarqueResponse {
             this.contact = contact;
         }
 
-        public String getProvider() {
+        public Provider getProvider() {
             return provider;
         }
 
-        public void setProvider(String provider) {
+        public void setProvider(Provider provider) {
             this.provider = provider;
         }
 
