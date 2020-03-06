@@ -146,6 +146,9 @@ public class DetalleEmbarque extends BaseActivity implements DetalleEmbarqueCont
 
             toast1.show();
             //displayToast();
+            Intent anterior = new  Intent (this, EmbarquesActivity.class);
+            startActivity(anterior);
+            finish ();
 
         }else{
             Toast.makeText(getApplicationContext(),"Error en parceo de datos",Toast.LENGTH_LONG);
