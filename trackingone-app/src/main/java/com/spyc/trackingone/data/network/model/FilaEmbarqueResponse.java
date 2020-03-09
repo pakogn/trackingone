@@ -38,7 +38,7 @@ public class FilaEmbarqueResponse {
     private InitialYardMuleDriver initial_yard_mule_driver;
 
     @Expose
-    @SerializedName("shipping_status ")
+    @SerializedName("shipping_status")
     private ShippingStatus shipping_status;
 
     @Expose

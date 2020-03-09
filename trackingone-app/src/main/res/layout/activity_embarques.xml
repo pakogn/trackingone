@@ -217,6 +217,19 @@
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="110dp"
+                                android:layout_height="match_parent"
+                                android:layout_column="9"
+                                android:layout_margin="1dp"
+                                android:background="#FFFFFF"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:text="Status"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
                         </TableRow>
 
                         <android.support.v7.widget.RecyclerView

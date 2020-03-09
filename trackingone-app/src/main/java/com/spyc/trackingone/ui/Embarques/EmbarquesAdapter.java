@@ -2,6 +2,7 @@ package com.spyc.trackingone.ui.Embarques;
 
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -128,6 +129,9 @@ public class EmbarquesAdapter extends RecyclerView.Adapter<BaseViewHolder> {
         @BindView(R.id.placas)
         TextView placasTextView;
 
+        @BindView(R.id.status)
+        TextView status;
+
         public ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
@@ -142,6 +146,7 @@ public class EmbarquesAdapter extends RecyclerView.Adapter<BaseViewHolder> {
             no_tractorTextView.setText("");
             cajaTextView.setText("");
             placasTextView.setText("");
+            status.setText("");
         }
 
         public void onBind(int position) {
@@ -172,6 +177,9 @@ public class EmbarquesAdapter extends RecyclerView.Adapter<BaseViewHolder> {
             }
             if (fila.getLicense_plate() != null) {
                 placasTextView.setText(fila.getLicense_plate());
+            }
+            if(fila.getShipping_status() != null) {
+                status.setText(fila.getShipping_status().getLabel());
             }
 
             itemView.setOnClickListener(new View.OnClickListener() {

@@ -134,6 +134,18 @@
                 android:text=""
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:layout_column="9"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="13dp" />
         </TableRow>
 
     </TableLayout>
