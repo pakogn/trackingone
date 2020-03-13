@@ -11,6 +11,9 @@ import com.spyc.trackingone.ui.Embarques.EmbarquesAdapter;
 import com.spyc.trackingone.ui.Embarques.EmbarquesContract;
 import com.spyc.trackingone.ui.Embarques.EmbarquesMvpPresenter;
 import com.spyc.trackingone.ui.Embarques.EmbarquesPresenter;
+import com.spyc.trackingone.ui.comentariosMulero.ComentariosMuleroContract;
+import com.spyc.trackingone.ui.comentariosMulero.ComentariosMuleroMvpPresenter;
+import com.spyc.trackingone.ui.comentariosMulero.ComentariosMuleroPresenter;
 import com.spyc.trackingone.ui.detalleEmbarque.DetalleEmbarqueContract;
 import com.spyc.trackingone.ui.detalleEmbarque.DetalleEmbarqueMvpPresenter;
 import com.spyc.trackingone.ui.detalleEmbarque.DetalleEmbarquePresenter;
@@ -135,6 +138,12 @@ public class ActivityModule {
     @Provides
     EmbarquesMuleroAdapter provideEmbarquesMuleroAdapter(){
         return new EmbarquesMuleroAdapter(new ArrayList<FilaEmbarqueResponse>());
+    }
+
+    @Provides
+    ComentariosMuleroMvpPresenter<ComentariosMuleroContract> provideComentariosMuleroPresenter(
+            ComentariosMuleroPresenter<ComentariosMuleroContract> presenter) {
+        return presenter;
     }
 
 

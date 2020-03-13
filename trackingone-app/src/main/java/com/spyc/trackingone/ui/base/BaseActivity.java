@@ -11,11 +11,6 @@ import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
-
-import com.spyc.trackingone.utils.NetworkUtils;
-import com.spyc.trackingone.MvpApp;
-import com.spyc.trackingone.di.component.DaggerActivityComponent;
-
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
@@ -31,17 +26,20 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.spyc.trackingone.MvpApp;
+import com.spyc.trackingone.R;
 import com.spyc.trackingone.di.component.ActivityComponent;
+import com.spyc.trackingone.di.component.DaggerActivityComponent;
 import com.spyc.trackingone.di.module.ActivityModule;
 import com.spyc.trackingone.ui.login.LoginActivity;
 import com.spyc.trackingone.utils.CommonUtils;
-
-import butterknife.Unbinder;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
-import com.spyc.trackingone.R;
+import com.spyc.trackingone.utils.NetworkUtils;
 import com.topwise.cloudpos.aidl.AidlDeviceService;
 
 import java.util.List;
+
+import butterknife.Unbinder;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 /**
  * Created by Jorge Namitle on 18/03/2018.

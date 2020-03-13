@@ -77,6 +77,10 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".ui.comentariosMulero.ComentariosMuleroActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".ui.Embarques.EmbarquesActivity"
             android:launchMode="singleTop"/>
 

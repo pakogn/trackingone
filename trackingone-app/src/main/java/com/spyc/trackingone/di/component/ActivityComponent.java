@@ -3,6 +3,7 @@ package com.spyc.trackingone.di.component;
 import com.spyc.trackingone.di.PerActivity;
 import com.spyc.trackingone.di.module.ActivityModule;
 import com.spyc.trackingone.ui.Embarques.EmbarquesActivity;
+import com.spyc.trackingone.ui.comentariosMulero.ComentariosMuleroActivity;
 import com.spyc.trackingone.ui.detalleEmbarque.DetalleEmbarque;
 import com.spyc.trackingone.ui.embarqueStatus.EmbarqueStatusActivity;
 import com.spyc.trackingone.ui.embarquesMulero.EmbarquesMuleroActivity;
@@ -33,4 +34,6 @@ public interface ActivityComponent {
     void inject(EmbarqueStatusActivity activity);
 
     void inject(EmbarquesMuleroActivity activity);
+
+    void inject(ComentariosMuleroActivity activity);
 }

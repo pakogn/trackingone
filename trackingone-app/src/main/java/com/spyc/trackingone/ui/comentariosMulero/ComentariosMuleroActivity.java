@@ -1,4 +1,4 @@
-package com.spyc.trackingone.ui.login;
+package com.spyc.trackingone.ui.comentariosMulero;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,7 +9,6 @@ import android.widget.EditText;
 
 import com.spyc.trackingone.ui.Embarques.EmbarquesActivity;
 import com.spyc.trackingone.ui.base.BaseActivity;
-import com.spyc.trackingone.ui.comentariosMulero.ComentariosMuleroActivity;
 import com.spyc.trackingone.ui.embarquesMulero.EmbarquesMuleroActivity;
 import com.spyc.trackingone.ui.home.HomeActivity;
 
@@ -21,23 +20,20 @@ import butterknife.OnClick;
 import com.spyc.trackingone.R;
 import com.topwise.cloudpos.aidl.AidlDeviceService;
 
-public class LoginActivity extends BaseActivity implements LoginContract {
+public class ComentariosMuleroActivity extends BaseActivity implements ComentariosMuleroContract {
 
     @Inject
-    LoginMvpPresenter<LoginContract> loginPresenter;
+    ComentariosMuleroMvpPresenter<ComentariosMuleroContract> comentariosMuleroPresenter;
 
-    @BindView(R.id.et_email)
-    EditText mEmailEditText;
-
-    @BindView(R.id.et_password)
-    EditText mPasswordEditText;
+    @BindView(R.id.et_comentarios)
+    EditText mComentariosEditText;
 
     SharedPreferences sharedPreferences;
     String  accessToken;
 
 
     public static Intent getStartIntent(Context context) {
-        Intent intent = new Intent(context, LoginActivity.class);
+        Intent intent = new Intent(context, ComentariosMuleroActivity.class);
         return intent;
     }
 
@@ -49,51 +45,40 @@ public class LoginActivity extends BaseActivity implements LoginContract {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_comentarios_mulero);
 
         getActivityComponent().inject(this);
 
         setUnBinder(ButterKnife.bind(this));
 
-        loginPresenter.onAttach(LoginActivity.this);
+        comentariosMuleroPresenter.onAttach(ComentariosMuleroActivity.this);
     }
 
-    @OnClick(R.id.btn_server_login)
-    void onServerLoginClick(View v) {
+    @OnClick(R.id.btn_comentarios_mulero)
+    void onServerComentariosMuleroClick(View v) {
         sharedPreferences = this.getSharedPreferences("mindorks_pref", Context.MODE_PRIVATE);
         accessToken = sharedPreferences.getString("PREF_KEY_ACCESS_TOKEN", null);
-        loginPresenter.onServerLoginClick(mEmailEditText.getText().toString(), mPasswordEditText.getText().toString());
+        comentariosMuleroPresenter.onComentariosMuleroClick(mComentariosEditText.getText().toString());
     }
 
     @Override
     public void openMainActivity() {
-        Intent intent = EmbarquesActivity.getStartIntent(LoginActivity.this);
+        Intent intent = EmbarquesActivity.getStartIntent(ComentariosMuleroActivity.this);
         startActivity(intent);
         finish();
     }
 
     @Override
     public void abrirPerfilMulero() {
-        Intent intent = ComentariosMuleroActivity.getStartIntent(LoginActivity.this);
-        startActivity(intent);
-        finish();
-        return;
-
-//        Intent intent = EmbarquesMuleroActivity.getStartIntent(LoginActivity.this);
-//        startActivity(intent);
-//        finish();
-    }
-
-    @Override
-    public void abrirPerfilTrafico() {
-        Intent intent = EmbarquesActivity.getStartIntent(LoginActivity.this);
+        Intent intent = EmbarquesMuleroActivity.getStartIntent(ComentariosMuleroActivity.this);
         startActivity(intent);
         finish();
     }
+
 
     @Override
     protected void onDestroy() {
-        loginPresenter.onDetach();
+        comentariosMuleroPresenter.onDetach();
         super.onDestroy();
     }
 

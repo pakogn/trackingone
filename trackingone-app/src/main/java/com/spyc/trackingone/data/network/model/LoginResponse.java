@@ -123,4 +123,5 @@ public class LoginResponse {
     public void setCompany_id(Long company_id) {
         this.company_id = company_id;
     }
+
 }

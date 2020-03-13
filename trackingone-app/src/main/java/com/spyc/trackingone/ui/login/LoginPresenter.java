@@ -24,7 +24,7 @@ import io.reactivex.functions.Consumer;
 public class LoginPresenter<V extends LoginContract> extends BasePresenter<V>
         implements LoginMvpPresenter<V> {
 
-    private static final String TAG = "LoginPresenter";
+    private static final String TAG = "ComentariosMuleroPresenter";
     public static final String USER_NAME = "";
 
     @Inject
@@ -73,17 +73,18 @@ public class LoginPresenter<V extends LoginContract> extends BasePresenter<V>
                         );
 
 
-
-                        if (!isViewAttached()) {
-                            return;
-                        }
-
                         getMvpView().hideLoading();
 
-                        if(response.getAuth() == 7) {
+                        Long idRol = response.getAuth();
+
+                        if(response.getAuth() == null) {
+                            idRol = (long) -1;
+                        }
+
+                        if(idRol == 7) {
                             getMvpView().abrirPerfilTrafico(); // primer perfil 7
                         }
-                        if(response.getAuth() == 8) {
+                        if(idRol == 8) {
                             getMvpView().abrirPerfilMulero(); // segundo perfil 8
                         } else {
                             getMvpView().showMessage("Ingresa un usuario valido");
