@@ -84,7 +84,7 @@ public class LoginPresenter<V extends LoginContract> extends BasePresenter<V>
                         if(idRol == 7) {
                             getMvpView().abrirPerfilTrafico(); // primer perfil 7
                         }
-                        if(idRol == 8) {
+                        else if(idRol == 8) {
                             getMvpView().abrirPerfilMulero(); // segundo perfil 8
                         } else {
                             getMvpView().showMessage("Ingresa un usuario valido");
