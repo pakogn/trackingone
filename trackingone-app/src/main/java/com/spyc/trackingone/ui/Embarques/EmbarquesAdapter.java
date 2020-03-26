@@ -193,7 +193,7 @@ public class EmbarquesAdapter extends RecyclerView.Adapter<BaseViewHolder> {
                     String fEmbarquesJSON = gson.toJson(fila);
                     String allJsonList = gson.toJson(getAllData());
                     Intent intent = new Intent(itemView.getContext(), DetalleEmbarque.class);
-                    intent.putExtra("embarque", fEmbarquesJSON);
+                    intent.putExtra("idMulero", fEmbarquesJSON);
                     intent.putExtra("AllList", allJsonList);
                     itemView.getContext().startActivity(intent);
                 }
