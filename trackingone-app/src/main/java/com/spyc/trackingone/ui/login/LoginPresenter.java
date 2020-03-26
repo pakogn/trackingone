@@ -76,6 +76,12 @@ public class LoginPresenter<V extends LoginContract> extends BasePresenter<V>
                         getMvpView().hideLoading();
 
                         Long idRol = response.getAuth();
+                        String error = response.getError();
+
+                        if (error != null || error != "") {
+                            getMvpView().showMessage(error);
+                            return;
+                        }
 
                         if(response.getAuth() == null) {
                             idRol = (long) -1;
@@ -87,9 +93,8 @@ public class LoginPresenter<V extends LoginContract> extends BasePresenter<V>
                         else if(idRol == 8) {
                             getMvpView().abrirPerfilMulero(); // segundo perfil 8
                         } else {
-                            getMvpView().showMessage("Ingresa un usuario valido");
+                            getMvpView().showMessage("Ingresa un usuario válido, por favor.");
                         }
-
                     }
                 }, new Consumer<Throwable>() {
                     @Override

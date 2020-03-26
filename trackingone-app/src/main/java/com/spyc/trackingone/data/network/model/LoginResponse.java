@@ -44,6 +44,30 @@ public class LoginResponse {
     @SerializedName("company_id")
     private Long company_id;
 
+    @Expose
+    @SerializedName("Error")
+    private String Error;
+
+    @Expose
+    @SerializedName("activity_log_id")
+    private String activity_log_id;
+
+    public String getActivity_log_id() {
+        return activity_log_id;
+    }
+
+    public void setActivity_log_id(String activity_log_id) {
+        this.activity_log_id = activity_log_id;
+    }
+
+    public String getError() {
+        return Error;
+    }
+
+    public void setError(String error) {
+        Error = error;
+    }
+
     public Long getId() {
         return id;
     }
