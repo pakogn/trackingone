@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -105,6 +106,9 @@ public class EmbarquesAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
     public class ViewHolder extends BaseViewHolder {
 
+        @BindView(R.id.embarque_btn)
+        ImageButton embarque_btnImageButton;
+
         @BindView(R.id.fecha)
         TextView fechaTextView;
 
@@ -181,6 +185,19 @@ public class EmbarquesAdapter extends RecyclerView.Adapter<BaseViewHolder> {
             if(fila.getShipping_status() != null) {
                 status.setText(fila.getShipping_status().getLabel());
             }
+
+            embarque_btnImageButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    gson = new Gson();
+                    String fEmbarquesJSON = gson.toJson(fila);
+                    String allJsonList = gson.toJson(getAllData());
+                    Intent intent = new Intent(itemView.getContext(), DetalleEmbarque.class);
+                    intent.putExtra("embarque", fEmbarquesJSON);
+                    intent.putExtra("AllList", allJsonList);
+                    itemView.getContext().startActivity(intent);
+                }
+            });
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
