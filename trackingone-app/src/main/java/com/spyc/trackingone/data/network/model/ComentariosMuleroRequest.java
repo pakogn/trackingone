@@ -17,14 +17,13 @@ public class ComentariosMuleroRequest {
     private Long id;
 
     @Expose
-    @SerializedName("comments")
-    private String comments;
+    @SerializedName("comment")
+    private String comment;
 
-    public ComentariosMuleroRequest(Long id, String comments) {
+    public ComentariosMuleroRequest(Long id, String comment) {
         this.setId(id);
-        this.setComments(comments);
+        this.setComment(comment);
     }
-
 
     @Override
     public boolean equals(Object object) {
@@ -34,14 +33,14 @@ public class ComentariosMuleroRequest {
         ComentariosMuleroRequest that = (ComentariosMuleroRequest) object;
 
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        return comments != null ? comments.equals(that.comments) : that.comments == null;
+        return comment != null ? comment.equals(that.comment) : that.comment == null;
 
     }
 
     @Override
     public int hashCode() {
         int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (comments != null ? comments.hashCode() : 0);
+        result = 31 * result + (comment != null ? comment.hashCode() : 0);
         return result;
     }
 
@@ -53,11 +52,11 @@ public class ComentariosMuleroRequest {
         this.id = id;
     }
 
-    public String getComments() {
-        return comments;
+    public String getComment() {
+        return comment;
     }
 
-    public void setComments(String comments) {
-        this.comments = comments;
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 }

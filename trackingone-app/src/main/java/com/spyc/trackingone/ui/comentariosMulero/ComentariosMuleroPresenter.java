@@ -44,10 +44,10 @@ public class ComentariosMuleroPresenter<V extends ComentariosMuleroContract> ext
         getMvpView().showLoading();
 
         Long id = getDataManager().getCurrentActivityLogId();
-        String comments = comentarios;
+        String comment = comentarios;
 
         getCompositeDisposable().add(getDataManager()
-                .postComentariosMulero(new ComentariosMuleroRequest(id, comments))
+                .postComentariosMulero(new ComentariosMuleroRequest(id, comment))
                 .subscribeOn(getSchedulerProvider().io())
                 .observeOn(getSchedulerProvider().ui())
                 .subscribe(new Consumer(){
