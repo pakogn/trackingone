@@ -13,6 +13,7 @@ import com.spyc.trackingone.data.db.model.User;
 import com.spyc.trackingone.data.network.ApiHeader;
 import com.spyc.trackingone.data.network.ApiHelper;
 import com.spyc.trackingone.data.network.model.CombosResponse;
+import com.spyc.trackingone.data.network.model.ComentariosMuleroRequest;
 import com.spyc.trackingone.data.network.model.CurrentUserResponse;
 import com.spyc.trackingone.data.network.model.EmailRequest;
 import com.spyc.trackingone.data.network.model.EmbarquesAsigadosRequest;
@@ -153,6 +154,11 @@ public class AppDataManager implements DataManager {
     }
 
     @Override
+    public Single postComentariosMulero(ComentariosMuleroRequest request) {
+        return mApiHelper.postComentariosMulero(request);
+    }
+
+    @Override
     public Single<LogoutResponse> doLogoutApiCall() {
         return mApiHelper.doLogoutApiCall();
     }
@@ -181,6 +187,16 @@ public class AppDataManager implements DataManager {
     @Override
     public void setCurrentUserId(Long userId) {
         mPreferencesHelper.setCurrentUserId(userId);
+    }
+
+    @Override
+    public Long getCurrentActivityLogId() {
+        return mPreferencesHelper.getCurrentActivityLogId();
+    }
+
+    @Override
+    public void setCurrentActivityLogId(Long activityLogId) {
+        mPreferencesHelper.setCurrentActivityLogId(activityLogId);
     }
 
     @Override
@@ -236,13 +252,15 @@ public class AppDataManager implements DataManager {
             Long auth,
             LoggedInMode loggedInMode,
             String userName,
-            String email) {
+            String email,
+            Long activityLogId) {
 
         setCurrentUserId(userId);
         setCurrentAuth(auth);
         setCurrentUserLoggedInMode(loggedInMode);
         setCurrentUserName(userName);
         setCurrentUserEmail(email);
+        setCurrentActivityLogId(activityLogId);
     }
 
     @Override
@@ -288,7 +306,8 @@ public class AppDataManager implements DataManager {
                 null,
                 DataManager.LoggedInMode.LOGGED_IN_MODE_LOGGED_OUT,
                 null,
-                null);
+                null,
+                (long)0);
     }
 
     @Override

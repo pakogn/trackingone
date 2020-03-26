@@ -37,7 +37,8 @@ public interface DataManager extends DbHelper, PreferencesHelper, ApiHelper {
             Long auth,
             LoggedInMode loggedInMode,
             String userName,
-            String email
+            String email,
+            Long activityLogId
             );
 
     void updateApiAccessInfo(

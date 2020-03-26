@@ -69,7 +69,8 @@ public class LoginPresenter<V extends LoginContract> extends BasePresenter<V>
                                 response.getAuth(),
                                 DataManager.LoggedInMode.LOGGED_IN_MODE_SERVER,
                                 response.getName(),
-                                response.getUsername()
+                                response.getUsername(),
+                                response.getActivityLogId()
                         );
 
 

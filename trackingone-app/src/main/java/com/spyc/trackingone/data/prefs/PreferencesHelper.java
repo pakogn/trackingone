@@ -38,4 +38,8 @@ public interface PreferencesHelper {
     String getRefreshToken();
 
     void setRefreshToken(String refreshToken);
+
+    Long getCurrentActivityLogId();
+
+    void setCurrentActivityLogId(Long activityLogId);
 }

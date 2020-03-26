@@ -1,6 +1,7 @@
 package com.spyc.trackingone.data.network;
 
 import com.spyc.trackingone.data.network.model.CombosResponse;
+import com.spyc.trackingone.data.network.model.ComentariosMuleroRequest;
 import com.spyc.trackingone.data.network.model.CurrentUserResponse;
 import com.spyc.trackingone.data.network.model.EmailRequest;
 import com.spyc.trackingone.data.network.model.EmbarquesAsigadosRequest;
@@ -46,5 +47,7 @@ public interface ApiHelper {
     Single postFromParkingSpace(String id);
 
     Single<List<CombosResponse>> getCombos();
+
+    Single postComentariosMulero(ComentariosMuleroRequest request);
 
 }
