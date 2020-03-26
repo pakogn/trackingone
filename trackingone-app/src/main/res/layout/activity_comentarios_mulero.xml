@@ -37,7 +37,7 @@
                 android:layout_marginLeft="@dimen/minimum"
                 android:layout_marginRight="@dimen/minimum"
                 android:cursorVisible="true"
-                android:hint="Comenarios"
+                android:hint="Comentarios"
                 android:inputType="textEmailAddress"
                 android:maxLength="50"/>
 
