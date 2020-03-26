@@ -5,6 +5,7 @@ import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONArrayRequestListener;
 import com.rx2androidnetworking.Rx2AndroidNetworking;
 import com.spyc.trackingone.data.network.model.CombosResponse;
+import com.spyc.trackingone.data.network.model.ComentariosMuleroRequest;
 import com.spyc.trackingone.data.network.model.CurrentUserResponse;
 import com.spyc.trackingone.data.network.model.EmailRequest;
 import com.spyc.trackingone.data.network.model.EmbarquesAsigadosRequest;
@@ -62,6 +63,15 @@ public class AppApiHelper implements ApiHelper {
 
     @Override
     public Single<LoginResponse> doServerLoginApiCall(LoginRequest.ServerLoginRequest request) {
+        return Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_SERVER_LOGIN)
+                .addHeaders(mApiHeader.getPublicApiHeader())
+                .addBodyParameter(request)
+                .build()
+                .getObjectSingle(LoginResponse.class);
+    }
+
+    @Override
+    public Single<LoginResponse> postComentariosMulero(ComentariosMuleroRequest request) {
         return Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_SERVER_LOGIN)
                 .addHeaders(mApiHeader.getPublicApiHeader())
                 .addBodyParameter(request)

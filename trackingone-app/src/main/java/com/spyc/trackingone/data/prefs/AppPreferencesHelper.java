@@ -26,6 +26,7 @@ public class AppPreferencesHelper implements PreferencesHelper{
             = "PREF_KEY_CURRENT_USER_PROFILE_PIC_URL";
     private static final String PREF_KEY_ACCESS_TOKEN = "PREF_KEY_ACCESS_TOKEN";
     private static final String PREF_KEY_REFRESH_TOKEN = "PREF_KEY_REFRESH_TOKEN";
+    private static final String PREF_KEY_CURRENT_ACTIVITY_LOG_ID = "PREF_KEY_CURRENT_ACTIVITY_LOG_ID";
 
     private final SharedPreferences mPrefs;
 
@@ -118,6 +119,18 @@ public class AppPreferencesHelper implements PreferencesHelper{
     @Override
     public void setRefreshToken(String refreshToken) {
         mPrefs.edit().putString(PREF_KEY_REFRESH_TOKEN, refreshToken).apply();
+    }
+
+    @Override
+    public Long getCurrentActivityLogId() {
+        long userId = mPrefs.getLong(PREF_KEY_CURRENT_ACTIVITY_LOG_ID, AppConstants.NULL_INDEX);
+        return userId == AppConstants.NULL_INDEX ? null : userId;
+    }
+
+    @Override
+    public void setCurrentActivityLogId(Long activityLogId) {
+        long id = activityLogId == null ? AppConstants.NULL_INDEX : activityLogId;
+        mPrefs.edit().putLong(PREF_KEY_CURRENT_ACTIVITY_LOG_ID, id).apply();
     }
 
 }

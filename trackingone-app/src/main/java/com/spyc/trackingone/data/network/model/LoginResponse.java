@@ -9,6 +9,10 @@ public class LoginResponse {
     private Long id;
 
     @Expose
+    @SerializedName("activity_log_id")
+    private Long activity_log_id;
+
+    @Expose
     @SerializedName("name")
     private String name;
 
@@ -102,6 +106,14 @@ public class LoginResponse {
 
     public String getUsername() {
         return username;
+    }
+
+    public Long getActivityLogId() {
+        return activity_log_id;
+    }
+
+    public void setActivityLogId(Long activity_log_id) {
+        this.activity_log_id = activity_log_id;
     }
 
     public void setUsername(String username) {
