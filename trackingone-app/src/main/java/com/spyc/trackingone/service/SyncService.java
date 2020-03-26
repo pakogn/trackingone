@@ -7,8 +7,8 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 
 import com.spyc.trackingone.MvpApp;
-import com.spyc.trackingone.di.component.DaggerServiceComponent;
 import com.spyc.trackingone.data.DataManager;
+import com.spyc.trackingone.di.component.DaggerServiceComponent;
 import com.spyc.trackingone.di.component.ServiceComponent;
 import com.spyc.trackingone.utils.AppLogger;
 

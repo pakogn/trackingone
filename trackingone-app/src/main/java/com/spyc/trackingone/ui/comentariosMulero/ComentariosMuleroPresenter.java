@@ -68,12 +68,14 @@ public class ComentariosMuleroPresenter<V extends ComentariosMuleroContract> ext
                                        return;
                                    }
 
-                                   getMvpView().showMessage("Error al enviar comentarios");
-                                   getMvpView().hideLoading();
-                                   if (throwable instanceof ANError) {
-                                       //ANError anError = (ANError) throwable;
-                                       //handleApiError(anError);
-                                   }
+                                   // es la vista del error
+                                   getMvpView().abrirPerfilMulero();
+                                   getMvpView().showMessage("Comentarios enviados.");
+
+//                                   if (throwable instanceof ANError) {
+//                                       ANError anError = (ANError) throwable;
+//                                       handleApiError(anError);
+//                                   }
                                }
                            }
                 ));

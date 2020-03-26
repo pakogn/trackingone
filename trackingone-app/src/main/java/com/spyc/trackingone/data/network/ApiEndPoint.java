@@ -47,5 +47,7 @@ public final class ApiEndPoint {
             + "/yard-mule-drivers/available";
     public static  final String POST_EMBARQUE_DETALLLES = BuildConfig.TRACKING_URL
             + "/shipping-schedules/{id}/assign";
+    public static  final String POST_COMENTARIOS_LOGIN = BuildConfig.TRACKING_URL
+            + "/me/login/comment";
 
 }

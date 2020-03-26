@@ -309,6 +309,7 @@ EmbarquesAdapter.Callback, SearchView.OnQueryTextListener{
                 filterList.add(embarquesAdapter.getData().get(i));
             }
         }
+
         embarquesAdapter.getData().clear();
         Log.d("DESPUES: ",""+filterList.size());
         actualizaEmbarques(filterList);

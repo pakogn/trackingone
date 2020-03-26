@@ -60,6 +60,8 @@ public class LoginPresenter<V extends LoginContract> extends BasePresenter<V>
                     public void accept(LoginResponse response) throws Exception {
                         Log.e("TOKEN=ID-USER::::::","" + response.getId());
                         Log.e("AUTH-USER::::::","" + response.getAuth());
+                        Log.e("ACTIVITY-LOG::::::","" + response.getActivityLogId());
+                        Log.e("ERROR::::::","" + response.getError());
                         getDataManager().updateApiAccessInfo(
                                 response.getId()
                         );
@@ -73,14 +75,12 @@ public class LoginPresenter<V extends LoginContract> extends BasePresenter<V>
                                 response.getActivityLogId()
                         );
 
-
                         getMvpView().hideLoading();
 
                         Long idRol = response.getAuth();
-                        String error = response.getError();
 
-                        if (error != null || error != "") {
-                            getMvpView().showMessage(error);
+                        if (response.getError() != null) {
+                            getMvpView().showMessage(response.getError());
                             return;
                         }
 

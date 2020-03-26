@@ -72,7 +72,7 @@ public class AppApiHelper implements ApiHelper {
 
     @Override
     public Single<LoginResponse> postComentariosMulero(ComentariosMuleroRequest request) {
-        return Rx2AndroidNetworking.post(ApiEndPoint.ENDPOINT_SERVER_LOGIN)
+        return Rx2AndroidNetworking.post(ApiEndPoint.POST_COMENTARIOS_LOGIN)
                 .addHeaders(mApiHeader.getPublicApiHeader())
                 .addBodyParameter(request)
                 .build()
