@@ -2,7 +2,6 @@ package com.spyc.trackingone.ui.Embarques;
 
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -83,7 +82,7 @@ public class EmbarquesAdapter extends RecyclerView.Adapter<BaseViewHolder> {
         if (filaEmbarqueResponse != null && filaEmbarqueResponse.size() > 0) {
             return filaEmbarqueResponse.size();
         } else {
-            return 1;
+            return 0;
         }
     }
 
@@ -159,16 +158,16 @@ public class EmbarquesAdapter extends RecyclerView.Adapter<BaseViewHolder> {
             final FilaEmbarqueResponse fila = filaEmbarqueResponse.get(position);
 
             if(fila.getScheduled_date() != null) {
-                fechaTextView.setText(fila.getScheduled_date());
+                fechaTextView.setText(fila.getFormatted_scheduled_date());
             }
             if(fila.getDriver_id() != null) {
-                operadorTextView.setText(fila.getDriver_id().toString());
+                operadorTextView.setText(fila.getDriver().getFullName());
             }
             if (fila.getShipping_number() != null) {
                 no_embarqueTextView.setText(fila.getShipping_number());
             }
             if (fila.getCarrier_id() != null) {
-                transportistaTextView.setText(fila.getCarrier_id().toString());
+                transportistaTextView.setText(fila.getCarrier().getName());
             }
             if (fila.getTrailer_number() != null) {
                 no_remolqueTextView.setText(fila.getTrailer_number());

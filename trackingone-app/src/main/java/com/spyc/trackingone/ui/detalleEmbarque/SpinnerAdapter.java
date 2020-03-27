@@ -35,7 +35,7 @@ public class SpinnerAdapter extends ArrayAdapter<CombosResponse> {
         }
 
         TextView txt = (TextView) convertView.findViewById(R.id.rEnbargueNombre);
-        txt.setText(actividad.getFirst_name());
+        txt.setText(actividad.getLabel());
         return convertView;
     }
 
@@ -46,7 +46,7 @@ public class SpinnerAdapter extends ArrayAdapter<CombosResponse> {
         }
 
         TextView txt = (TextView) convertView.findViewById(R.id.rEnbargueNombre);
-        txt.setText(embarque.getFirst_name());
+        txt.setText(embarque.getLabel());
 
         return convertView;
     }

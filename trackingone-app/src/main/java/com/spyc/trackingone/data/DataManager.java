@@ -5,9 +5,6 @@ import com.spyc.trackingone.data.network.ApiHeader;
 import com.spyc.trackingone.data.network.ApiHelper;
 import com.spyc.trackingone.data.prefs.PreferencesHelper;
 
-import java.io.File;
-import java.util.List;
-
 import io.reactivex.Observable;
 
 /**

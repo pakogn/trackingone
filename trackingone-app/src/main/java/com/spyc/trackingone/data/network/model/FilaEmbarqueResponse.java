@@ -1018,9 +1018,33 @@ public static class Provider
         @SerializedName("id")
         private Long id;
 
+        public String getFirst_name() {
+            return first_name;
+        }
+
+        public void setFirst_name(String first_name) {
+            this.first_name = first_name;
+        }
+
+        public String getLast_name() {
+            return last_name;
+        }
+
+        public void setLast_name(String last_name) {
+            this.last_name = last_name;
+        }
+
         @Expose
         @SerializedName("name")
         private String name;
+
+        @Expose
+        @SerializedName("first_name")
+        private String first_name;
+
+        @Expose
+        @SerializedName("last_name")
+        private String last_name;
 
         @Expose
         @SerializedName("rfc")
@@ -1057,6 +1081,10 @@ public static class Provider
         @Expose
         @SerializedName("formatted_deleted_at")
         private String formatted_deleted_at;
+
+        public String getFullName(){
+            return getFirst_name()+" "+getLast_name();
+        }
 
         public Carrier getCarrier() {
             return carrier;
