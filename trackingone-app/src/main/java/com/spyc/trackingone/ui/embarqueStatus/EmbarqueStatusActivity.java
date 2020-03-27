@@ -121,6 +121,10 @@ public class EmbarqueStatusActivity extends BaseActivity implements EmbarqueStat
         }
     }
 
+    @OnClick(R.id.btn_cancel)
+    public void cancelar() {
+        finish();
+    }
 
     @OnClick(R.id.btn_status)
     public void abrirDetalleEmbarque() {
@@ -131,7 +135,6 @@ public class EmbarqueStatusActivity extends BaseActivity implements EmbarqueStat
         } else {
             embarqueStatusMvpPresenter.showMessage("ERROR, la caja no coincide con la correcta");
         }
-
     }
 
     void clickBtnStatus() {
