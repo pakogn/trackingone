@@ -54,8 +54,25 @@ public class CombosResponse {
     @SerializedName("first_name")
     private String first_name;
 
+    public String getLabel() {
+        return label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
+    @Expose
+    @SerializedName("label")
+    private String label;
+
+
     public String getFirst_name() {
         return first_name;
+    }
+
+    public String getFullName() {
+        return name+" "+ first_last_name+" "+second_last_name;
     }
 
     public void setFirst_name(String first_name) {

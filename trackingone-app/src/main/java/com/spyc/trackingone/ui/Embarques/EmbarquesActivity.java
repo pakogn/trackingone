@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
-import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.MenuItemCompat;
@@ -25,13 +24,10 @@ import android.view.View;
 import android.widget.AbsListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.spyc.trackingone.R;
 import com.spyc.trackingone.data.network.model.FilaEmbarqueResponse;
 import com.spyc.trackingone.ui.base.BaseActivity;
-import com.spyc.trackingone.ui.detalleEmbarque.DetalleEmbarque;
-import com.spyc.trackingone.ui.embarqueStatus.EmbarqueStatusActivity;
 import com.spyc.trackingone.ui.login.LoginActivity;
 import com.topwise.cloudpos.aidl.AidlDeviceService;
 
@@ -291,8 +287,10 @@ EmbarquesAdapter.Callback, SearchView.OnQueryTextListener{
         Log.e("TOTAL: ",""+embarquesAdapter.getItemCount());
 
         for(int i=0; i<embarquesAdapter.getItemCount(); i++){
-            if( embarquesAdapter.getData().get(i).getRamp() == null){
-                filterList.add(embarquesAdapter.getData().get(i));
+            if(embarquesAdapter.getData().get(i) != null){
+                if( embarquesAdapter.getData().get(i).getRamp() == null){
+                    filterList.add(embarquesAdapter.getData().get(i));
+                }
             }
         }
         embarquesAdapter.getData().clear();
@@ -305,9 +303,12 @@ EmbarquesAdapter.Callback, SearchView.OnQueryTextListener{
         Log.e("TOTAL: ",""+embarquesAdapter.getItemCount());
 
         for(int i=0; i<embarquesAdapter.getItemCount(); i++){
-            if( embarquesAdapter.getData().get(i).getRamp() != null && embarquesAdapter.getData().get(i).getInitial_parking_space() != null){
-                filterList.add(embarquesAdapter.getData().get(i));
+            if(embarquesAdapter.getData().get(i) != null){
+                if( embarquesAdapter.getData().get(i).getRamp() != null && embarquesAdapter.getData().get(i).getInitial_parking_space() != null){
+                    filterList.add(embarquesAdapter.getData().get(i));
+                }
             }
+
         }
 
         embarquesAdapter.getData().clear();

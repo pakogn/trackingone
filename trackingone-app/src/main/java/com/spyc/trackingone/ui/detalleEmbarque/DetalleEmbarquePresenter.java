@@ -15,7 +15,6 @@ import java.util.List;
 import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 
 public class DetalleEmbarquePresenter<V extends DetalleEmbarqueContract> extends BasePresenter<V>
@@ -71,8 +70,11 @@ public class DetalleEmbarquePresenter<V extends DetalleEmbarqueContract> extends
                     @Override
                     public void accept(EmbarquesAsigadosResponse embarquesAsigadosResponse) throws Exception {
                         getMvpView().hideLoading();
-                        getMvpView().saveCorrect(embarquesAsigadosResponse);
-
+                        if(!embarquesAsigadosResponse.getError()){
+                            getMvpView().saveCorrect(embarquesAsigadosResponse);
+                        }else{
+                            getMvpView().showMessage(embarquesAsigadosResponse.getMessage());
+                        }
                     }
                 }, new Consumer<Throwable>() {
                     @Override

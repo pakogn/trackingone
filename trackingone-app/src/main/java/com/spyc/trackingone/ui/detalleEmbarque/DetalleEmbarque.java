@@ -5,9 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -15,8 +16,6 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.support.v7.widget.Toolbar;
-
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -51,6 +50,18 @@ public class DetalleEmbarque extends BaseActivity implements DetalleEmbarqueCont
     Spinner SpinnerMoluero1;
     @BindView(R.id.mulero2)
     Spinner SpinnerMoluero2;
+    @BindView(R.id.edtxcajon_inicial)
+    EditText edttcajon;
+    @BindView(R.id.edtx_rampa)
+    EditText edtRamp;
+    @BindView(R.id.edtx_cajo_fin)
+    EditText edtcajonFin;
+    @BindView(R.id.rbuno)
+    RadioButton rbotn1;
+    @BindView(R.id.rbdos)
+    RadioButton rbotn2;
+    @BindView(R.id.rbtres)
+    RadioButton rbotn3;
     private SpinnerAdapter adapterSpinnerActividad2;
     private SpinnerAdapter adapterSpinnerActividad;
     private   RecyclerView recyclerView;
@@ -59,11 +70,10 @@ public class DetalleEmbarque extends BaseActivity implements DetalleEmbarqueCont
     CombosResponse opcionSeleccionada2;
     private  TableViewAdapter adapter;
     private List<FilaEmbarqueResponse> listaenbarque= new ArrayList<FilaEmbarqueResponse>();
-     EditText edttcajon, edtcajonFin,edtRamp;
     RadioGroup radioGroup;
-    RadioButton rbotn1;
-    RadioButton rbotn2;
-    RadioButton rbotn3;
+    //RadioButton rbotn1;
+    //RadioButton rbotn2;
+    //RadioButton rbotn3;
 
     public static Intent getStartIntent(Context context) {
         Intent intent = new Intent(context, DetalleEmbarque.class);
@@ -81,10 +91,10 @@ public class DetalleEmbarque extends BaseActivity implements DetalleEmbarqueCont
         getActivityComponent().inject(this);
         setUnBinder(ButterKnife.bind(this));
         detalleEmbarquePresenter.onAttach(this);
-        setUp();
         Gson gson = new Gson();
         fEmbarqueJson = gson.fromJson(getIntent().getStringExtra("idMulero"), FilaEmbarqueResponse.class);
         Log.e("","LLEGA ="+getIntent().getStringExtra("idMulero"));
+        setUp();
 
         SpinnerMoluero1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -105,12 +115,12 @@ public class DetalleEmbarque extends BaseActivity implements DetalleEmbarqueCont
             }
         });
 
-
-       String datajson =  getIntent().getStringExtra("AllList");
+        String datajson =  getIntent().getStringExtra("AllList");
         Type listType = new TypeToken<List<FilaEmbarqueResponse>>() {}.getType();
         listaenbarque = gson.fromJson(datajson, listType);
          recyclerView = findViewById(R.id.recyclerViewDeliveryProductList);
          adapter = new TableViewAdapter(listaenbarque);
+        ObntenerdatosNivel("all");
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
@@ -125,15 +135,45 @@ public class DetalleEmbarque extends BaseActivity implements DetalleEmbarqueCont
             getSupportActionBar().setDisplayShowTitleEnabled(false);
             toolbar_title.setText(R.string.embarqueDetalle);
         }
+        edttcajon.setText(""+(fEmbarqueJson.getInitial_parking_space() != null ? fEmbarqueJson.getInitial_parking_space() : ""));
+        edtcajonFin.setText(""+(fEmbarqueJson.getFinal_parking_space() != null ? fEmbarqueJson.getFinal_parking_space() : ""));
+        edtRamp.setText(""+(fEmbarqueJson.getRamp() != null ? fEmbarqueJson.getRamp() : ""));
+        if(fEmbarqueJson.getShipping_priority() != null){
+            switch (fEmbarqueJson.getShipping_priority()){
+                case "1":
+                    rbotn1.setChecked(true);
+                    break;
+                case "2":
+                    rbotn2.setChecked(true);
+                    break;
+                case "3":
+                    rbotn3.setChecked(true);
+                    break;
+            }
+        }
+
         detalleEmbarquePresenter.getCombos();
     }
 
     @Override
     public void showCombosView(List<CombosResponse> response) {
         Log.d("data",response.toString());
+        CombosResponse placeHolderCombo = new CombosResponse();
+        placeHolderCombo.setLabel("Seleccionar");
+        response.add(0, placeHolderCombo);
         adapterSpinnerActividad = new SpinnerAdapter(this, response);
         SpinnerMoluero1.setAdapter(adapterSpinnerActividad);
+        for (int i = 0; i < response.size(); i++) {
+            if (response.get(i).getId() == fEmbarqueJson.getInitial_yard_mule_driver_id()) {
+                SpinnerMoluero1.setSelection(i);
+            }
+        }
         SpinnerMoluero2.setAdapter(adapterSpinnerActividad);
+        for (int i = 0; i < response.size(); i++) {
+            if (response.get(i).getId() == fEmbarqueJson.getInitial_yard_mule_driver_id()) {
+                SpinnerMoluero2.setSelection(i);
+            }
+        }
     }
     @Override
     public void saveCorrect(EmbarquesAsigadosResponse res)
@@ -182,10 +222,21 @@ public class DetalleEmbarque extends BaseActivity implements DetalleEmbarqueCont
         for( int i=0;i< listaenbarque.size();i++)
         {
             String data= String.valueOf(listaenbarque.get(i).getShipping_priority()==null?"":listaenbarque.get(i).getShipping_priority());
-            if(nivel.equals( data))
-            {
-                listaenbarqueAlta.add(listaenbarque.get(i));
+            switch (nivel){
+                case "all":
+                    if(listaenbarque.get(i).getRamp_and_yard_mule_driver_assigned_at() != null)
+                    {
+                        listaenbarqueAlta.add(listaenbarque.get(i));
+                    }
+                    break;
+                default:
+                    if(nivel.equals( data) && listaenbarque.get(i).getRamp_and_yard_mule_driver_assigned_at() != null)
+                    {
+                        listaenbarqueAlta.add(listaenbarque.get(i));
+                    }
+                break;
             }
+
         }
         TemlistaenbarqueAlta = listaenbarqueAlta;
         adapter = new TableViewAdapter(TemlistaenbarqueAlta);
@@ -217,16 +268,19 @@ public class DetalleEmbarque extends BaseActivity implements DetalleEmbarqueCont
         if (cajonInicial.length()==0)
         {
             Toast.makeText(this,"Falta informacion Cajón Inicial ", Toast.LENGTH_LONG).show();
+            showSoftKeyboard(edttcajon);
             return;
         }
         if (ramp.length()==0)
         {
             Toast.makeText(this,"Falta informacion de Ramp ", Toast.LENGTH_LONG).show();
+            showSoftKeyboard(edtRamp);
             return;
         }
         if (cajonfianl.length()==0)
         {
             Toast.makeText(this,"Falta informacion Cajón Final ", Toast.LENGTH_LONG).show();
+            showSoftKeyboard(edtcajonFin);
             return;
         }
         if ( rbotn1.isChecked()==false && rbotn2.isChecked() ==false&&rbotn3.isChecked() ==false)
@@ -250,9 +304,14 @@ public class DetalleEmbarque extends BaseActivity implements DetalleEmbarqueCont
             Toast.makeText(this,"No tiene datos los combos", Toast.LENGTH_LONG).show();
             return;
         }
-        if ( opcionSeleccionada1.getId()==null||opcionSeleccionada2.getId()==null)
+        if ( opcionSeleccionada1.getId()==null)
         {
-            Toast.makeText(this,"Los combos tienen ID nulos", Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"Seleccione mulero inicial", Toast.LENGTH_LONG).show();
+            return;
+        }
+        if (opcionSeleccionada2.getId()==null)
+        {
+            Toast.makeText(this,"Seleccione mulero final", Toast.LENGTH_LONG).show();
             return;
         }
         EmbarquesAsigadosRequest request = new EmbarquesAsigadosRequest();
@@ -264,6 +323,13 @@ public class DetalleEmbarque extends BaseActivity implements DetalleEmbarqueCont
         request.setFinal_parking_space(edtcajonFin.getText().toString());
         request.setShipping_priority(shepp);
         detalleEmbarquePresenter.postDetails(fEmbarqueJson.getId(),request);
+    }
+    public void showSoftKeyboard(View view) {
+        if(view.requestFocus()){
+            InputMethodManager imm =(InputMethodManager)
+                    getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.showSoftInput(view,InputMethodManager.SHOW_IMPLICIT);
+        }
     }
 
 
