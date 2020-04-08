@@ -97,7 +97,7 @@ public class EmbarqueStatusActivity extends BaseActivity implements EmbarqueStat
 
         origin.setText(fEmbarqueJson.getShipping_status_id() == 3 ? fEmbarqueJson.getInitial_parking_space() : fEmbarqueJson.getRamp());
         destination.setText(fEmbarqueJson.getShipping_status_id() == 3 ? fEmbarqueJson.getRamp() : fEmbarqueJson.getFinal_parking_space());
-        container.setText(fEmbarqueJson.getContainer());
+        /*container.setText(fEmbarqueJson.getContainer());*/
 
         this.setTextStatusButton();
 
