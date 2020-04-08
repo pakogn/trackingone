@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -15,6 +14,7 @@ import com.spyc.trackingone.data.network.model.FilaEmbarqueResponse;
 import com.spyc.trackingone.ui.base.BaseActivity;
 import com.spyc.trackingone.ui.embarquesMulero.EmbarquesMuleroActivity;
 import com.topwise.cloudpos.aidl.AidlDeviceService;
+
 import javax.inject.Inject;
 
 import butterknife.BindView;
@@ -35,8 +35,14 @@ public class EmbarqueStatusActivity extends BaseActivity implements EmbarqueStat
     @BindView(R.id.origin)
     EditText origin;
 
+    @BindView(R.id.originLabel)
+    TextView originLabel;
+
     @BindView(R.id.destination)
     EditText destination;
+
+    @BindView(R.id.destinationLabel)
+    TextView destinationLabel;
 
     @BindView(R.id.container)
     EditText container;
@@ -86,9 +92,12 @@ public class EmbarqueStatusActivity extends BaseActivity implements EmbarqueStat
         fEmbarqueJson = gson.fromJson(getIntent().getStringExtra("idMulero"), FilaEmbarqueResponse.class);
         Log.e("","LLEGA ="+getIntent().getStringExtra("idMulero"));
 
-        origin.setText(fEmbarqueJson.getOrigin());
-        destination.setText(fEmbarqueJson.getDestination());
-        //container.setText(fEmbarqueJson.getContainer());
+        originLabel.setText(fEmbarqueJson.getShipping_status_id() == 3 ? "CAJON INICIAL" : "RAMPA");
+        destinationLabel.setText(fEmbarqueJson.getShipping_status_id() == 3 ? "RAMPA" : "CAJON FINAL");
+
+        origin.setText(fEmbarqueJson.getShipping_status_id() == 3 ? fEmbarqueJson.getInitial_parking_space() : fEmbarqueJson.getRamp());
+        destination.setText(fEmbarqueJson.getShipping_status_id() == 3 ? fEmbarqueJson.getRamp() : fEmbarqueJson.getFinal_parking_space());
+        container.setText(fEmbarqueJson.getContainer());
 
         this.setTextStatusButton();
 

@@ -12,9 +12,7 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.spyc.trackingone.R;
 import com.spyc.trackingone.data.network.model.FilaEmbarqueResponse;
-import com.spyc.trackingone.ui.Embarques.EmbarquesAdapter;
 import com.spyc.trackingone.ui.base.BaseViewHolder;
-import com.spyc.trackingone.ui.detalleEmbarque.DetalleEmbarque;
 import com.spyc.trackingone.ui.embarqueStatus.EmbarqueStatusActivity;
 
 import java.util.ArrayList;
@@ -156,7 +154,7 @@ public class EmbarquesMuleroAdapter extends RecyclerView.Adapter<BaseViewHolder>
                 muFechaTextView.setText(fila.getScheduled_date());
             }
             if(fila.getCarrier_id() != null) {
-                muTransportistaTextView.setText(fila.getCarrier_id().toString());
+                muTransportistaTextView.setText(fila.getCarrier().getName());
             }
             if (fila.getContainer() != null) {
                 muNoCajaTextView.setText(fila.getContainer());
@@ -171,7 +169,7 @@ public class EmbarquesMuleroAdapter extends RecyclerView.Adapter<BaseViewHolder>
                 muNoTractorTextView.setText(fila.getTruck_number());
             }
             if (fila.getShipping_status_id() != null) {
-                muTipoMovTextView.setText(fila.getShipping_status_id().toString());
+                muTipoMovTextView.setText(fila.getShipping_status().getLabel());
             }
             if (fila.getInitial_parking_space() != null) {
                 muCajonTextView.setText(fila.getInitial_parking_space());
